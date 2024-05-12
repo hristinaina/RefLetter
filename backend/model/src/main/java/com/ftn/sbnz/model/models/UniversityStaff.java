@@ -1,5 +1,12 @@
 package com.ftn.sbnz.model.models;
 
-public class UniversityStaff {
-    
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class UniversityStaff extends Person{
+    private University university;
 }
