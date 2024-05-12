@@ -21,12 +21,12 @@ University Rank,Name of University,Location,No of student,No of student per staf
 20,Cornell University,United States,"24,027",10.3,26%,51 : 49,85.9,80.2,86.1,97.3,40.4,76.9
 21,"University of California, Los Angeles",United States,"42,434",9.7,16%,56 : 44,85.8,80.4,88.9,95.4,58.8,65.0
 22,UCL,United Kingdom,"36,790",10.3,60%,59 : 41,85.7,74.5,85.4,97.9,44.5,96.7
-23,University of Michigan-Ann Arbor,United States,"45,912",8.2,17%,50 : 50,82.9,79.3,84.6,93.6,48.7,59.2
+23,University of Michigan-Ann Arbor,United States,"45,912",8.2,17,50 : 50,82.9,79.3,84.6,93.6,48.7,59.2
 24,New York University,United States,"36,337",9.8,42%,57 : 43,82.7,74.2,84.0,95.0,44.6,74.7
 25,Duke University,United States,"16,091",4.2,24%,52 : 48,82.6,78.1,76.2,95.7,99.6,68.0
 26,Northwestern University,United States,"19,175",13.2,20%,51 : 49,82.1,71.7,80.7,97.5,85.0,67.0
 26,University of Washington,United States,"47,727",10.8,18%,55 : 45,82.1,71.6,82.8,98.9,53.9,63.0
-28,Carnegie Mellon University,United States,"14,305",12.9,47%,44 : 56,81.1,65.4,81.8,98.7,55.2,80.1
+28,Carnegie Mellon University,United States,"14,305",12.9,47,44 : 56,81.1,65.4,81.8,98.7,55.2,80.1
 29,University of Edinburgh,United Kingdom,"32,845",11.8,47%,62 : 38,79.8,66.9,74.5,97.1,40.9,95.6
 30,Technical University of Munich,,"33,960",40.6,36%,37 : 63,79.3,69.8,82.2,84.5,100.0,77.7
 31,University of Hong Kong,,"18,087",18.2,43%,54 : 46,78.5,65.6,74.1,92.4,60.6,98.7
@@ -1696,497 +1696,497 @@ University Rank,Name of University,Location,No of student,No of student per staf
 1501+,Yanshan University,China,"38,649",13.2,1%,39 : 61,10.4–18.3,17.2,10.9,18.3,46.9,17.0
 1501+,Yeditepe University,Turkey,"17,038",28.2,5%,55 : 45,10.4–18.3,18.8,12.2,10.5,65.7,29.6
 1501+,Zonguldak Bülent Ecevit University,Turkey,"28,319",25.4,8%,47 : 53,10.4–18.3,13.2,8.2,23.5,38.9,23.1
-Reporter,University Abdelhamid Ibn Badis Mostaganem,Algeria,"24,493",19.3,1%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Abdullah Gül University,Turkey,"2,509",20.1,9%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Abertay University,United Kingdom,"4,010",21.7,22%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Adamawa State University, Mubi",Nigeria,"17,840",70.0,0%,35 : 65,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,AECC University College,United Kingdom,615,15.4,43%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Afe Babalola University,,"9,085",11.1,1%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Aga Khan University,Pakistan,"1,356",2.3,1%,65 : 35,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ahl Al Bayt University,Iraq,"2,879",14.3,1%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Aichi Prefectural University,Japan,"3,302",15.2,1%,72 : 28,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Air University,Pakistan,"6,404",15.2,0%,32 : 68,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ajeenkya DY Patil University,India,"2,793",16.4,0%,24 : 76,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent Metropolitan University,Uzbekistan,317,22.6,5%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ajman University,United Arab Emirates,"5,050",16.4,82%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Akita Prefectural University,Japan,"1,826",8.5,1%,26 : 74,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Akwa Ibom State University,Nigeria,"10,026",20.7,0%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Ayen University,Iraq,"11,000",51.2,0%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Alex Ekwueme Federal University Ndufu-Alike,Nigeria,"12,962",16.8,0%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Ahliyya Amman University,,"4,192",11.8,57%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Farabi University College,Iraq,"4,309",16.0,0%,36 : 64,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Farahidi University,Iraq,"17,080",65.9,0%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Esraa University College,Iraq,"16,150",22.2,0%,,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Al-Hamdaniya,Iraq,"2,302",26.5,0%,32 : 68,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Alisher Navo’i Tashkent State University of Uzbek Language and Literature,,"3,614",12.9,6%,82 : 18,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Kitab University,Iraq,"7,206",16.9,0%,32 : 68,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Maarif University College,Iraq,"6,000",17.6,1%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Manara College for Medical Sciences,Iraq,"4,538",30.9,0%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Mustaqbal University,,"9,698",20.8,0%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Muthanna University,Iraq,"15,591",23.1,0%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Nahrain University,Iraq,"5,716",6.2,0%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Noor University College,Iraq,"6,454",40.6,0%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Al-Quds University,Palestine,"12,170",12.3,6%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Altınbaş University,Turkey,"8,204",13.7,47%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,American International University – Bangladesh,Bangladesh,"10,738",26.6,0%,24 : 76,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,American University of Madaba,Jordan,"1,685",17.9,26%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,American University of Nigeria,Nigeria,"1,100",10.1,2%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,American University of Ras Al Khaimah,United Arab Emirates,784,8.1,63%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Amity University, Gurugram",India,"5,695",14.8,2%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Amity University, Gwalior",India,"2,160",12.6,0%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Amity University Rajasthan, Jaipur",India,"2,971",12.5,0%,33 : 67,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Amity University, Mumbai",India,"4,358",22.7,0%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Andijan State Medical Institute,Uzbekistan,"6,831",9.5,5%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Andrés Bello Catholic University (UCAB),Venezuela,"10,857",17.8,1%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Anglo-American University,Czech Republic,620,12.7,80%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ankara Science University,Turkey,393,9.6,19%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Arab American University,Palestine,"12,070",31.1,44%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Arab Open University – Kuwait,Kuwait,"9,139",103.9,64%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Arab Open University Lebanon,Lebanon,"1,754",13.3,14%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Arts University Bournemouth,United Kingdom,"3,310",14.1,21%,69 : 31,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Antonio Nariño University,Colombia,"13,359",17.9,1%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of the Arts London,United Kingdom,"17,930",12.8,60%,76 : 24,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Arts University Plymouth,United Kingdom,"1,215",12.2,9%,72 : 28,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Asahi University,Japan,"2,607",8.7,5%,33 : 67,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ashikaga University,Japan,"1,572",19.9,15%,25 : 75,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ashur University College,Iraq,"1,059",8.1,0%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Audencia,France,"5,838",38.7,31%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Augustine University,Nigeria,238,3.7,0%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Azerbaijan University of Architecture and Construction,Azerbaijan,"9,846",18.9,3%,22 : 78,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Azerbaijan State University of Economics,Azerbaijan,"17,328",11.8,2%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Babcock University,Nigeria,"12,340",18.8,0%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Badr University in Cairo (BUC),Egypt,"14,021",20.7,2%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bakrie University,Indonesia,"3,219",33.9,0%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Balochistan University of Engineering and Technology, Khuzdar",Pakistan,"2,990",15.0,%,7 : 93,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Bamidele Olumilua University of Education, Science and Technology, Ikere-Ikiti",Nigeria,"4,329",14.9,0%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bandirma Onyedi Eylül University,Turkey,"15,473",47.0,7%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bangabandhu Sheikh Mujibur Rahman Agricultural University,Bangladesh,"1,760",8.4,3%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Barawa International University,Somalia,"13,200",35.3,3%,33 : 67,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bartin University,Turkey,"10,317",23.7,9%,44 : 56,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Basrah University College of Science and Technology,Iraq,"2,115",21.2,0%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bath Spa University,United Kingdom,"6,555",17.7,11%,68 : 32,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Batna 1,Algeria,"32,179",28.1,0%,64 : 36,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Baze University,Nigeria,"1,790",5.2,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bells University of Technology,Nigeria,"1,765",7.5,0%,27 : 73,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Benghazi,Libya,"76,419",16.3,2%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Benson Idahosa University,Nigeria,"3,859",16.6,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bernardo O’Higgins University,Chile,"7,554",18.1,4%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Beykent University,Turkey,"22,103",25.4,4%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bilecik Şeyh Edebali University,Turkey,"10,434",18.2,8%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Biruni University,Turkey,"5,111",16.9,7%,72 : 28,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Birzeit University,Palestine,"11,486",17.5,5%,63 : 37,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Bisha,Saudi Arabia,"13,919",11.8,1%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bishop Grosseteste University,United Kingdom,"2,010",21.2,4%,79 : 21,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Bogotá Jorge Tadeo Lozano,Colombia,"7,704",18.6,1%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Bolton,United Kingdom,"5,400",14.6,33%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Botswana International University of Science and Technology (BIUST),Botswana,"2,006",11.4,1%,22 : 78,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Bowen University,Nigeria,"4,161",12.0,0%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Buckinghamshire New University,United Kingdom,"5,290",17.3,32%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Buriram Rajabhat University,Thailand,"11,197",26.2,0%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Canadian International College (CIC) – Cairo,Egypt,"9,494",39.4,2%,32 : 68,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Catholic University in Erbil,Iraq,152,3.6,0%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Católica de Colombia,Colombia,"10,671",27.2,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,B. S. Abdur Rahman Crescent Institute of Science and Technology,India,"7,046",15.7,0%,24 : 76,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Católica de Cuenca,Ecuador,"16,046",20.6,2%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Católica San Pablo,Peru,"8,793",32.5,0%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Cebu Technological University,Philippines,"39,726",33.3,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,CECOS University of IT and Emerging Sciences,Pakistan,"2,405",13.0,0%,11 : 89,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Celaya,Mexico,"1,993",14.0,2%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Central European University,Austria,"1,276",7.6,83%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Central Punjab,Pakistan,"16,948",32.8,0%,36 : 64,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Centro Universitário de Jaguariúna,Brazil,"9,839",25.8,0%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Centro Universitário Max Planck,Brazil,"5,150",16.0,0%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,CES University,Colombia,"6,348",13.5,3%,70 : 30,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,César Ritz Colleges Switzerland,Switzerland,547,4.8,99%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,CETYS Universidad,Mexico,"4,960",9.6,13%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Chernihiv Polytechnic National University,Ukraine,"5,914",20.5,0%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Chichester,United Kingdom,"4,180",14.7,7%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Chitkara University,India,"12,895",15.5,3%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Christ University Bengaluru India,India,"23,637",20.2,2%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Coal City University,Nigeria,461,4.8,0%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Conservatoire for Dance and Drama,United Kingdom,940,10.4,35%,70 : 30,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Constantine 3,Algeria,"14,736",16.2,2%,73 : 27,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Courtauld Institute of Art,United Kingdom,510,12.8,51%,82 : 18,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Cranfield University,United Kingdom,"3,135",7.8,68%,30 : 70,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Cihan University – Erbil,Iraq,"4,457",23.3,1%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University for the Creative Arts,United Kingdom,"5,345",18.8,35%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"City University of Science and Information Technology, Peshawar",Pakistan,"4,163",21.3,2%,15 : 85,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Cross River University of Technology,Nigeria,"18,915",40.2,0%,36 : 64,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Cumbria,United Kingdom,"5,275",15.7,10%,70 : 30,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,C.V. Raman Global University,India,"6,991",15.8,4%,29 : 71,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Cyprus Health and Social Sciences University,Northern Cyprus,"2,354",35.1,75%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Daffodil International University (DIU),Bangladesh,"16,157",21.1,3%,34 : 66,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Debre Tabor University,Ethiopia,"8,414",7.4,0%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad del Sinú,Colombia,"4,350",25.6,0%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Delta University for Science and Technology,Egypt,"8,780",16.9,0%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Deraya University,Egypt,"4,275",18.9,0%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University for Development Studies,Ghana,"20,674",33.9,1%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Dhaka International University,Bangladesh,"6,033",29.9,8%,17 : 83,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Dhofar University,Oman,"3,122",17.8,6%,56 : 44,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Dhonburi Rajabhat University,Thailand,"4,210",16.1,1%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Dijlah University,Iraq,"8,864",28.5,0%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Diyala,Iraq,"29,461",17.9,0%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Denau Institute of Entrepreneurship and Pedagogy,Uzbekistan,"5,247",21.9,0%,63 : 37,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Doğuş University,Turkey,"9,149",30.2,1%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Donetsk National University of Economics and Trade named after Mykhailo Tuhan-Baranovsky (DonNUET),Ukraine,"1,068",18.4,2%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Dr. M.G.R. Educational and Research Institute,India,"23,097",13.3,0%,32 : 68,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Dubai,United Arab Emirates,"1,147",27.3,24%,29 : 71,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,DHA Suffa University,Pakistan,"1,807",14.5,0%,15 : 85,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Duhok,Iraq,"23,662",13.5,0%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,EAN University,Colombia,"10,000",142.9,0%,,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ebonyi State University,Nigeria,"25,204",27.5,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of El Oued,Algeria,"29,028",33.1,0%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,École Nationale Polytechnique,Algeria,"1,489",8.7,0%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,École Polytechnique d’Architecture et d’Urbanisme,Algeria,"1,371",10.1,0%,69 : 31,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Academy of Economic Studies of Moldova,Moldova,"5,525",25.3,1%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Edo State University Uzairue,Nigeria,"1,489",9.5,0%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"University of Education, Lahore",Pakistan,"27,105",33.1,0%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Effat University,Saudi Arabia,"1,067",9.4,26%,99 : 1,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Egerton University,Kenya,"20,472",40.1,1%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Egyptian Russian University,Egypt,"6,237",13.6,2%,39 : 61,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Egypt-Japan University of Science and Technology (E-JUST),Egypt,539,6.7,3%,33 : 67,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"University of Engineering and Technology, Mardan",Pakistan,"1,208",21.6,1%,5 : 95,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,ESIC,,"6,123",19.4,10%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidade Estadual de Goiás,Brazil,"19,519",15.4,0%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,European University Cyprus,,"5,229",19.4,49%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,European University of Valencia,Spain,"2,169",8.8,50%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Evangel University, Akaeze",Nigeria,987,5.7,0%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Externado University of Colombia,Colombia,"12,370",13.0,1%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Falmouth University,United Kingdom,"4,800",17.8,14%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Federal University Gashua,Nigeria,"1,091",3.3,0%,10 : 90,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Federal University of Kashere,Nigeria,"10,121",21.4,0%,30 : 70,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Federal University of Lafia,Nigeria,"12,456",22.8,0%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Federal University of Latin American Integration (UNILA),Brazil,"4,774",11.8,31%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Federal University of Petroleum Resources, Effurun",Nigeria,"7,313",39.7,0%,17 : 83,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Federal University of Technology, Minna",Nigeria,"24,671",27.8,0%,25 : 75,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Federal University of Technology, Owerri",Nigeria,"22,610",18.7,0%,31 : 69,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,First Technical University,Nigeria,"2,442",29.1,0%,29 : 71,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Fountain University,Nigeria,"1,420",18.9,0%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Franca,Brazil,"50,760",160.6,0%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Fukui Prefectural University,Japan,"1,772",10.9,1%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Fundação Oswaldo Cruz,Brazil,"3,699",,%,,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Fundación Universitaria del Área Andina,Colombia,"40,193",35.9,0%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Future University in Egypt,Egypt,"9,066",10.7,10%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,General Sir John Kotelawala Defence University,Sri Lanka,"5,136",21.0,2%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ghulam Ishaq Khan Institute of Engineering Sciences and Technology,Pakistan,"2,046",20.5,0%,10 : 90,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,GLA University,India,"9,680",17.2,0%,27 : 73,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Fergana Polytechnic Institute,Uzbekistan,"14,812",23.6,0%,20 : 80,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Glasgow School of Art,United Kingdom,"2,240",16.0,44%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Gloucestershire,United Kingdom,"6,605",17.2,11%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Government College Women University Faisalabad,Pakistan,"14,424",56.3,0%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Government College Women University, Sialkot",Pakistan,"7,023",34.8,0%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"The Graduate University for Advanced Studies, SOKENDAI",Japan,506,0.4,31%,29 : 71,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Greenwich University,Pakistan,"1,261",15.6,3%,35 : 65,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Gregory University Uturu,Nigeria,"2,025",7.3,0%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Guildhall School of Music and Drama,United Kingdom,995,5.2,34%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Gulf College,Oman,"2,780",27.5,3%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Harper Adams University,United Kingdom,"2,195",13.3,11%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Hartpury University,United Kingdom,"1,655",23.6,10%,64 : 36,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Hassiba Benbouali University of Chlef,Algeria,"30,121",22.3,1%,71 : 29,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Hawler Medical University,Iraq,"4,152",7.2,1%,63 : 37,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Health and Allied Sciences,Ghana,"6,445",23.5,0%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"University of Health Sciences, Turkey",Turkey,"21,322",9.0,5%,34 : 66,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of the Highlands and Islands,United Kingdom,"7,200",130.9,12%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Hindustan Institute of Technology and Science,India,"6,033",12.1,1%,36 : 64,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Hiroshima Shudo University,Japan,"4,776",16.6,0%,39 : 61,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Hiroshima Institute of Technology,Japan,"4,628",25.4,0%,10 : 90,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Hitotsubashi University,Japan,"6,212",17.0,15%,32 : 68,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Huachiew Chalermprakiet University,Thailand,"7,297",16.0,7%,79 : 21,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Human Development,Iraq,"2,583",17.1,3%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Hyogo University of Teacher Education,Japan,"1,161",8.0,2%,68 : 32,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,IFHE Hyderabad,India,"6,931",20.3,0%,39 : 61,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ignatius Ajuru University of Education,Nigeria,"29,785",75.2,0%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ilma University,Pakistan,"4,107",22.4,0%,21 : 79,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,IMT Mines Alès,France,"1,425",12.8,15%,31 : 69,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Indira Gandhi Delhi Technical University for Women,India,"3,673",53.2,0%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Institute of Cancer Research,United Kingdom,195,2.8,33%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,International Christian University,Japan,"2,913",12.6,11%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,International University of Rabat,Morocco,"5,830",33.3,2%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ionian University,Greece,"8,169",41.9,3%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ion Mincu University of Architecture and Urbanism,Romania,"3,173",12.8,4%,71 : 29,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Islamia College Peshawar,Pakistan,"6,732",25.5,3%,27 : 73,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,The Islamic University,Iraq,"4,152",9.1,2%,70 : 30,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Islamic University of Gaza,Palestine,"17,058",47.0,1%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Islamic University of Madinah,Saudi Arabia,"11,703",7.7,75%,4 : 96,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Isra University,Jordan,"4,864",19.6,18%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Israel Technological University,Ecuador,"3,070",34.9,1%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Istanbul Aydın University,Turkey,"27,826",27.9,13%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Istanbul Gelişim University,Turkey,"18,774",23.4,15%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,IUBAT – International University of Business Agriculture and Technology,Bangladesh,"6,435",22.1,1%,30 : 70,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universita IULM,,"7,841",15.9,7%,72 : 28,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Jabir ibn Hayyan Medical University,Iraq,"1,532",16.1,0%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Japan Advanced Institute of Science and Technology (JAIST),Japan,"1,218",7.8,42%,23 : 77,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Jashore University of Science and Technology,Bangladesh,"4,741",20.1,0%,30 : 70,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Jerash Private University,Jordan,"3,362",18.0,31%,38 : 62,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Jijel,Algeria,"21,228",20.2,0%,63 : 37,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Jos,Nigeria,"37,885",23.4,0%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kamianets-Podіlskyi Ivan Ohiienko National University,Ukraine,"2,944",7.8,0%,64 : 36,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kampala International University,Uganda,"23,800",7.0,30%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Karaganda University of Kazpotrebsoyuz,Kazakhstan,"5,076",13.3,1%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Karshi State University,Uzbekistan,"13,909",21.0,0%,63 : 37,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kastamonu University,Turkey,"17,597",41.0,15%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kazakh National Pedagogical University Abai,Kazakhstan,"13,479",12.6,2%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Kelaniya,Sri Lanka,"17,082",17.1,3%,65 : 35,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Kerbala,Iraq,"20,327",16.5,0%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kermanshah University of Technology,Iran,"2,251",13.6,0%,38 : 62,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kharkiv University of Humanities “People’s Ukrainian Academy”,Ukraine,455,5.5,1%,81 : 19,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kadir Has University,Turkey,"4,896",23.5,3%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Khazar University,Azerbaijan,"2,610",11.3,7%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Khomein University of Medical Sciences,Iran,782,31.3,0%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Khulna University,Bangladesh,"5,921",11.8,0%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Khwaja Fareed University of Engineering and Information Technology,Pakistan,"10,713",21.6,0%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Khyber Medical University,Pakistan,"4,364",16.5,3%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kings University,Nigeria,132,3.3,0%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Kirkuk,Iraq,"22,867",24.8,0%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kitami Institute of Technology,Japan,"1,965",14.1,4%,13 : 87,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kobe City University of Foreign Studies,Japan,"2,287",15.3,4%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kobe Gakuin University,Japan,"11,557",34.3,2%,38 : 62,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kocaeli Health and Technology University,Turkey,"2,784",31.6,4%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kokshetau State University,Kazakhstan,"7,047",11.3,5%,65 : 35,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Konan Women’s University,Japan,"4,416",24.7,1%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Konya Technical University,Turkey,"13,016",30.1,4%,26 : 74,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,KTO Karatay University,Turkey,"8,370",26.2,3%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kyiv National Economic University,Ukraine,"10,585",9.4,2%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kyoai Gakuen University,Japan,"1,089",19.4,4%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Kyrgyz-Turkish Manas University,Kyrgyzstan,"5,448",14.5,17%,72 : 28,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Laghouat,Algeria,"34,345",35.2,0%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Lagos State University,Nigeria,"28,289",37.1,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Knowledge University,Iraq,"2,125",16.6,1%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Lampung,Indonesia,"25,782",19.9,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Landmark University,Nigeria,"3,429",13.4,0%,34 : 66,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,La Salle University,Colombia,"9,869",20.1,1%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Las Américas (UDLA),Ecuador,"12,767",13.7,1%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Leeds Arts University,United Kingdom,"2,065",15.3,12%,76 : 24,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Leeds Conservatoire,United Kingdom,"1,260",19.4,12%,33 : 67,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Leeds Trinity University,United Kingdom,"3,230",24.8,9%,65 : 35,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Koya University,Iraq,"4,536",9.4,1%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Lesya Ukrainka Volyn National University,Ukraine,"8,039",10.1,1%,68 : 32,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Liberal Arts Bangladesh,Bangladesh,"4,475",20.2,0%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Liverpool Hope University,United Kingdom,"4,025",15.2,13%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Liverpool Institute for Performing Arts,United Kingdom,865,17.3,23%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Liverpool School of Tropical Medicine,United Kingdom,210,2.2,39%,65 : 35,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,The LNM Institute of Information Technology,India,"2,136",22.3,0%,17 : 83,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Loei Rajabhat University,Thailand,"7,433",19.6,0%,70 : 30,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,London Business School,United Kingdom,"1,995",18.1,91%,38 : 62,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,London School of Hygiene and Tropical Medicine,United Kingdom,825,1.8,62%,70 : 30,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,London Metropolitan University,United Kingdom,"8,260",21.5,45%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Los Lagos,Chile,"5,567",16.6,0%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Loyola,Spain,"3,319",13.3,4%,65 : 35,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Malawi University of Science and Technology (MUST),Malawi,"2,356",12.3,0%,28 : 72,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Management Development Institute (MDI),India,982,12.8,0%,21 : 79,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Marian College Kuttikkanam (Autonomous),India,"1,755",17.0,0%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Maritime University of Szczecin,Poland,"2,559",24.7,13%,26 : 74,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Mascara,Algeria,"21,682",12.0,0%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Mayor,Chile,"20,330",11.0,2%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Medellín,Colombia,"9,371",17.6,2%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Meikai University,Japan,"4,326",16.1,17%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Michael and Cecilia Ibru University,Nigeria,405,6.9,0%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Michael Okpara University of Agriculture, Umudike",Nigeria,"23,198",21.7,0%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Middle Technical University,Iraq,"37,101",26.7,0%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Mindanao State University – Iligan Institute of Technology,Philippines,"9,348",18.6,0%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,MIOTI Tech and Business School,Spain,115,38.3,9%,31 : 69,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Mirpur University of Science and Technology,Pakistan,"7,544",19.8,0%,44 : 56,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Misan,Iraq,"11,855",15.0,0%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Misr University for Science and Technology,Egypt,"24,742",18.8,6%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Mahatma Jyotiba Phule Rohilkhand University,India,"3,999",20.1,0%,31 : 69,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,M. Kumarasamy College of Engineering,India,"3,772",11.7,0%,27 : 73,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"MNS University of Agriculture, Multan",Pakistan,"3,266",23.5,0%,22 : 78,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Modern University for Business and Science,Lebanon,"1,896",16.9,31%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Université Mohamed El Bachir El Ibrahimi de Bordj Bou Arréridj,Algeria,"18,000",30.9,0%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Monteávila,Venezuela,"1,054",5.7,0%,71 : 29,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Monterrey,Mexico,"10,814",31.2,1%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,October University for Modern Sciences and Arts (MSA),Egypt,"12,444",11.4,2%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Muban Chombueng Rajabhat University,Thailand,"4,951",17.9,0%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Mukogawa Women’s University,Japan,"8,394",26.4,0%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Mulungushi University,Zambia,"6,988",54.6,0%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Mutah University,Jordan,"11,486",16.1,15%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Nacional de Chimborazo,Ecuador,"8,478",14.7,1%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Nacional de Itapúa,Paraguay,"5,595",5.3,0%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Nagoya University of Commerce & Business,Japan,"3,549",29.9,8%,25 : 75,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Najran University,Saudi Arabia,"17,967",16.9,1%,69 : 31,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Nakhchivan State University,Azerbaijan,"7,620",14.1,20%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Namangan Engineering Construction Institute,Uzbekistan,"3,881",11.8,0%,18 : 82,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Namangan Institute of Engineering and Technology,Uzbekistan,"5,784",18.1,0%,21 : 79,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Namangan State University,Uzbekistan,"20,636",31.9,0%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Nara Institute of Science and Technology,Japan,"1,043",5.1,24%,23 : 77,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Nara Women’s University,Japan,"2,612",6.2,5%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National Aviation University,Ukraine,"14,239",10.9,5%,39 : 61,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National University of Computer and Emerging Sciences,Pakistan,"8,291",14.8,2%,22 : 78,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National Film and Television School,United Kingdom,395,7.2,42%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National University of Medical Sciences (NUMS),Pakistan,"1,654",5.0,0%,72 : 28,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National University of Mongolia,Mongolia,"18,647",26.5,2%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National University Odessa Law Academy,Ukraine,"10,503",17.7,1%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,The National University of Ostroh Academy,Ukraine,"3,432",8.8,1%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National Polytechnic University of Armenia,Armenia,"5,742",8.7,2%,20 : 80,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National University of Quilmes,Argentina,"33,703",27.3,2%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"National University of Science and Technology, Oman",Oman,"3,986",18.8,14%,63 : 37,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"National University, Sudan",Sudan,"5,132",12.3,6%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National Taichung University of Science and Technology,Taiwan,"15,512",14.9,1%,70 : 30,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National Transport University,Ukraine,"7,262",11.5,2%,31 : 69,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National University of Water and Environmental Engineering,Ukraine,"4,344",9.8,3%,34 : 66,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National University “Yuri Kondratyuk Poltava Polytechnic”,Ukraine,"5,067",8.1,10%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Navoi State Pedagogical Institute,Uzbekistan,"12,791",26.4,0%,72 : 28,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universitas Negeri Surabaya,Indonesia,"29,840",24.5,0%,64 : 36,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Newman University,United Kingdom,"2,325",17.9,12%,76 : 24,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Niger Delta University,Nigeria,"20,608",25.9,0%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Nigerian Police Academy, Wudil",Nigeria,"3,087",21.9,0%,16 : 84,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Nihon Pharmaceutical University,Japan,"1,618",18.4,4%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Niigata University of Health and Welfare,Japan,"4,410",17.2,0%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Niigata Prefecture,Japan,"1,196",14.8,1%,76 : 24,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Nile University,Egypt,"2,168",14.4,2%,28 : 72,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ninevah University,Iraq,"3,707",13.6,0%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Nitte (Deemed to be University),India,"4,408",7.7,1%,65 : 35,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Northampton,United Kingdom,"9,945",16.9,33%,64 : 36,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Northeast Ohio Medical University,United States,955,11.8,0%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Northern Technical University,Iraq,"21,400",27.5,0%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Norwich University of the Arts,United Kingdom,"2,290",15.8,13%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Nova Gorica,Slovenia,416,3.5,54%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Novena University,Nigeria,"1,981",25.4,0%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Nursing School of Coimbra,Portugal,"2,138",23.0,7%,85 : 15,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,October 6 University,Egypt,"25,927",20.8,3%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Oguz Han Engineering and Technology University of Turkmenistan,Turkmenistan,"2,223",13.2,0%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Olusegun Agagu University of Science and Technology,Nigeria,"6,474",29.4,0%,28 : 72,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,ORT Uruguay University,Uruguay,"4,151",6.7,2%,47 : 53,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ostrogradsky National University of Kremenchuk,Ukraine,"4,106",11.8,0%,38 : 62,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Palestine Polytechnic University,Palestine,"4,812",27.0,3%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Palestine Technical University – Kadoorie,Palestine,"7,013",18.3,4%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Panteion University of Social and Political Sciences,Greece,"12,615",62.5,2%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Paris University of International Education,France,445,29.7,100%,32 : 68,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Pavlo Tychyna Uman State Pedagogical University,Ukraine,"9,149",17.5,2%,32 : 68,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Petra,Jordan,"6,538",19.9,21%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Pharos University,Egypt,"11,106",14.1,6%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Phayao,Thailand,"18,057",20.7,0%,68 : 32,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Philadelphia University (Jordan),Jordan,"3,615",20.1,36%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Plymouth Marjon University,United Kingdom,"1,845",18.5,3%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Polytechnic University of Tirana,Albania,"8,591",16.2,2%,,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Poltava V.G. Korolenko National Pedagogical University (PNPU),Ukraine,"3,812",5.8,0%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Polytechnic Institute of Setúbal,Portugal,"7,829",17.3,6%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad Popular Autónoma del Estado de Puebla,Mexico,"11,279",16.1,1%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Prefectural University of Hiroshima,Japan,"2,623",12.3,2%,65 : 35,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Prince Sultan University (PSU),,"4,772",19.4,15%,56 : 44,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"University of Professional Studies, Accra",Ghana,"14,017",39.8,0%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Puthisastra,Cambodia,"1,649",2.9,0%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Queen Margaret University,United Kingdom,"3,905",20.6,31%,77 : 23,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Rajamangala University of Technology Isan,Thailand,"24,166",9.5,0%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ravensbourne,United Kingdom,"2,375",22.6,30%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Rawalpindi Medical University,Pakistan,"3,304",8.4,1%,69 : 31,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Rennes School of Business,France,"3,098",31.3,33%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,REVA University,India,"13,467",21.3,1%,33 : 67,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Rose Bruford College,United Kingdom,655,18.7,18%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Royal Agricultural University,United Kingdom,"1,015",20.3,14%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Royal Central School of Speech and Drama, University of London",United Kingdom,"1,035",15.9,36%,68 : 32,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Royal College of Art,United Kingdom,"2,405",20.9,77%,69 : 31,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Royal Conservatoire of Scotland,United Kingdom,"1,190",10.8,38%,57 : 43,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Royal Academy of Music,United Kingdom,830,9.8,47%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Royal College of Music,United Kingdom,860,10.8,57%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Royal Northern College of Music,United Kingdom,870,10.9,33%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Sadat City,Egypt,"30,141",34.4,4%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Saint Joseph,,"1,141",10.7,24%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sakon Nakhon Rajabhat University,Thailand,"9,328",20.1,0%,64 : 36,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Salahaddin University,Iraq,"25,189",10.7,1%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Salem University,Nigeria,513,3.9,1%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Samarkand State University,Uzbekistan,"15,754",17.2,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Samarkand State Institute of Foreign Languages,Uzbekistan,"5,010",10.9,0%,74 : 26,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Samuel Adegboyega University,Nigeria,390,5.4,0%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad San Ignacio de Loyola,Peru,"21,556",35.9,1%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of San Martín de Porres,Peru,"40,234",18.0,0%,61 : 39,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Santo Tomas,Philippines,"26,511",13.3,7%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Satya Wacana Christian University,Indonesia,"16,132",35.5,0%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Saudi Electronic University,Saudi Arabia,"21,756",24.3,6%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,SBS Swiss Business School,Switzerland,"1,644",10.3,57%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Science and Technology of Southern Philippines (USTP),Philippines,"9,222",32.5,0%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sefako Makgatho Health Sciences University,South Africa,"6,306",9.9,1%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Senshu University,Japan,"17,933",23.0,3%,35 : 65,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Shaheed Benazir Bhutto Women University Peshawar,Pakistan,"5,677",38.6,0%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Shaheed Zulfiqar Ali Bhutto Medical University,Pakistan,"4,803",8.6,1%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,The University of Shiga Prefecture,Japan,"2,853",14.1,1%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Shonan Institute of Technology,Japan,"2,234",29.4,9%,7 : 93,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Samarkand State Medical University,Uzbekistan,"7,200",10.2,1%,41 : 59,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Shri Mata Vaishno Devi University,India,"1,805",15.0,0%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sikkim Manipal University,India,"3,013",10.5,2%,31 : 69,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Silesian University in Opava,Czech Republic,"5,322",20.4,6%,71 : 29,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Simón Bolívar University,Venezuela,"4,462",10.5,0%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Simón Bolívar University (Colombia),Colombia,"18,482",18.2,1%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sir Syed University of Engineering and Technology,Pakistan,"5,879",14.1,0%,14 : 86,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sokoto State University,Nigeria,"8,244",23.8,0%,25 : 75,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Solent University, Southampton",United Kingdom,"8,640",16.1,30%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Sopron,Hungary,"2,847",14.9,3%,63 : 37,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Soran University,Iraq,"4,596",9.5,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of South Santa Catarina (Unisul),Brazil,"16,602",18.8,0%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,SR University,India,"3,238",13.1,0%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sri Balaji Vidyapeeth,India,"3,850",7.4,1%,53 : 47,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Sri Jayewardenepura,Sri Lanka,"17,069",23.4,0%,62 : 38,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sri Lanka Institute of Information Technology,Sri Lanka,"11,151",38.7,0%,37 : 63,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sri Padmavati Mahila Visvavidyalayam (Women's University),India,"5,475",19.6,6%,83 : 17,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,State University of Bahia,Brazil,"20,384",10.2,0%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,State Energy Institute of Turkmenistan,Turkmenistan,"2,134",11.5,2%,28 : 72,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"St Mary’s University College, Belfast",United Kingdom,915,22.9,48%,74 : 26,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"St Mary’s University, Twickenham",United Kingdom,"4,740",18.2,25%,54 : 46,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Stranmillis University College,United Kingdom,"1,060",23.6,18%,79 : 21,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Suez University,Egypt,"18,010",21.8,2%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Suffolk,United Kingdom,"3,245",16.6,14%,71 : 29,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sugiyama Jogakuen University,Japan,"6,064",29.4,0%,100 : 0,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Sulaimani Polytechnic University,Iraq,"3,762",11.4,0%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Suratthani Rajabhat University,Thailand,"12,086",24.6,0%,71 : 29,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Széchenyi István University,Hungary,"9,299",14.7,5%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tafila Technical University,Jordan,"4,094",21.9,1%,43 : 57,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Taipei,Taiwan,"7,988",17.6,2%,60 : 40,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tama Art University,Japan,"4,719",32.8,11%,73 : 27,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tarlac Agricultural University,Philippines,"5,351",24.3,0%,56 : 44,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tarsus University,Turkey,"2,556",27.8,2%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent Institute of Finance,Uzbekistan,"8,370",21.2,1%,29 : 71,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent University of Information Technologies,Uzbekistan,"14,404",15.5,0%,22 : 78,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent Institute of Irrigation and Agricultural Mechanisation,Uzbekistan,"5,750",7.1,5%,24 : 76,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent Medical Academy,Uzbekistan,"6,495",8.8,2%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent Pediatric Medical Institute,Uzbekistan,"5,704",10.1,1%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent Pharmaceutical Institute,Uzbekistan,"3,313",12.2,13%,64 : 36,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent State Agrarian University,Uzbekistan,"11,560",13.5,0%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent State Dental Institute,Uzbekistan,"4,609",8.9,3%,52 : 48,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent State University of Law,Uzbekistan,"4,819",10.6,1%,27 : 73,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Université Sultan Moulay Slimane,Morocco,"31,042",50.0,0%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent State University of Oriental Studies,Uzbekistan,"4,291",16.1,1%,51 : 49,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent State Technical University,Uzbekistan,"14,591",14.2,0%,17 : 83,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent State Transport University,Uzbekistan,"17,319",24.9,0%,9 : 91,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent Institute of Textile and Light Industry,Uzbekistan,"4,266",11.7,0%,40 : 60,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tatung University,Taiwan,"4,036",19.6,3%,39 : 61,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tecmilenio University,Mexico,"2,932",16.5,1%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tecnológico de Costa Rica,Costa Rica,"10,651",13.8,2%,35 : 65,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Instituto Tecnológico Metropolitano,Colombia,"25,333",28.6,0%,44 : 56,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Institut Teknologi Nasional Bandung (ITENAS Bandung),Indonesia,"5,548",23.0,0%,27 : 73,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Telafer,Iraq,"1,456",30.3,0%,44 : 56,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tenri University,Japan,"3,147",22.5,5%,34 : 66,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Termez State University,Uzbekistan,"25,070",35.7,1%,49 : 51,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Termez Institute of Engineering and Technology,Uzbekistan,"4,296",36.7,0%,15 : 85,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tikrit University,Iraq,"36,905",13.1,0%,36 : 64,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tokyo University of Foreign Studies,Japan,"4,413",17.9,11%,66 : 34,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Tashkent State University of Economics,,"8,304",14.2,1%,27 : 73,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Toyama Prefectural University,Japan,"1,630",8.2,2%,26 : 74,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Trinity Laban Conservatoire of Music and Dance,United Kingdom,"1,180",9.8,31%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Turin Polytechnic University in Tashkent,Uzbekistan,"1,752",18.8,4%,13 : 87,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Ubon Ratchathani University,Thailand,"15,717",22.1,0%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,UBT,Kosovo,"9,757",15.5,4%,45 : 55,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,UIN Sulthan Thaha Saifuddin Jambi,Indonesia,"16,859",47.5,1%,56 : 44,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Umaru Musa Yar’adua University,Nigeria,"10,334",20.3,0%,27 : 73,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Unichristus,Brazil,"5,497",15.4,0%,67 : 33,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,United International University,Bangladesh,"4,632",21.4,1%,30 : 70,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad del Pacífico Ecuador,Ecuador,651,13.9,2%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University College of Osteopathy,United Kingdom,390,11.1,28%,55 : 45,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Institute of Telecommunications and Informatics of Turkmenistan,Turkmenistan,"2,900",9.7,0%,24 : 76,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,UNNOBA,Argentina,"8,614",12.4,2%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Urgench State University,Uzbekistan,"22,548",21.3,5%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Üsküdar University,Turkey,"22,967",43.3,11%,64 : 36,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Usmanu Danfodiyo University, Sokoto",Nigeria,"24,553",19.1,0%,31 : 69,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Universidad UTE,Ecuador,"10,628",19.0,1%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Uyo,Nigeria,"18,911",30.4,0%,42 : 58,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,National University of Uzbekistan named after Mirzo Ulugbek,,"21,785",16.4,1%,50 : 50,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Valahia University of Targoviste,Romania,"5,551",20.6,1%,46 : 54,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Vale do Itajaí,Brazil,"9,018",18.0,1%,58 : 42,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Varendra University,Bangladesh,"4,213",28.3,0%,36 : 64,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Varna University of Management,Bulgaria,618,19.3,33%,48 : 52,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,"Veritas University, Abuja",Nigeria,"3,291",13.2,2%,56 : 44,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,University of Veterinary Medicine and Pharmacy in Košice,Slovakia,"1,717",7.2,40%,83 : 17,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Vila Velha University,Brazil,"4,902",18.5,1%,59 : 41,n/a,n/a,n/a,n/a,n/a,n/a
-Reporter,Virtual University of Tunis,Tunisia,"2,048",43.6,1%,,n/a,n/a,n/a,n/a,n/a,n/a
+Reporter,University Abdelhamid Ibn Badis Mostaganem,Algeria,"24,493",19.3,1%,67 : 33,,,,,,
+Reporter,Abdullah Gül University,Turkey,"2,509",20.1,9%,43 : 57,,,,,,
+Reporter,Abertay University,United Kingdom,"4,010",21.7,22%,48 : 52,,,,,,
+Reporter,"Adamawa State University, Mubi",Nigeria,"17,840",70.0,0%,35 : 65,,,,,,
+Reporter,AECC University College,United Kingdom,615,15.4,43%,47 : 53,,,,,,
+Reporter,Afe Babalola University,,"9,085",11.1,1%,59 : 41,,,,,,
+Reporter,Aga Khan University,Pakistan,"1,356",2.3,1%,65 : 35,,,,,,
+Reporter,Ahl Al Bayt University,Iraq,"2,879",14.3,1%,51 : 49,,,,,,
+Reporter,Aichi Prefectural University,Japan,"3,302",15.2,1%,72 : 28,,,,,,
+Reporter,Air University,Pakistan,"6,404",15.2,0%,32 : 68,,,,,,
+Reporter,Ajeenkya DY Patil University,India,"2,793",16.4,0%,24 : 76,,,,,,
+Reporter,Tashkent Metropolitan University,Uzbekistan,317,22.6,5%,51 : 49,,,,,,
+Reporter,Ajman University,United Arab Emirates,"5,050",16.4,82%,59 : 41,,,,,,
+Reporter,Akita Prefectural University,Japan,"1,826",8.5,1%,26 : 74,,,,,,
+Reporter,Akwa Ibom State University,Nigeria,"10,026",20.7,0%,42 : 58,,,,,,
+Reporter,Al-Ayen University,Iraq,"11,000",51.2,0%,66 : 34,,,,,,
+Reporter,Alex Ekwueme Federal University Ndufu-Alike,Nigeria,"12,962",16.8,0%,52 : 48,,,,,,
+Reporter,Al-Ahliyya Amman University,,"4,192",11.8,57%,50 : 50,,,,,,
+Reporter,Al-Farabi University College,Iraq,"4,309",16.0,0%,36 : 64,,,,,,
+Reporter,Al-Farahidi University,Iraq,"17,080",65.9,0%,47 : 53,,,,,,
+Reporter,Al-Esraa University College,Iraq,"16,150",22.2,0%,,,,,,,
+Reporter,University of Al-Hamdaniya,Iraq,"2,302",26.5,0%,32 : 68,,,,,,
+Reporter,Alisher Navo’i Tashkent State University of Uzbek Language and Literature,,"3,614",12.9,6%,82 : 18,,,,,,
+Reporter,Al-Kitab University,Iraq,"7,206",16.9,0%,32 : 68,,,,,,
+Reporter,Al-Maarif University College,Iraq,"6,000",17.6,1%,60 : 40,,,,,,
+Reporter,Al-Manara College for Medical Sciences,Iraq,"4,538",30.9,0%,47 : 53,,,,,,
+Reporter,Al-Mustaqbal University,,"9,698",20.8,0%,41 : 59,,,,,,
+Reporter,Al-Muthanna University,Iraq,"15,591",23.1,0%,55 : 45,,,,,,
+Reporter,Al-Nahrain University,Iraq,"5,716",6.2,0%,49 : 51,,,,,,
+Reporter,Al-Noor University College,Iraq,"6,454",40.6,0%,62 : 38,,,,,,
+Reporter,Al-Quds University,Palestine,"12,170",12.3,6%,62 : 38,,,,,,
+Reporter,Altınbaş University,Turkey,"8,204",13.7,47%,41 : 59,,,,,,
+Reporter,American International University – Bangladesh,Bangladesh,"10,738",26.6,0%,24 : 76,,,,,,
+Reporter,American University of Madaba,Jordan,"1,685",17.9,26%,47 : 53,,,,,,
+Reporter,American University of Nigeria,Nigeria,"1,100",10.1,2%,49 : 51,,,,,,
+Reporter,American University of Ras Al Khaimah,United Arab Emirates,784,8.1,63%,50 : 50,,,,,,
+Reporter,"Amity University, Gurugram",India,"5,695",14.8,2%,40 : 60,,,,,,
+Reporter,"Amity University, Gwalior",India,"2,160",12.6,0%,43 : 57,,,,,,
+Reporter,"Amity University Rajasthan, Jaipur",India,"2,971",12.5,0%,33 : 67,,,,,,
+Reporter,"Amity University, Mumbai",India,"4,358",22.7,0%,48 : 52,,,,,,
+Reporter,Andijan State Medical Institute,Uzbekistan,"6,831",9.5,5%,47 : 53,,,,,,
+Reporter,Andrés Bello Catholic University (UCAB),Venezuela,"10,857",17.8,1%,50 : 50,,,,,,
+Reporter,Anglo-American University,Czech Republic,620,12.7,80%,40 : 60,,,,,,
+Reporter,Ankara Science University,Turkey,393,9.6,19%,62 : 38,,,,,,
+Reporter,Arab American University,Palestine,"12,070",31.1,44%,58 : 42,,,,,,
+Reporter,Arab Open University – Kuwait,Kuwait,"9,139",103.9,64%,57 : 43,,,,,,
+Reporter,Arab Open University Lebanon,Lebanon,"1,754",13.3,14%,47 : 53,,,,,,
+Reporter,Arts University Bournemouth,United Kingdom,"3,310",14.1,21%,69 : 31,,,,,,
+Reporter,Antonio Nariño University,Colombia,"13,359",17.9,1%,53 : 47,,,,,,
+Reporter,University of the Arts London,United Kingdom,"17,930",12.8,60%,76 : 24,,,,,,
+Reporter,Arts University Plymouth,United Kingdom,"1,215",12.2,9%,72 : 28,,,,,,
+Reporter,Asahi University,Japan,"2,607",8.7,5%,33 : 67,,,,,,
+Reporter,Ashikaga University,Japan,"1,572",19.9,15%,25 : 75,,,,,,
+Reporter,Ashur University College,Iraq,"1,059",8.1,0%,59 : 41,,,,,,
+Reporter,Audencia,France,"5,838",38.7,31%,52 : 48,,,,,,
+Reporter,Augustine University,Nigeria,238,3.7,0%,40 : 60,,,,,,
+Reporter,Azerbaijan University of Architecture and Construction,Azerbaijan,"9,846",18.9,3%,22 : 78,,,,,,
+Reporter,Azerbaijan State University of Economics,Azerbaijan,"17,328",11.8,2%,51 : 49,,,,,,
+Reporter,Babcock University,Nigeria,"12,340",18.8,0%,53 : 47,,,,,,
+Reporter,Badr University in Cairo (BUC),Egypt,"14,021",20.7,2%,55 : 45,,,,,,
+Reporter,Bakrie University,Indonesia,"3,219",33.9,0%,57 : 43,,,,,,
+Reporter,"Balochistan University of Engineering and Technology, Khuzdar",Pakistan,"2,990",15.0,%,7 : 93,,,,,,
+Reporter,"Bamidele Olumilua University of Education, Science and Technology, Ikere-Ikiti",Nigeria,"4,329",14.9,0%,60 : 40,,,,,,
+Reporter,Bandirma Onyedi Eylül University,Turkey,"15,473",47.0,7%,45 : 55,,,,,,
+Reporter,Bangabandhu Sheikh Mujibur Rahman Agricultural University,Bangladesh,"1,760",8.4,3%,53 : 47,,,,,,
+Reporter,Barawa International University,Somalia,"13,200",35.3,3%,33 : 67,,,,,,
+Reporter,Bartin University,Turkey,"10,317",23.7,9%,44 : 56,,,,,,
+Reporter,Basrah University College of Science and Technology,Iraq,"2,115",21.2,0%,46 : 54,,,,,,
+Reporter,Bath Spa University,United Kingdom,"6,555",17.7,11%,68 : 32,,,,,,
+Reporter,University of Batna 1,Algeria,"32,179",28.1,0%,64 : 36,,,,,,
+Reporter,Baze University,Nigeria,"1,790",5.2,0%,50 : 50,,,,,,
+Reporter,Bells University of Technology,Nigeria,"1,765",7.5,0%,27 : 73,,,,,,
+Reporter,University of Benghazi,Libya,"76,419",16.3,2%,58 : 42,,,,,,
+Reporter,Benson Idahosa University,Nigeria,"3,859",16.6,0%,50 : 50,,,,,,
+Reporter,Bernardo O’Higgins University,Chile,"7,554",18.1,4%,66 : 34,,,,,,
+Reporter,Beykent University,Turkey,"22,103",25.4,4%,47 : 53,,,,,,
+Reporter,Bilecik Şeyh Edebali University,Turkey,"10,434",18.2,8%,42 : 58,,,,,,
+Reporter,Biruni University,Turkey,"5,111",16.9,7%,72 : 28,,,,,,
+Reporter,Birzeit University,Palestine,"11,486",17.5,5%,63 : 37,,,,,,
+Reporter,University of Bisha,Saudi Arabia,"13,919",11.8,1%,66 : 34,,,,,,
+Reporter,Bishop Grosseteste University,United Kingdom,"2,010",21.2,4%,79 : 21,,,,,,
+Reporter,University of Bogotá Jorge Tadeo Lozano,Colombia,"7,704",18.6,1%,55 : 45,,,,,,
+Reporter,University of Bolton,United Kingdom,"5,400",14.6,33%,61 : 39,,,,,,
+Reporter,Botswana International University of Science and Technology (BIUST),Botswana,"2,006",11.4,1%,22 : 78,,,,,,
+Reporter,Bowen University,Nigeria,"4,161",12.0,0%,58 : 42,,,,,,
+Reporter,Buckinghamshire New University,United Kingdom,"5,290",17.3,32%,60 : 40,,,,,,
+Reporter,Buriram Rajabhat University,Thailand,"11,197",26.2,0%,53 : 47,,,,,,
+Reporter,Canadian International College (CIC) – Cairo,Egypt,"9,494",39.4,2%,32 : 68,,,,,,
+Reporter,Catholic University in Erbil,Iraq,152,3.6,0%,58 : 42,,,,,,
+Reporter,Universidad Católica de Colombia,Colombia,"10,671",27.2,0%,50 : 50,,,,,,
+Reporter,B. S. Abdur Rahman Crescent Institute of Science and Technology,India,"7,046",15.7,0%,24 : 76,,,,,,
+Reporter,Universidad Católica de Cuenca,Ecuador,"16,046",20.6,2%,57 : 43,,,,,,
+Reporter,Universidad Católica San Pablo,Peru,"8,793",32.5,0%,53 : 47,,,,,,
+Reporter,Cebu Technological University,Philippines,"39,726",33.3,0%,50 : 50,,,,,,
+Reporter,CECOS University of IT and Emerging Sciences,Pakistan,"2,405",13.0,0%,11 : 89,,,,,,
+Reporter,University of Celaya,Mexico,"1,993",14.0,2%,50 : 50,,,,,,
+Reporter,Central European University,Austria,"1,276",7.6,83%,55 : 45,,,,,,
+Reporter,University of Central Punjab,Pakistan,"16,948",32.8,0%,36 : 64,,,,,,
+Reporter,Centro Universitário de Jaguariúna,Brazil,"9,839",25.8,0%,58 : 42,,,,,,
+Reporter,Centro Universitário Max Planck,Brazil,"5,150",16.0,0%,61 : 39,,,,,,
+Reporter,CES University,Colombia,"6,348",13.5,3%,70 : 30,,,,,,
+Reporter,César Ritz Colleges Switzerland,Switzerland,547,4.8,99%,49 : 51,,,,,,
+Reporter,CETYS Universidad,Mexico,"4,960",9.6,13%,52 : 48,,,,,,
+Reporter,Chernihiv Polytechnic National University,Ukraine,"5,914",20.5,0%,42 : 58,,,,,,
+Reporter,University of Chichester,United Kingdom,"4,180",14.7,7%,62 : 38,,,,,,
+Reporter,Chitkara University,India,"12,895",15.5,3%,40 : 60,,,,,,
+Reporter,Christ University Bengaluru India,India,"23,637",20.2,2%,48 : 52,,,,,,
+Reporter,Coal City University,Nigeria,461,4.8,0%,48 : 52,,,,,,
+Reporter,Conservatoire for Dance and Drama,United Kingdom,940,10.4,35%,70 : 30,,,,,,
+Reporter,University of Constantine 3,Algeria,"14,736",16.2,2%,73 : 27,,,,,,
+Reporter,Courtauld Institute of Art,United Kingdom,510,12.8,51%,82 : 18,,,,,,
+Reporter,Cranfield University,United Kingdom,"3,135",7.8,68%,30 : 70,,,,,,
+Reporter,Cihan University – Erbil,Iraq,"4,457",23.3,1%,43 : 57,,,,,,
+Reporter,University for the Creative Arts,United Kingdom,"5,345",18.8,35%,67 : 33,,,,,,
+Reporter,"City University of Science and Information Technology, Peshawar",Pakistan,"4,163",21.3,2%,15 : 85,,,,,,
+Reporter,Cross River University of Technology,Nigeria,"18,915",40.2,0%,36 : 64,,,,,,
+Reporter,University of Cumbria,United Kingdom,"5,275",15.7,10%,70 : 30,,,,,,
+Reporter,C.V. Raman Global University,India,"6,991",15.8,4%,29 : 71,,,,,,
+Reporter,Cyprus Health and Social Sciences University,Northern Cyprus,"2,354",35.1,75%,45 : 55,,,,,,
+Reporter,Daffodil International University (DIU),Bangladesh,"16,157",21.1,3%,34 : 66,,,,,,
+Reporter,Debre Tabor University,Ethiopia,"8,414",7.4,0%,41 : 59,,,,,,
+Reporter,Universidad del Sinú,Colombia,"4,350",25.6,0%,57 : 43,,,,,,
+Reporter,Delta University for Science and Technology,Egypt,"8,780",16.9,0%,48 : 52,,,,,,
+Reporter,Deraya University,Egypt,"4,275",18.9,0%,58 : 42,,,,,,
+Reporter,University for Development Studies,Ghana,"20,674",33.9,1%,41 : 59,,,,,,
+Reporter,Dhaka International University,Bangladesh,"6,033",29.9,8%,17 : 83,,,,,,
+Reporter,Dhofar University,Oman,"3,122",17.8,6%,56 : 44,,,,,,
+Reporter,Dhonburi Rajabhat University,Thailand,"4,210",16.1,1%,61 : 39,,,,,,
+Reporter,Dijlah University,Iraq,"8,864",28.5,0%,43 : 57,,,,,,
+Reporter,University of Diyala,Iraq,"29,461",17.9,0%,54 : 46,,,,,,
+Reporter,Denau Institute of Entrepreneurship and Pedagogy,Uzbekistan,"5,247",21.9,0%,63 : 37,,,,,,
+Reporter,Doğuş University,Turkey,"9,149",30.2,1%,40 : 60,,,,,,
+Reporter,Donetsk National University of Economics and Trade named after Mykhailo Tuhan-Baranovsky (DonNUET),Ukraine,"1,068",18.4,2%,60 : 40,,,,,,
+Reporter,Dr. M.G.R. Educational and Research Institute,India,"23,097",13.3,0%,32 : 68,,,,,,
+Reporter,University of Dubai,United Arab Emirates,"1,147",27.3,24%,29 : 71,,,,,,
+Reporter,DHA Suffa University,Pakistan,"1,807",14.5,0%,15 : 85,,,,,,
+Reporter,University of Duhok,Iraq,"23,662",13.5,0%,52 : 48,,,,,,
+Reporter,EAN University,Colombia,"10,000",142.9,0%,,,,,,,
+Reporter,Ebonyi State University,Nigeria,"25,204",27.5,0%,50 : 50,,,,,,
+Reporter,University of El Oued,Algeria,"29,028",33.1,0%,59 : 41,,,,,,
+Reporter,École Nationale Polytechnique,Algeria,"1,489",8.7,0%,46 : 54,,,,,,
+Reporter,École Polytechnique d’Architecture et d’Urbanisme,Algeria,"1,371",10.1,0%,69 : 31,,,,,,
+Reporter,Academy of Economic Studies of Moldova,Moldova,"5,525",25.3,1%,53 : 47,,,,,,
+Reporter,Edo State University Uzairue,Nigeria,"1,489",9.5,0%,52 : 48,,,,,,
+Reporter,"University of Education, Lahore",Pakistan,"27,105",33.1,0%,51 : 49,,,,,,
+Reporter,Effat University,Saudi Arabia,"1,067",9.4,26%,99 : 1,,,,,,
+Reporter,Egerton University,Kenya,"20,472",40.1,1%,43 : 57,,,,,,
+Reporter,Egyptian Russian University,Egypt,"6,237",13.6,2%,39 : 61,,,,,,
+Reporter,Egypt-Japan University of Science and Technology (E-JUST),Egypt,539,6.7,3%,33 : 67,,,,,,
+Reporter,"University of Engineering and Technology, Mardan",Pakistan,"1,208",21.6,1%,5 : 95,,,,,,
+Reporter,ESIC,,"6,123",19.4,10%,46 : 54,,,,,,
+Reporter,Universidade Estadual de Goiás,Brazil,"19,519",15.4,0%,66 : 34,,,,,,
+Reporter,European University Cyprus,,"5,229",19.4,49%,58 : 42,,,,,,
+Reporter,European University of Valencia,Spain,"2,169",8.8,50%,58 : 42,,,,,,
+Reporter,"Evangel University, Akaeze",Nigeria,987,5.7,0%,47 : 53,,,,,,
+Reporter,Externado University of Colombia,Colombia,"12,370",13.0,1%,58 : 42,,,,,,
+Reporter,Falmouth University,United Kingdom,"4,800",17.8,14%,57 : 43,,,,,,
+Reporter,Federal University Gashua,Nigeria,"1,091",3.3,0%,10 : 90,,,,,,
+Reporter,Federal University of Kashere,Nigeria,"10,121",21.4,0%,30 : 70,,,,,,
+Reporter,Federal University of Lafia,Nigeria,"12,456",22.8,0%,40 : 60,,,,,,
+Reporter,Federal University of Latin American Integration (UNILA),Brazil,"4,774",11.8,31%,50 : 50,,,,,,
+Reporter,"Federal University of Petroleum Resources, Effurun",Nigeria,"7,313",39.7,0%,17 : 83,,,,,,
+Reporter,"Federal University of Technology, Minna",Nigeria,"24,671",27.8,0%,25 : 75,,,,,,
+Reporter,"Federal University of Technology, Owerri",Nigeria,"22,610",18.7,0%,31 : 69,,,,,,
+Reporter,First Technical University,Nigeria,"2,442",29.1,0%,29 : 71,,,,,,
+Reporter,Fountain University,Nigeria,"1,420",18.9,0%,59 : 41,,,,,,
+Reporter,University of Franca,Brazil,"50,760",160.6,0%,57 : 43,,,,,,
+Reporter,Fukui Prefectural University,Japan,"1,772",10.9,1%,51 : 49,,,,,,
+Reporter,Fundação Oswaldo Cruz,Brazil,"3,699",,%,,,,,,,
+Reporter,Fundación Universitaria del Área Andina,Colombia,"40,193",35.9,0%,60 : 40,,,,,,
+Reporter,Future University in Egypt,Egypt,"9,066",10.7,10%,43 : 57,,,,,,
+Reporter,General Sir John Kotelawala Defence University,Sri Lanka,"5,136",21.0,2%,48 : 52,,,,,,
+Reporter,Ghulam Ishaq Khan Institute of Engineering Sciences and Technology,Pakistan,"2,046",20.5,0%,10 : 90,,,,,,
+Reporter,GLA University,India,"9,680",17.2,0%,27 : 73,,,,,,
+Reporter,Fergana Polytechnic Institute,Uzbekistan,"14,812",23.6,0%,20 : 80,,,,,,
+Reporter,Glasgow School of Art,United Kingdom,"2,240",16.0,44%,67 : 33,,,,,,
+Reporter,University of Gloucestershire,United Kingdom,"6,605",17.2,11%,60 : 40,,,,,,
+Reporter,Government College Women University Faisalabad,Pakistan,"14,424",56.3,0%,100 : 0,,,,,,
+Reporter,"Government College Women University, Sialkot",Pakistan,"7,023",34.8,0%,100 : 0,,,,,,
+Reporter,"The Graduate University for Advanced Studies, SOKENDAI",Japan,506,0.4,31%,29 : 71,,,,,,
+Reporter,Greenwich University,Pakistan,"1,261",15.6,3%,35 : 65,,,,,,
+Reporter,Gregory University Uturu,Nigeria,"2,025",7.3,0%,62 : 38,,,,,,
+Reporter,Guildhall School of Music and Drama,United Kingdom,995,5.2,34%,50 : 50,,,,,,
+Reporter,Gulf College,Oman,"2,780",27.5,3%,40 : 60,,,,,,
+Reporter,Harper Adams University,United Kingdom,"2,195",13.3,11%,58 : 42,,,,,,
+Reporter,Hartpury University,United Kingdom,"1,655",23.6,10%,64 : 36,,,,,,
+Reporter,Hassiba Benbouali University of Chlef,Algeria,"30,121",22.3,1%,71 : 29,,,,,,
+Reporter,Hawler Medical University,Iraq,"4,152",7.2,1%,63 : 37,,,,,,
+Reporter,University of Health and Allied Sciences,Ghana,"6,445",23.5,0%,62 : 38,,,,,,
+Reporter,"University of Health Sciences, Turkey",Turkey,"21,322",9.0,5%,34 : 66,,,,,,
+Reporter,University of the Highlands and Islands,United Kingdom,"7,200",130.9,12%,61 : 39,,,,,,
+Reporter,Hindustan Institute of Technology and Science,India,"6,033",12.1,1%,36 : 64,,,,,,
+Reporter,Hiroshima Shudo University,Japan,"4,776",16.6,0%,39 : 61,,,,,,
+Reporter,Hiroshima Institute of Technology,Japan,"4,628",25.4,0%,10 : 90,,,,,,
+Reporter,Hitotsubashi University,Japan,"6,212",17.0,15%,32 : 68,,,,,,
+Reporter,Huachiew Chalermprakiet University,Thailand,"7,297",16.0,7%,79 : 21,,,,,,
+Reporter,University of Human Development,Iraq,"2,583",17.1,3%,49 : 51,,,,,,
+Reporter,Hyogo University of Teacher Education,Japan,"1,161",8.0,2%,68 : 32,,,,,,
+Reporter,IFHE Hyderabad,India,"6,931",20.3,0%,39 : 61,,,,,,
+Reporter,Ignatius Ajuru University of Education,Nigeria,"29,785",75.2,0%,49 : 51,,,,,,
+Reporter,Ilma University,Pakistan,"4,107",22.4,0%,21 : 79,,,,,,
+Reporter,IMT Mines Alès,France,"1,425",12.8,15%,31 : 69,,,,,,
+Reporter,Indira Gandhi Delhi Technical University for Women,India,"3,673",53.2,0%,100 : 0,,,,,,
+Reporter,Institute of Cancer Research,United Kingdom,195,2.8,33%,62 : 38,,,,,,
+Reporter,International Christian University,Japan,"2,913",12.6,11%,61 : 39,,,,,,
+Reporter,International University of Rabat,Morocco,"5,830",33.3,2%,51 : 49,,,,,,
+Reporter,Ionian University,Greece,"8,169",41.9,3%,53 : 47,,,,,,
+Reporter,Ion Mincu University of Architecture and Urbanism,Romania,"3,173",12.8,4%,71 : 29,,,,,,
+Reporter,Islamia College Peshawar,Pakistan,"6,732",25.5,3%,27 : 73,,,,,,
+Reporter,The Islamic University,Iraq,"4,152",9.1,2%,70 : 30,,,,,,
+Reporter,Islamic University of Gaza,Palestine,"17,058",47.0,1%,60 : 40,,,,,,
+Reporter,Islamic University of Madinah,Saudi Arabia,"11,703",7.7,75%,4 : 96,,,,,,
+Reporter,Isra University,Jordan,"4,864",19.6,18%,54 : 46,,,,,,
+Reporter,Israel Technological University,Ecuador,"3,070",34.9,1%,42 : 58,,,,,,
+Reporter,Istanbul Aydın University,Turkey,"27,826",27.9,13%,51 : 49,,,,,,
+Reporter,Istanbul Gelişim University,Turkey,"18,774",23.4,15%,46 : 54,,,,,,
+Reporter,IUBAT – International University of Business Agriculture and Technology,Bangladesh,"6,435",22.1,1%,30 : 70,,,,,,
+Reporter,Universita IULM,,"7,841",15.9,7%,72 : 28,,,,,,
+Reporter,Jabir ibn Hayyan Medical University,Iraq,"1,532",16.1,0%,58 : 42,,,,,,
+Reporter,Japan Advanced Institute of Science and Technology (JAIST),Japan,"1,218",7.8,42%,23 : 77,,,,,,
+Reporter,Jashore University of Science and Technology,Bangladesh,"4,741",20.1,0%,30 : 70,,,,,,
+Reporter,Jerash Private University,Jordan,"3,362",18.0,31%,38 : 62,,,,,,
+Reporter,University of Jijel,Algeria,"21,228",20.2,0%,63 : 37,,,,,,
+Reporter,University of Jos,Nigeria,"37,885",23.4,0%,45 : 55,,,,,,
+Reporter,Kamianets-Podіlskyi Ivan Ohiienko National University,Ukraine,"2,944",7.8,0%,64 : 36,,,,,,
+Reporter,Kampala International University,Uganda,"23,800",7.0,30%,45 : 55,,,,,,
+Reporter,Karaganda University of Kazpotrebsoyuz,Kazakhstan,"5,076",13.3,1%,59 : 41,,,,,,
+Reporter,Karshi State University,Uzbekistan,"13,909",21.0,0%,63 : 37,,,,,,
+Reporter,Kastamonu University,Turkey,"17,597",41.0,15%,45 : 55,,,,,,
+Reporter,Kazakh National Pedagogical University Abai,Kazakhstan,"13,479",12.6,2%,61 : 39,,,,,,
+Reporter,University of Kelaniya,Sri Lanka,"17,082",17.1,3%,65 : 35,,,,,,
+Reporter,University of Kerbala,Iraq,"20,327",16.5,0%,55 : 45,,,,,,
+Reporter,Kermanshah University of Technology,Iran,"2,251",13.6,0%,38 : 62,,,,,,
+Reporter,Kharkiv University of Humanities “People’s Ukrainian Academy”,Ukraine,455,5.5,1%,81 : 19,,,,,,
+Reporter,Kadir Has University,Turkey,"4,896",23.5,3%,53 : 47,,,,,,
+Reporter,Khazar University,Azerbaijan,"2,610",11.3,7%,54 : 46,,,,,,
+Reporter,Khomein University of Medical Sciences,Iran,782,31.3,0%,48 : 52,,,,,,
+Reporter,Khulna University,Bangladesh,"5,921",11.8,0%,41 : 59,,,,,,
+Reporter,Khwaja Fareed University of Engineering and Information Technology,Pakistan,"10,713",21.6,0%,41 : 59,,,,,,
+Reporter,Khyber Medical University,Pakistan,"4,364",16.5,3%,40 : 60,,,,,,
+Reporter,Kings University,Nigeria,132,3.3,0%,42 : 58,,,,,,
+Reporter,University of Kirkuk,Iraq,"22,867",24.8,0%,52 : 48,,,,,,
+Reporter,Kitami Institute of Technology,Japan,"1,965",14.1,4%,13 : 87,,,,,,
+Reporter,Kobe City University of Foreign Studies,Japan,"2,287",15.3,4%,67 : 33,,,,,,
+Reporter,Kobe Gakuin University,Japan,"11,557",34.3,2%,38 : 62,,,,,,
+Reporter,Kocaeli Health and Technology University,Turkey,"2,784",31.6,4%,66 : 34,,,,,,
+Reporter,Kokshetau State University,Kazakhstan,"7,047",11.3,5%,65 : 35,,,,,,
+Reporter,Konan Women’s University,Japan,"4,416",24.7,1%,100 : 0,,,,,,
+Reporter,Konya Technical University,Turkey,"13,016",30.1,4%,26 : 74,,,,,,
+Reporter,KTO Karatay University,Turkey,"8,370",26.2,3%,58 : 42,,,,,,
+Reporter,Kyiv National Economic University,Ukraine,"10,585",9.4,2%,61 : 39,,,,,,
+Reporter,Kyoai Gakuen University,Japan,"1,089",19.4,4%,66 : 34,,,,,,
+Reporter,Kyrgyz-Turkish Manas University,Kyrgyzstan,"5,448",14.5,17%,72 : 28,,,,,,
+Reporter,University of Laghouat,Algeria,"34,345",35.2,0%,51 : 49,,,,,,
+Reporter,Lagos State University,Nigeria,"28,289",37.1,0%,50 : 50,,,,,,
+Reporter,Knowledge University,Iraq,"2,125",16.6,1%,47 : 53,,,,,,
+Reporter,University of Lampung,Indonesia,"25,782",19.9,0%,50 : 50,,,,,,
+Reporter,Landmark University,Nigeria,"3,429",13.4,0%,34 : 66,,,,,,
+Reporter,La Salle University,Colombia,"9,869",20.1,1%,55 : 45,,,,,,
+Reporter,University of Las Américas (UDLA),Ecuador,"12,767",13.7,1%,54 : 46,,,,,,
+Reporter,Leeds Arts University,United Kingdom,"2,065",15.3,12%,76 : 24,,,,,,
+Reporter,Leeds Conservatoire,United Kingdom,"1,260",19.4,12%,33 : 67,,,,,,
+Reporter,Leeds Trinity University,United Kingdom,"3,230",24.8,9%,65 : 35,,,,,,
+Reporter,Koya University,Iraq,"4,536",9.4,1%,50 : 50,,,,,,
+Reporter,Lesya Ukrainka Volyn National University,Ukraine,"8,039",10.1,1%,68 : 32,,,,,,
+Reporter,University of Liberal Arts Bangladesh,Bangladesh,"4,475",20.2,0%,49 : 51,,,,,,
+Reporter,Liverpool Hope University,United Kingdom,"4,025",15.2,13%,67 : 33,,,,,,
+Reporter,Liverpool Institute for Performing Arts,United Kingdom,865,17.3,23%,57 : 43,,,,,,
+Reporter,Liverpool School of Tropical Medicine,United Kingdom,210,2.2,39%,65 : 35,,,,,,
+Reporter,The LNM Institute of Information Technology,India,"2,136",22.3,0%,17 : 83,,,,,,
+Reporter,Loei Rajabhat University,Thailand,"7,433",19.6,0%,70 : 30,,,,,,
+Reporter,London Business School,United Kingdom,"1,995",18.1,91%,38 : 62,,,,,,
+Reporter,London School of Hygiene and Tropical Medicine,United Kingdom,825,1.8,62%,70 : 30,,,,,,
+Reporter,London Metropolitan University,United Kingdom,"8,260",21.5,45%,66 : 34,,,,,,
+Reporter,University of Los Lagos,Chile,"5,567",16.6,0%,58 : 42,,,,,,
+Reporter,Universidad Loyola,Spain,"3,319",13.3,4%,65 : 35,,,,,,
+Reporter,Malawi University of Science and Technology (MUST),Malawi,"2,356",12.3,0%,28 : 72,,,,,,
+Reporter,Management Development Institute (MDI),India,982,12.8,0%,21 : 79,,,,,,
+Reporter,Marian College Kuttikkanam (Autonomous),India,"1,755",17.0,0%,52 : 48,,,,,,
+Reporter,Maritime University of Szczecin,Poland,"2,559",24.7,13%,26 : 74,,,,,,
+Reporter,University of Mascara,Algeria,"21,682",12.0,0%,61 : 39,,,,,,
+Reporter,Universidad Mayor,Chile,"20,330",11.0,2%,57 : 43,,,,,,
+Reporter,University of Medellín,Colombia,"9,371",17.6,2%,54 : 46,,,,,,
+Reporter,Meikai University,Japan,"4,326",16.1,17%,43 : 57,,,,,,
+Reporter,Michael and Cecilia Ibru University,Nigeria,405,6.9,0%,41 : 59,,,,,,
+Reporter,"Michael Okpara University of Agriculture, Umudike",Nigeria,"23,198",21.7,0%,41 : 59,,,,,,
+Reporter,Middle Technical University,Iraq,"37,101",26.7,0%,45 : 55,,,,,,
+Reporter,Mindanao State University – Iligan Institute of Technology,Philippines,"9,348",18.6,0%,60 : 40,,,,,,
+Reporter,MIOTI Tech and Business School,Spain,115,38.3,9%,31 : 69,,,,,,
+Reporter,Mirpur University of Science and Technology,Pakistan,"7,544",19.8,0%,44 : 56,,,,,,
+Reporter,University of Misan,Iraq,"11,855",15.0,0%,51 : 49,,,,,,
+Reporter,Misr University for Science and Technology,Egypt,"24,742",18.8,6%,47 : 53,,,,,,
+Reporter,Mahatma Jyotiba Phule Rohilkhand University,India,"3,999",20.1,0%,31 : 69,,,,,,
+Reporter,M. Kumarasamy College of Engineering,India,"3,772",11.7,0%,27 : 73,,,,,,
+Reporter,"MNS University of Agriculture, Multan",Pakistan,"3,266",23.5,0%,22 : 78,,,,,,
+Reporter,Modern University for Business and Science,Lebanon,"1,896",16.9,31%,47 : 53,,,,,,
+Reporter,Université Mohamed El Bachir El Ibrahimi de Bordj Bou Arréridj,Algeria,"18,000",30.9,0%,100 : 0,,,,,,
+Reporter,Universidad Monteávila,Venezuela,"1,054",5.7,0%,71 : 29,,,,,,
+Reporter,University of Monterrey,Mexico,"10,814",31.2,1%,61 : 39,,,,,,
+Reporter,October University for Modern Sciences and Arts (MSA),Egypt,"12,444",11.4,2%,50 : 50,,,,,,
+Reporter,Muban Chombueng Rajabhat University,Thailand,"4,951",17.9,0%,62 : 38,,,,,,
+Reporter,Mukogawa Women’s University,Japan,"8,394",26.4,0%,100 : 0,,,,,,
+Reporter,Mulungushi University,Zambia,"6,988",54.6,0%,41 : 59,,,,,,
+Reporter,Mutah University,Jordan,"11,486",16.1,15%,46 : 54,,,,,,
+Reporter,Universidad Nacional de Chimborazo,Ecuador,"8,478",14.7,1%,57 : 43,,,,,,
+Reporter,Universidad Nacional de Itapúa,Paraguay,"5,595",5.3,0%,59 : 41,,,,,,
+Reporter,Nagoya University of Commerce & Business,Japan,"3,549",29.9,8%,25 : 75,,,,,,
+Reporter,Najran University,Saudi Arabia,"17,967",16.9,1%,69 : 31,,,,,,
+Reporter,Nakhchivan State University,Azerbaijan,"7,620",14.1,20%,46 : 54,,,,,,
+Reporter,Namangan Engineering Construction Institute,Uzbekistan,"3,881",11.8,0%,18 : 82,,,,,,
+Reporter,Namangan Institute of Engineering and Technology,Uzbekistan,"5,784",18.1,0%,21 : 79,,,,,,
+Reporter,Namangan State University,Uzbekistan,"20,636",31.9,0%,66 : 34,,,,,,
+Reporter,Nara Institute of Science and Technology,Japan,"1,043",5.1,24%,23 : 77,,,,,,
+Reporter,Nara Women’s University,Japan,"2,612",6.2,5%,100 : 0,,,,,,
+Reporter,National Aviation University,Ukraine,"14,239",10.9,5%,39 : 61,,,,,,
+Reporter,National University of Computer and Emerging Sciences,Pakistan,"8,291",14.8,2%,22 : 78,,,,,,
+Reporter,National Film and Television School,United Kingdom,395,7.2,42%,50 : 50,,,,,,
+Reporter,National University of Medical Sciences (NUMS),Pakistan,"1,654",5.0,0%,72 : 28,,,,,,
+Reporter,National University of Mongolia,Mongolia,"18,647",26.5,2%,60 : 40,,,,,,
+Reporter,National University Odessa Law Academy,Ukraine,"10,503",17.7,1%,60 : 40,,,,,,
+Reporter,The National University of Ostroh Academy,Ukraine,"3,432",8.8,1%,57 : 43,,,,,,
+Reporter,National Polytechnic University of Armenia,Armenia,"5,742",8.7,2%,20 : 80,,,,,,
+Reporter,National University of Quilmes,Argentina,"33,703",27.3,2%,57 : 43,,,,,,
+Reporter,"National University of Science and Technology, Oman",Oman,"3,986",18.8,14%,63 : 37,,,,,,
+Reporter,"National University, Sudan",Sudan,"5,132",12.3,6%,60 : 40,,,,,,
+Reporter,National Taichung University of Science and Technology,Taiwan,"15,512",14.9,1%,70 : 30,,,,,,
+Reporter,National Transport University,Ukraine,"7,262",11.5,2%,31 : 69,,,,,,
+Reporter,National University of Water and Environmental Engineering,Ukraine,"4,344",9.8,3%,34 : 66,,,,,,
+Reporter,National University “Yuri Kondratyuk Poltava Polytechnic”,Ukraine,"5,067",8.1,10%,49 : 51,,,,,,
+Reporter,Navoi State Pedagogical Institute,Uzbekistan,"12,791",26.4,0%,72 : 28,,,,,,
+Reporter,Universitas Negeri Surabaya,Indonesia,"29,840",24.5,0%,64 : 36,,,,,,
+Reporter,Newman University,United Kingdom,"2,325",17.9,12%,76 : 24,,,,,,
+Reporter,Niger Delta University,Nigeria,"20,608",25.9,0%,45 : 55,,,,,,
+Reporter,"Nigerian Police Academy, Wudil",Nigeria,"3,087",21.9,0%,16 : 84,,,,,,
+Reporter,Nihon Pharmaceutical University,Japan,"1,618",18.4,4%,48 : 52,,,,,,
+Reporter,Niigata University of Health and Welfare,Japan,"4,410",17.2,0%,51 : 49,,,,,,
+Reporter,University of Niigata Prefecture,Japan,"1,196",14.8,1%,76 : 24,,,,,,
+Reporter,Nile University,Egypt,"2,168",14.4,2%,28 : 72,,,,,,
+Reporter,Ninevah University,Iraq,"3,707",13.6,0%,42 : 58,,,,,,
+Reporter,Nitte (Deemed to be University),India,"4,408",7.7,1%,65 : 35,,,,,,
+Reporter,University of Northampton,United Kingdom,"9,945",16.9,33%,64 : 36,,,,,,
+Reporter,Northeast Ohio Medical University,United States,955,11.8,0%,54 : 46,,,,,,
+Reporter,Northern Technical University,Iraq,"21,400",27.5,0%,48 : 52,,,,,,
+Reporter,Norwich University of the Arts,United Kingdom,"2,290",15.8,13%,61 : 39,,,,,,
+Reporter,University of Nova Gorica,Slovenia,416,3.5,54%,48 : 52,,,,,,
+Reporter,Novena University,Nigeria,"1,981",25.4,0%,42 : 58,,,,,,
+Reporter,Nursing School of Coimbra,Portugal,"2,138",23.0,7%,85 : 15,,,,,,
+Reporter,October 6 University,Egypt,"25,927",20.8,3%,49 : 51,,,,,,
+Reporter,Oguz Han Engineering and Technology University of Turkmenistan,Turkmenistan,"2,223",13.2,0%,52 : 48,,,,,,
+Reporter,Olusegun Agagu University of Science and Technology,Nigeria,"6,474",29.4,0%,28 : 72,,,,,,
+Reporter,ORT Uruguay University,Uruguay,"4,151",6.7,2%,47 : 53,,,,,,
+Reporter,Ostrogradsky National University of Kremenchuk,Ukraine,"4,106",11.8,0%,38 : 62,,,,,,
+Reporter,Palestine Polytechnic University,Palestine,"4,812",27.0,3%,55 : 45,,,,,,
+Reporter,Palestine Technical University – Kadoorie,Palestine,"7,013",18.3,4%,59 : 41,,,,,,
+Reporter,Panteion University of Social and Political Sciences,Greece,"12,615",62.5,2%,52 : 48,,,,,,
+Reporter,Paris University of International Education,France,445,29.7,100%,32 : 68,,,,,,
+Reporter,Pavlo Tychyna Uman State Pedagogical University,Ukraine,"9,149",17.5,2%,32 : 68,,,,,,
+Reporter,University of Petra,Jordan,"6,538",19.9,21%,57 : 43,,,,,,
+Reporter,Pharos University,Egypt,"11,106",14.1,6%,49 : 51,,,,,,
+Reporter,University of Phayao,Thailand,"18,057",20.7,0%,68 : 32,,,,,,
+Reporter,Philadelphia University (Jordan),Jordan,"3,615",20.1,36%,41 : 59,,,,,,
+Reporter,Plymouth Marjon University,United Kingdom,"1,845",18.5,3%,61 : 39,,,,,,
+Reporter,Polytechnic University of Tirana,Albania,"8,591",16.2,2%,,,,,,,
+Reporter,Poltava V.G. Korolenko National Pedagogical University (PNPU),Ukraine,"3,812",5.8,0%,51 : 49,,,,,,
+Reporter,Polytechnic Institute of Setúbal,Portugal,"7,829",17.3,6%,54 : 46,,,,,,
+Reporter,Universidad Popular Autónoma del Estado de Puebla,Mexico,"11,279",16.1,1%,60 : 40,,,,,,
+Reporter,Prefectural University of Hiroshima,Japan,"2,623",12.3,2%,65 : 35,,,,,,
+Reporter,Prince Sultan University (PSU),,"4,772",19.4,15%,56 : 44,,,,,,
+Reporter,"University of Professional Studies, Accra",Ghana,"14,017",39.8,0%,46 : 54,,,,,,
+Reporter,University of Puthisastra,Cambodia,"1,649",2.9,0%,55 : 45,,,,,,
+Reporter,Queen Margaret University,United Kingdom,"3,905",20.6,31%,77 : 23,,,,,,
+Reporter,Rajamangala University of Technology Isan,Thailand,"24,166",9.5,0%,46 : 54,,,,,,
+Reporter,Ravensbourne,United Kingdom,"2,375",22.6,30%,50 : 50,,,,,,
+Reporter,Rawalpindi Medical University,Pakistan,"3,304",8.4,1%,69 : 31,,,,,,
+Reporter,Rennes School of Business,France,"3,098",31.3,33%,50 : 50,,,,,,
+Reporter,REVA University,India,"13,467",21.3,1%,33 : 67,,,,,,
+Reporter,Rose Bruford College,United Kingdom,655,18.7,18%,60 : 40,,,,,,
+Reporter,Royal Agricultural University,United Kingdom,"1,015",20.3,14%,51 : 49,,,,,,
+Reporter,"Royal Central School of Speech and Drama, University of London",United Kingdom,"1,035",15.9,36%,68 : 32,,,,,,
+Reporter,Royal College of Art,United Kingdom,"2,405",20.9,77%,69 : 31,,,,,,
+Reporter,Royal Conservatoire of Scotland,United Kingdom,"1,190",10.8,38%,57 : 43,,,,,,
+Reporter,Royal Academy of Music,United Kingdom,830,9.8,47%,49 : 51,,,,,,
+Reporter,Royal College of Music,United Kingdom,860,10.8,57%,52 : 48,,,,,,
+Reporter,Royal Northern College of Music,United Kingdom,870,10.9,33%,50 : 50,,,,,,
+Reporter,University of Sadat City,Egypt,"30,141",34.4,4%,54 : 46,,,,,,
+Reporter,University of Saint Joseph,,"1,141",10.7,24%,62 : 38,,,,,,
+Reporter,Sakon Nakhon Rajabhat University,Thailand,"9,328",20.1,0%,64 : 36,,,,,,
+Reporter,Salahaddin University,Iraq,"25,189",10.7,1%,55 : 45,,,,,,
+Reporter,Salem University,Nigeria,513,3.9,1%,40 : 60,,,,,,
+Reporter,Samarkand State University,Uzbekistan,"15,754",17.2,0%,50 : 50,,,,,,
+Reporter,Samarkand State Institute of Foreign Languages,Uzbekistan,"5,010",10.9,0%,74 : 26,,,,,,
+Reporter,Samuel Adegboyega University,Nigeria,390,5.4,0%,51 : 49,,,,,,
+Reporter,Universidad San Ignacio de Loyola,Peru,"21,556",35.9,1%,51 : 49,,,,,,
+Reporter,University of San Martín de Porres,Peru,"40,234",18.0,0%,61 : 39,,,,,,
+Reporter,University of Santo Tomas,Philippines,"26,511",13.3,7%,51 : 49,,,,,,
+Reporter,Satya Wacana Christian University,Indonesia,"16,132",35.5,0%,45 : 55,,,,,,
+Reporter,Saudi Electronic University,Saudi Arabia,"21,756",24.3,6%,48 : 52,,,,,,
+Reporter,SBS Swiss Business School,Switzerland,"1,644",10.3,57%,42 : 58,,,,,,
+Reporter,University of Science and Technology of Southern Philippines (USTP),Philippines,"9,222",32.5,0%,60 : 40,,,,,,
+Reporter,Sefako Makgatho Health Sciences University,South Africa,"6,306",9.9,1%,62 : 38,,,,,,
+Reporter,Senshu University,Japan,"17,933",23.0,3%,35 : 65,,,,,,
+Reporter,Shaheed Benazir Bhutto Women University Peshawar,Pakistan,"5,677",38.6,0%,100 : 0,,,,,,
+Reporter,Shaheed Zulfiqar Ali Bhutto Medical University,Pakistan,"4,803",8.6,1%,55 : 45,,,,,,
+Reporter,The University of Shiga Prefecture,Japan,"2,853",14.1,1%,49 : 51,,,,,,
+Reporter,Shonan Institute of Technology,Japan,"2,234",29.4,9%,7 : 93,,,,,,
+Reporter,Samarkand State Medical University,Uzbekistan,"7,200",10.2,1%,41 : 59,,,,,,
+Reporter,Shri Mata Vaishno Devi University,India,"1,805",15.0,0%,40 : 60,,,,,,
+Reporter,Sikkim Manipal University,India,"3,013",10.5,2%,31 : 69,,,,,,
+Reporter,Silesian University in Opava,Czech Republic,"5,322",20.4,6%,71 : 29,,,,,,
+Reporter,Simón Bolívar University,Venezuela,"4,462",10.5,0%,43 : 57,,,,,,
+Reporter,Simón Bolívar University (Colombia),Colombia,"18,482",18.2,1%,60 : 40,,,,,,
+Reporter,Sir Syed University of Engineering and Technology,Pakistan,"5,879",14.1,0%,14 : 86,,,,,,
+Reporter,Sokoto State University,Nigeria,"8,244",23.8,0%,25 : 75,,,,,,
+Reporter,"Solent University, Southampton",United Kingdom,"8,640",16.1,30%,45 : 55,,,,,,
+Reporter,University of Sopron,Hungary,"2,847",14.9,3%,63 : 37,,,,,,
+Reporter,Soran University,Iraq,"4,596",9.5,0%,50 : 50,,,,,,
+Reporter,University of South Santa Catarina (Unisul),Brazil,"16,602",18.8,0%,52 : 48,,,,,,
+Reporter,SR University,India,"3,238",13.1,0%,49 : 51,,,,,,
+Reporter,Sri Balaji Vidyapeeth,India,"3,850",7.4,1%,53 : 47,,,,,,
+Reporter,University of Sri Jayewardenepura,Sri Lanka,"17,069",23.4,0%,62 : 38,,,,,,
+Reporter,Sri Lanka Institute of Information Technology,Sri Lanka,"11,151",38.7,0%,37 : 63,,,,,,
+Reporter,Sri Padmavati Mahila Visvavidyalayam (Women's University),India,"5,475",19.6,6%,83 : 17,,,,,,
+Reporter,State University of Bahia,Brazil,"20,384",10.2,0%,67 : 33,,,,,,
+Reporter,State Energy Institute of Turkmenistan,Turkmenistan,"2,134",11.5,2%,28 : 72,,,,,,
+Reporter,"St Mary’s University College, Belfast",United Kingdom,915,22.9,48%,74 : 26,,,,,,
+Reporter,"St Mary’s University, Twickenham",United Kingdom,"4,740",18.2,25%,54 : 46,,,,,,
+Reporter,Stranmillis University College,United Kingdom,"1,060",23.6,18%,79 : 21,,,,,,
+Reporter,Suez University,Egypt,"18,010",21.8,2%,55 : 45,,,,,,
+Reporter,University of Suffolk,United Kingdom,"3,245",16.6,14%,71 : 29,,,,,,
+Reporter,Sugiyama Jogakuen University,Japan,"6,064",29.4,0%,100 : 0,,,,,,
+Reporter,Sulaimani Polytechnic University,Iraq,"3,762",11.4,0%,50 : 50,,,,,,
+Reporter,Suratthani Rajabhat University,Thailand,"12,086",24.6,0%,71 : 29,,,,,,
+Reporter,Széchenyi István University,Hungary,"9,299",14.7,5%,43 : 57,,,,,,
+Reporter,Tafila Technical University,Jordan,"4,094",21.9,1%,43 : 57,,,,,,
+Reporter,University of Taipei,Taiwan,"7,988",17.6,2%,60 : 40,,,,,,
+Reporter,Tama Art University,Japan,"4,719",32.8,11%,73 : 27,,,,,,
+Reporter,Tarlac Agricultural University,Philippines,"5,351",24.3,0%,56 : 44,,,,,,
+Reporter,Tarsus University,Turkey,"2,556",27.8,2%,42 : 58,,,,,,
+Reporter,Tashkent Institute of Finance,Uzbekistan,"8,370",21.2,1%,29 : 71,,,,,,
+Reporter,Tashkent University of Information Technologies,Uzbekistan,"14,404",15.5,0%,22 : 78,,,,,,
+Reporter,Tashkent Institute of Irrigation and Agricultural Mechanisation,Uzbekistan,"5,750",7.1,5%,24 : 76,,,,,,
+Reporter,Tashkent Medical Academy,Uzbekistan,"6,495",8.8,2%,42 : 58,,,,,,
+Reporter,Tashkent Pediatric Medical Institute,Uzbekistan,"5,704",10.1,1%,50 : 50,,,,,,
+Reporter,Tashkent Pharmaceutical Institute,Uzbekistan,"3,313",12.2,13%,64 : 36,,,,,,
+Reporter,Tashkent State Agrarian University,Uzbekistan,"11,560",13.5,0%,51 : 49,,,,,,
+Reporter,Tashkent State Dental Institute,Uzbekistan,"4,609",8.9,3%,52 : 48,,,,,,
+Reporter,Tashkent State University of Law,Uzbekistan,"4,819",10.6,1%,27 : 73,,,,,,
+Reporter,Université Sultan Moulay Slimane,Morocco,"31,042",50.0,0%,51 : 49,,,,,,
+Reporter,Tashkent State University of Oriental Studies,Uzbekistan,"4,291",16.1,1%,51 : 49,,,,,,
+Reporter,Tashkent State Technical University,Uzbekistan,"14,591",14.2,0%,17 : 83,,,,,,
+Reporter,Tashkent State Transport University,Uzbekistan,"17,319",24.9,0%,9 : 91,,,,,,
+Reporter,Tashkent Institute of Textile and Light Industry,Uzbekistan,"4,266",11.7,0%,40 : 60,,,,,,
+Reporter,Tatung University,Taiwan,"4,036",19.6,3%,39 : 61,,,,,,
+Reporter,Tecmilenio University,Mexico,"2,932",16.5,1%,45 : 55,,,,,,
+Reporter,Tecnológico de Costa Rica,Costa Rica,"10,651",13.8,2%,35 : 65,,,,,,
+Reporter,Instituto Tecnológico Metropolitano,Colombia,"25,333",28.6,0%,44 : 56,,,,,,
+Reporter,Institut Teknologi Nasional Bandung (ITENAS Bandung),Indonesia,"5,548",23.0,0%,27 : 73,,,,,,
+Reporter,University of Telafer,Iraq,"1,456",30.3,0%,44 : 56,,,,,,
+Reporter,Tenri University,Japan,"3,147",22.5,5%,34 : 66,,,,,,
+Reporter,Termez State University,Uzbekistan,"25,070",35.7,1%,49 : 51,,,,,,
+Reporter,Termez Institute of Engineering and Technology,Uzbekistan,"4,296",36.7,0%,15 : 85,,,,,,
+Reporter,Tikrit University,Iraq,"36,905",13.1,0%,36 : 64,,,,,,
+Reporter,Tokyo University of Foreign Studies,Japan,"4,413",17.9,11%,66 : 34,,,,,,
+Reporter,Tashkent State University of Economics,,"8,304",14.2,1%,27 : 73,,,,,,
+Reporter,Toyama Prefectural University,Japan,"1,630",8.2,2%,26 : 74,,,,,,
+Reporter,Trinity Laban Conservatoire of Music and Dance,United Kingdom,"1,180",9.8,31%,67 : 33,,,,,,
+Reporter,Turin Polytechnic University in Tashkent,Uzbekistan,"1,752",18.8,4%,13 : 87,,,,,,
+Reporter,Ubon Ratchathani University,Thailand,"15,717",22.1,0%,67 : 33,,,,,,
+Reporter,UBT,Kosovo,"9,757",15.5,4%,45 : 55,,,,,,
+Reporter,UIN Sulthan Thaha Saifuddin Jambi,Indonesia,"16,859",47.5,1%,56 : 44,,,,,,
+Reporter,Umaru Musa Yar’adua University,Nigeria,"10,334",20.3,0%,27 : 73,,,,,,
+Reporter,Unichristus,Brazil,"5,497",15.4,0%,67 : 33,,,,,,
+Reporter,United International University,Bangladesh,"4,632",21.4,1%,30 : 70,,,,,,
+Reporter,Universidad del Pacífico Ecuador,Ecuador,651,13.9,2%,58 : 42,,,,,,
+Reporter,University College of Osteopathy,United Kingdom,390,11.1,28%,55 : 45,,,,,,
+Reporter,Institute of Telecommunications and Informatics of Turkmenistan,Turkmenistan,"2,900",9.7,0%,24 : 76,,,,,,
+Reporter,UNNOBA,Argentina,"8,614",12.4,2%,58 : 42,,,,,,
+Reporter,Urgench State University,Uzbekistan,"22,548",21.3,5%,58 : 42,,,,,,
+Reporter,Üsküdar University,Turkey,"22,967",43.3,11%,64 : 36,,,,,,
+Reporter,"Usmanu Danfodiyo University, Sokoto",Nigeria,"24,553",19.1,0%,31 : 69,,,,,,
+Reporter,Universidad UTE,Ecuador,"10,628",19.0,1%,48 : 52,,,,,,
+Reporter,University of Uyo,Nigeria,"18,911",30.4,0%,42 : 58,,,,,,
+Reporter,National University of Uzbekistan named after Mirzo Ulugbek,,"21,785",16.4,1%,50 : 50,,,,,,
+Reporter,Valahia University of Targoviste,Romania,"5,551",20.6,1%,46 : 54,,,,,,
+Reporter,University of Vale do Itajaí,Brazil,"9,018",18.0,1%,58 : 42,,,,,,
+Reporter,Varendra University,Bangladesh,"4,213",28.3,0%,36 : 64,,,,,,
+Reporter,Varna University of Management,Bulgaria,618,19.3,33%,48 : 52,,,,,,
+Reporter,"Veritas University, Abuja",Nigeria,"3,291",13.2,2%,56 : 44,,,,,,
+Reporter,University of Veterinary Medicine and Pharmacy in Košice,Slovakia,"1,717",7.2,40%,83 : 17,,,,,,
+Reporter,Vila Velha University,Brazil,"4,902",18.5,1%,59 : 41,,,,,,
+Reporter,Virtual University of Tunis,Tunisia,"2,048",43.6,1%,,,,,,,
 Reporter,Visayas State University,Philippines,"6,163",13.8,0%,59 : 41,,,,,,
 Reporter,University of Wales Trinity Saint David,United Kingdom,"9,280",19.7,25%,59 : 41,,,,,,
 Reporter,​Wellspring University,Nigeria,313,12.5,0%,67 : 33,,,,,,
@@ -2208,114 +2208,6 @@ Reporter,York St John University,United Kingdom,"6,315",18.6,12%,65 : 35,,,,,,
 Reporter,"Yusuf Maitama Sule University, Kano",Nigeria,"12,880",33.0,0%,48 : 52,,,,,,
 Reporter,Zhytomyr Polytechnic State University,Ukraine,"3,869",15.4,1%,34 : 66,,,,,,
 Reporter,Ziauddin University,Pakistan,"4,906",8.8,1%,63 : 37,,,,,,
--,NaN,,,,,,56.9,81.0,72.9,9.3,99.1,72.4
--,NaN,,,,,,51.2–54.3,55.7,46.8,51.4,99.1,62.2
--,NaN,,,,,,47.0–48.7,31.1,23.7,83.0,75.5,57.4
--,NaN,,,,,,42.1–44.9,32.5,45.3,54.6,61.6,43.9
--,NaN,,,,,,42.1–44.9,45.3,41.7,29.1,100.0,70.0
--,NaN,,,,,,39.3–42.0,56.6,32.0,23.8,81.0,49.5
--,NaN,,,,,,39.3–42.0,22.6,14.5,83.3,82.3,35.3
--,NaN,,,,,,34.0–39.2,18.8,14.6,71.1,39.7,23.7
--,NaN,,,,,,34.0–39.2,30.7,22.2,38.3,85.9,64.6
--,NaN,,,,,,34.0–39.2,21.9,12.2,66.7,40.1,42.1
--,NaN,,,,,,34.0–39.2,38.0,21.5,37.9,43.4,63.5
--,NaN,,,,,,34.0–39.2,41.5,37.4,18.0,88.7,73.5
--,NaN,,,,,,29.8–33.9,28.8,32.6,28.2,71.7,65.5
--,NaN,,,,,,29.8–33.9,38.8,19.7,23.9,50.7,61.8
--,NaN,,,,,,29.8–33.9,39.2,34.0,16.6,39.2,46.5
--,NaN,,,,,,29.8–33.9,46.3,39.7,11.9,39.7,45.7
--,NaN,,,,,,29.8–33.9,27.3,15.7,38.8,42.7,56.7
--,NaN,,,,,,29.8–33.9,17.0,13.3,64.9,41.6,41.6
--,NaN,,,,,,24.4–29.7,17.0,8.8,61.5,38.2,27.1
--,NaN,,,,,,24.4–29.7,31.5,20.2,19.3,68.4,63.8
--,NaN,,,,,,24.4–29.7,18.5,8.7,61.9,36.9,24.9
--,NaN,,,,,,18.4–24.3,18.8,15.0,11.8,43.2,55.9
--,NaN,,,,,,18.4–24.3,27.7,18.4,16.1,43.6,53.9
--,NaN,,,,,,18.4–24.3,30.7,15.0,12.6,48.3,53.3
--,NaN,,,,,,18.4–24.3,17.7,9.6,34.5,43.0,26.2
--,NaN,,,,,,18.4–24.3,17.8,12.3,31.4,51.1,27.6
--,NaN,,,,,,18.4–24.3,18.0,9.2,38.6,52.1,32.2
--,NaN,,,,,,18.4–24.3,39.4,9.2,1.2,36.9,42.4
--,NaN,,,,,,18.4–24.3,26.4,12.5,9.9,46.4,34.4
--,NaN,,,,,,18.4–24.3,25.4,12.7,23.0,70.9,27.5
--,NaN,,,,,,18.4–24.3,18.1,11.3,32.8,53.6,23.0
--,NaN,,,,,,18.4–24.3,39.7,13.5,3.4,78.0,22.9
--,NaN,,,,,,18.4–24.3,21.3,13.5,14.3,43.7,33.9
--,NaN,,,,,,18.4–24.3,42.1,11.2,3.1,40.8,20.8
--,NaN,,,,,,18.4–24.3,21.3,15.4,17.6,42.8,36.5
--,NaN,,,,,,18.4–24.3,24.8,19.6,17.0,68.4,54.9
--,NaN,,,,,,18.4–24.3,22.2,13.4,13.0,48.2,37.3
--,NaN,,,,,,18.4–24.3,19.2,15.4,14.0,54.8,38.1
--,NaN,,,,,,18.4–24.3,23.8,23.2,15.0,62.9,55.2
--,NaN,,,,,,18.4–24.3,15.9,9.6,39.2,38.8,23.0
--,NaN,,,,,,18.4–24.3,19.7,8.7,40.4,38.6,20.5
--,NaN,,,,,,10.4–18.3,16.3,9.3,4.2,40.2,17.9
--,NaN,,,,,,10.4–18.3,21.5,10.0,7.3,45.8,64.5
--,NaN,,,,,,10.4–18.3,19.2,11.4,7.8,50.6,38.3
--,NaN,,,,,,10.4–18.3,18.0,10.6,11.6,53.1,24.5
--,NaN,,,,,,10.4–18.3,17.0,9.5,20.1,38.0,20.2
--,NaN,,,,,,10.4–18.3,17.1,10.0,10.3,38.9,23.9
--,NaN,,,,,,10.4–18.3,16.6,10.0,0.8,36.9,22.1
--,NaN,,,,,,10.4–18.3,16.8,9.6,2.6,39.4,20.3
--,NaN,,,,,,10.4–18.3,17.5,13.6,6.5,47.7,20.5
--,NaN,,,,,,10.4–18.3,15.2,11.1,2.9,58.3,19.7
--,NaN,,,,,,10.4–18.3,17.1,9.4,8.9,36.9,27.8
--,NaN,,,,,,10.4–18.3,19.4,16.7,9.6,75.4,34.8
--,NaN,,,,,,10.4–18.3,17.6,9.2,6.4,48.9,20.0
--,NaN,,,,,,10.4–18.3,22.7,9.0,16.5,38.4,29.7
--,NaN,,,,,,10.4–18.3,21.5,9.7,6.0,37.7,23.5
--,NaN,,,,,,10.4–18.3,17.7,11.0,4.0,39.3,27.5
--,NaN,,,,,,10.4–18.3,22.1,8.3,1.3,36.9,25.1
--,NaN,,,,,,10.4–18.3,15.9,10.3,5.5,38.7,17.7
--,NaN,,,,,,10.4–18.3,20.1,13.0,5.5,40.5,36.9
--,NaN,,,,,,10.4–18.3,15.5,9.2,3.2,39.7,28.9
--,NaN,,,,,,10.4–18.3,16.4,8.7,6.5,38.9,32.2
--,NaN,,,,,,10.4–18.3,23.1,9.2,10.6,39.7,31.4
--,NaN,,,,,,10.4–18.3,14.1,8.4,9.0,37.3,27.5
--,NaN,,,,,,10.4–18.3,19.3,10.8,3.9,67.5,24.9
--,NaN,,,,,,10.4–18.3,18.9,11.3,2.2,42.3,20.9
--,NaN,,,,,,10.4–18.3,15.1,9.4,3.8,41.6,21.9
--,NaN,,,,,,10.4–18.3,18.8,8.4,1.4,36.9,33.7
--,NaN,,,,,,10.4–18.3,20.8,16.3,6.5,41.0,21.0
--,NaN,,,,,,10.4–18.3,15.6,11.4,7.1,47.9,18.4
--,NaN,,,,,,10.4–18.3,17.3,8.3,0.9,37.0,38.8
--,NaN,,,,,,10.4–18.3,17.7,10.1,7.0,41.1,26.9
--,NaN,,,,,,10.4–18.3,17.3,11.2,18.1,55.6,33.2
--,NaN,,,,,,10.4–18.3,16.6,12.7,9.0,41.1,34.5
--,NaN,,,,,,10.4–18.3,15.8,9.5,8.7,42.7,18.0
--,NaN,,,,,,10.4–18.3,17.1,8.6,6.5,37.1,24.1
--,NaN,,,,,,10.4–18.3,18.8,10.2,3.3,37.9,34.7
--,NaN,,,,,,10.4–18.3,12.5,8.9,7.2,37.5,16.7
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
--,NaN,,,,,,n/a,n/a,n/a,n/a,n/a,n/a
 -,SUNY Binghamton University,,,,,,34.0–39.2,25.3,20.4,56.8,40.0,37.0
 -,University of Tabriz,,,,,,34.0–39.2,23.4,21.4,68.9,41.0,36.7
 -,Tabriz University of Medical Sciences,,,,,,34.0–39.2,42.4,13.9,58.4,37.1,25.7
