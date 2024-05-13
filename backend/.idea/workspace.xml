@@ -5,33 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/UniversityRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ModelHelper/UniversityCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/configs/LoadDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/resources/data/World_University_Rankings_2023.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Company.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/CompanyRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ModelHelper/CompanyCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/resources/data/global-fortune-500-data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/University.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/resources/application.properties.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/application.properties.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/application.properties.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/World_University_Rankings_2023.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/configs/LoadDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/configs/LoadDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ili0n"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/hristinaina/RefLetter",
+    "accountId": "64d53d1d-4268-43ae-82f6-d914be217b62"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2gHg7nUwDOsrkxcuvtu7t84L9RJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,12 +61,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.ServiceApplication.executor": "Debug",
+    "Spring Boot.ServiceApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "feature/db__loader",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/hrist/Desktop/SIIT/VIII_semestar/SBNZ/grad-school-recommendation/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a"
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -87,6 +106,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -97,6 +124,7 @@
       <updated>1715359754785</updated>
       <workItem from="1715359756528" duration="209000" />
       <workItem from="1715419502142" duration="55000" />
+      <workItem from="1715550646360" duration="3310000" />
     </task>
     <servers />
   </component>
@@ -116,16 +144,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/configs/LoadDB.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
