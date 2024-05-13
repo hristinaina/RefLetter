@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="added loader for companies">
-      <change afterPath="$PROJECT_DIR$/kjar/src/main/resources/rules/forward/forward.drl" afterDir="false" />
+    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="added almost all rules for forward scenario 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kjar/src/main/resources/META-INF/kmodule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kjar/src/main/resources/META-INF/kmodule.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/UniversityRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/UniversityRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +143,7 @@
       <workItem from="1715359756528" duration="209000" />
       <workItem from="1715419502142" duration="55000" />
       <workItem from="1715550646360" duration="4942000" />
-      <workItem from="1715603262401" duration="9085000" />
+      <workItem from="1715603262401" duration="10062000" />
     </task>
     <task id="LOCAL-00001" summary="added loader for companies">
       <option name="closed" value="true" />
@@ -162,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715596020170</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added almost all rules for forward scenario 1">
+      <option name="closed" value="true" />
+      <created>1715638606221</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715638606221</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +180,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added loader for companies" />
-    <option name="LAST_COMMIT_MESSAGE" value="added loader for companies" />
+    <MESSAGE value="added almost all rules for forward scenario one one" />
+    <MESSAGE value="added almost all rules for forward scenario 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="added almost all rules for forward scenario 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
