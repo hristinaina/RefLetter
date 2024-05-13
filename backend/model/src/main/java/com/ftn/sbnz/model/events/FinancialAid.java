@@ -19,6 +19,6 @@ import lombok.NoArgsConstructor;
 public class FinancialAid {
     private FinancialAidType type;
     private double amount;
-    private Requirement requrement;
+    private Requirement requirement;
     private Date deadline;
 }

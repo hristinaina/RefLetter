@@ -18,7 +18,7 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int rank;
-    private String company;
+    private String name;
     private String industry;
     private String city;
     private String stateCountry;
@@ -29,7 +29,7 @@ public class Company {
 
     public Company(int rank, String company, String industry, String city, String stateCountry, String country, double revenue, int employees) {
         this.rank = rank;
-        this.company = company;
+        this.name = company;
         this.industry = industry;
         this.city = city;
         this.stateCountry = stateCountry;
