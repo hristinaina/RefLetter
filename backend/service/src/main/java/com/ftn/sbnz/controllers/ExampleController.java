@@ -43,7 +43,7 @@ public class ExampleController {
 		Student oldStudent = new Student((long) 1, interests);  // ovo se inace dobavi iz baze po id-ju
 		int fired = this.sampleService.updateStudent(oldStudent, updatedStudent);
 
-		return new ResponseEntity<Integer>(fired, HttpStatus.OK);
+		return ResponseEntity.ok().body(fired);
     }
 	
 }

@@ -1,6 +1,6 @@
 package cep;
 import  com.ftn.sbnz.model.models.Student;
-import  com.ftn.sbnz.model.models.InterestChange;
+import  com.ftn.sbnz.model.events.InterestChange;
 
 rule "Check for Interest Change Event"
     salience 10
@@ -8,10 +8,9 @@ rule "Check for Interest Change Event"
         $s1: Student($sId: id, $interest1: researchInterest)
         $s2: Student(
             this != $s1, 
-            this after $t1, 
             id == $sId, 
             $interest2: researchInterest,
-            !this.researchInterest.containsAll($interest1)
+            !$s2.researchInterest.equals($interest1)
         )
     then
         insert(new InterestChange($interest1, $interest2, $sId));
