@@ -2,6 +2,8 @@ package com.ftn.sbnz.model.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -10,6 +12,13 @@ import java.util.Map;
 @AllArgsConstructor
 //TODO check attribue types
 public class Student extends Person{
+    
+    public Student(Long id, ArrayList<String> interests) {
+        this.id = id;
+        this.researchInterest = interests;
+    }
+
+    private Long id;
     private double gpa;
     private String location;
     private List<String> researchInterest;

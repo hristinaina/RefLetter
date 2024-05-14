@@ -1,0 +1,36 @@
+package cep;
+import  com.ftn.sbnz.model.models.Student;
+import  com.ftn.sbnz.model.models.InterestChange;
+
+rule "Check for Interest Change Event"
+    salience 10
+    when
+        $s1: Student($sId: id, $interest1: researchInterest)
+        $s2: Student(
+            this != $s1, 
+            this after $t1, 
+            id == $sId, 
+            $interest2: researchInterest,
+            !this.researchInterest.containsAll($interest1)
+        )
+    then
+        insert(new InterestChange($interest1, $interest2, $sId));
+        delete($s1);
+end
+
+
+rule "Student is indecisive"
+    salience 5
+    when
+        $ic1: InterestChange($sId: studentId)
+        Number(intValue >= 10) from accumulate(
+            $ic2: InterestChange(
+                this != $ic1, 
+                studentId == $sId, 
+                this after[0s, 720h] $ic1
+            ),
+            count($ic2)
+        )
+    then
+        System.out.println("Prikazuje se statistika");
+end

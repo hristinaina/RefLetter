@@ -19,4 +19,5 @@ public class InterestChange {
     private List<String> oldInterests;
     private List<String> currentInterests;
     private Date timestamp;
+    private Long studentId;
 }
