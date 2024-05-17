@@ -9,36 +9,38 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-//TODO da li je bitno ko je kreator? Bolje samo univerzitet sacuvati
-public class GradProgram {
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class GradProgramRecommendation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private double price;
     @ManyToOne
-    private University university;
+    private Student student;
     @ManyToOne
-    private Requirement requirement;
-    private String name;
+    private GradProgram gradProgram;
     @OneToMany
     private List<FinancialAid> financialAids;
+    private double score;
+    private boolean passesRequirements;
 
-    public void addFinancialAid(FinancialAid financialAid){
+
+    public void addFinancialAid(FinancialAid financialAid) {
         if (this.financialAids == null) {
             this.financialAids = new ArrayList<>();
         }
         this.financialAids.add(financialAid);
     }
 
-    public GradProgram(double price, University university, Requirement requirement, String name, List<FinancialAid> financialAids) {
-        this.price = price;
-        this.university = university;
-        this.requirement = requirement;
-        this.name = name;
-        this.financialAids = financialAids;
+
+    public GradProgramRecommendation(Student student, GradProgram gradProgram) {
+        this.student = student;
+        this.gradProgram = gradProgram;
+        score = 0;
+        passesRequirements = false;
+        financialAids = new ArrayList<>();
+
     }
 }

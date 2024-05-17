@@ -9,6 +9,8 @@ import javax.persistence.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@MappedSuperclass
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

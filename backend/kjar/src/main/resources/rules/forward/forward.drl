@@ -4,39 +4,48 @@ import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.Requirement;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.model.models.University;
+import com.ftn.sbnz.model.models.GradProgramRecommendation;
 import com.ftn.sbnz.model.events.FinancialAid;
 
+global java.util.ArrayList results;
+
 rule "Check if GradProgram contains Student's interest"
+    salience 10
     when
         $student: Student($interest: researchInterest)
         $program: GradProgram($requirement: requirement)
         $researchArea: String() from $requirement.getResearchInterest()
         eval($interest.contains($researchArea))
+        not GradProgramRecommendation(student == $student, gradProgram == $program)
     then
+        insert(new GradProgramRecommendation($student, $program));
         System.out.println("The GradProgram " + $program.getName() + " at " + $program.getUniversity().getName() + " contains the interest of the student " + $student.getName());
 end
 
-rule "Check if Student matches GradProgram's test scores and research experience"
+rule "Check if Student in GradProgramRecommendation matches GradProgram's test scores and research experience"
     when
-        $student: Student($testScores: testScores, $experience: researchExperience)
-        $program: GradProgram($requirement: requirement)
-        Requirement($requiredScores: testScores, $requiredExperience: researchExperience) from $requirement
+        $recommendation: GradProgramRecommendation($student: student, $program: gradProgram, passesRequirements == false)
+        Requirement($requiredScores: testScores, $requiredExperience: researchExperience) from $program.getRequirement()
         $testName: String() from $requiredScores.keySet()
-        eval($testScores.containsKey($testName) && Double.parseDouble($testScores.get($testName).toString()) >= Double.parseDouble($requiredScores.get($testName).toString()))
+        eval($student.getTestScores().containsKey($testName) && Double.parseDouble($student.getTestScores().get($testName).toString()) >= Double.parseDouble($requiredScores.get($testName).toString()))
         $requiredExp: String() from $requiredExperience
-        eval($experience.contains($requiredExp))
+        eval($student.getResearchExperience().contains($requiredExp))
     then
-        System.out.println("The student " + $student.getName() + " at " + $program.getUniversity().getName() + " matches the test scores and research experience requirements of the GradProgram " + $program.getName());
-end
+     System.out.println("The student " + $student.getName() + " at " + $program.getUniversity().getName() + " matches the test scores and research experience requirements of the GradProgram " + $program.getName());
+
+        modify($recommendation){
+            setPassesRequirements(true)
+        }
+       end
 
 
 rule "Calculate University score based on Student and University parameters"
+    salience 9
     when
-        $student: Student($location: location)
-        $university: University($uniLocation: location, $rank: rank, $numberOfStudents: numberOfStudents, $studentPerStaff: studentPerStaff, $internationalStudentPercent: internationalStudentPercent, $overallScore: overallScore, $researchScore: researchScore, $citationScore: citationScore)
-    then
+         $recommendation: GradProgramRecommendation($student: student, $program: gradProgram, passesRequirements == true, score == 0)
+         $university: University($uniLocation: location, $rank: rank, $numberOfStudents: numberOfStudents, $studentPerStaff: studentPerStaff, $internationalStudentPercent: internationalStudentPercent, $overallScore: overallScore, $researchScore: researchScore, $citationScore: citationScore) from $program.getUniversity()    then
         double score = 0.0;
-        if ($location.equals($uniLocation)) {
+        if ($student.getLocation().equals($uniLocation)) {
             score += 10;
         }
         score += (100 - Double.parseDouble($rank)) * 5;
@@ -47,20 +56,38 @@ rule "Calculate University score based on Student and University parameters"
         score += $researchScore;
         score += $citationScore;
 
+        modify($recommendation){
+            setScore(score)
+        }
         System.out.println("The score for the University " + $university.getName() + " based on the Student " + $student.getName() + " is " + score);
 end
 
 rule "Check Financial Aid for Student"
+    salience 8
+    no-loop
     when
-        $student: Student($testScores: testScores,$experience: researchExperience, requiresFinancialAid == true)
-        $gradProgram: GradProgram($programName: name, $university: university,$financialAids: financialAids)
-         FinancialAid($aidType: type, $amount: amount,$requirement: requirement) from $financialAids
+        $recommendation: GradProgramRecommendation($student: student, $gradProgram: gradProgram, score > 0, passesRequirements == true)
+        $studentAid: FinancialAid($aidType: type, $amount: amount,$requirement: requirement) from $gradProgram.getFinancialAids()
         Requirement($requiredScores: testScores, $requiredExperience: researchExperience) from $requirement
         $testName: String() from $requiredScores.keySet()
-        eval($testScores.containsKey($testName) && Double.parseDouble($testScores.get($testName).toString()) >= Double.parseDouble($requiredScores.get($testName).toString()))
+        eval($student.getTestScores().containsKey($testName) && Double.parseDouble($student.getTestScores().get($testName).toString()) >= Double.parseDouble($requiredScores.get($testName).toString()))
         $requiredExp: String() from $requiredExperience
-        eval($experience.contains($requiredExp))
+        eval($student.getResearchExperience().contains($requiredExp))
     then
-        System.out.println("The student " + $student.getName() + " is eligible for financial aid of type " + $aidType + " with an amount of " + $amount + " for the program " + $programName + " at the university " + $university.getName());
+        modify($recommendation){
+            addFinancialAid($studentAid)
+        }
+        System.out.println("The student " + $student.getName() + " is eligible for financial aid of type " + $aidType + " with an amount of " + $amount + " for the program " + $gradProgram.getName() + " at the university " + $gradProgram.getUniversity().getName());
 end
+
+rule "Recommend GradProgram to Student"
+    salience 7
+    when
+        $recommendation: GradProgramRecommendation($student: student, $gradProgram: gradProgram, $financialAids: financialAids, score > 0, passesRequirements == true)
+        eval(($financialAids.size() > 0) || !$student.isRequiresFinancialAid() )
+    then
+        results.add($recommendation);
+        System.out.println("The GradProgram " + $gradProgram.getName() + " at " + $gradProgram.getUniversity().getName() + " is recommended to the student " + $student.getName());
+end
+
 

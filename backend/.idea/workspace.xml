@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="added almost all rules for forward scenario 1">
+    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="added new project proposal">
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_proposal.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_proposal.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kjar/src/main/resources/rules/forward/forward.drl" beforeDir="false" afterPath="$PROJECT_DIR$/kjar/src/main/resources/rules/forward/forward.drl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Requirement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/UniversityStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/UniversityStaff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature/db_loader" />
+        <entry key="$PROJECT_DIR$/.." value="feature/cep2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -52,34 +61,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ExampleTest.test.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.ServiceApplication.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/forward__1",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/hrist/Desktop/SIIT/VIII_semestar/SBNZ/grad-school-recommendation/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ExampleTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/forward__1&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hrist/Desktop/SIIT/VIII_semestar/SBNZ/grad-school-recommendation/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b43fdd98b1fd705ae4c3a10cf25aad8a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.ExampleTest.test">
     <configuration name="ExampleTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service" />
@@ -143,7 +152,8 @@
       <workItem from="1715359756528" duration="209000" />
       <workItem from="1715419502142" duration="55000" />
       <workItem from="1715550646360" duration="4942000" />
-      <workItem from="1715603262401" duration="10062000" />
+      <workItem from="1715603262401" duration="13176000" />
+      <workItem from="1715966267057" duration="6375000" />
     </task>
     <task id="LOCAL-00001" summary="added loader for companies">
       <option name="closed" value="true" />
@@ -161,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715638606221</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added new project proposal">
+      <option name="closed" value="true" />
+      <created>1715639741859</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715639741859</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,14 +200,15 @@
     <MESSAGE value="added loader for companies" />
     <MESSAGE value="added almost all rules for forward scenario one one" />
     <MESSAGE value="added almost all rules for forward scenario 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="added almost all rules for forward scenario 1" />
+    <MESSAGE value="added new project proposal" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new project proposal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java</url>
-          <line>61</line>
+          <line>62</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

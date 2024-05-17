@@ -2,14 +2,19 @@ package com.ftn.sbnz.model.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 import java.util.List;
 import java.util.Map;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 //TODO check attribue types
 public class Student extends Person {
     private double gpa;

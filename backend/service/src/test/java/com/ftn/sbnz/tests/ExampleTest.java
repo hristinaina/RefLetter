@@ -2,10 +2,7 @@ package com.ftn.sbnz.tests;
 
 import com.ftn.sbnz.model.enums.FinancialAidType;
 import com.ftn.sbnz.model.events.FinancialAid;
-import com.ftn.sbnz.model.models.GradProgram;
-import com.ftn.sbnz.model.models.Requirement;
-import com.ftn.sbnz.model.models.Student;
-import com.ftn.sbnz.model.models.University;
+import com.ftn.sbnz.model.models.*;
 import com.ftn.sbnz.model.repo.UniversityRepo;
 import org.junit.Test;
 import org.kie.api.KieServices;
@@ -14,10 +11,7 @@ import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootTest
 public class ExampleTest {
@@ -59,6 +53,9 @@ public class ExampleTest {
         kieSession.insert(mit);
         kieSession.insert(stanford);
         kieSession.insert(mitAid);
+        List<GradProgramRecommendation> results = new ArrayList<>();
+        kieSession.setGlobal("results", results);
         kieSession.fireAllRules();
+        System.out.println(results.size());
     }
 }
