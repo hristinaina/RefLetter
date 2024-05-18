@@ -24,28 +24,30 @@ end
 query StudentEligibleForProgram(Student $student, GradProgram $program)
 
     CheckStudentRequirements($student,$program;)
-    or CheckOtherUniSameLocation($student,$program;)
-    or CheckOtherUni($student,$program;)
+    or ( $university: University() from $program.getUniversity()
+    and $otherProgram: GradProgram(this != $program , university ==$university)
+    and StudentEligibleForProgram($student, $otherProgram;))
+
 
 end
 
-query CheckOtherUniSameLocation(Student $student, GradProgram $program)
-
-    $university: University() from $program.getUniversity()
-    $otherProgram: GradProgram(this != $program , university ==$university)
-    eval($student.getLocation().equals($university.getLocation()))
-    CheckStudentRequirements($student, $otherProgram;)
-
-end
-
-query CheckOtherUni(Student $student, GradProgram $program)
-
-    $university: University() from $program.getUniversity()
-    $otherProgram: GradProgram(this != $program , university ==$university)
-    eval(!($student.getLocation().equals($university.getLocation()) ))
-    CheckStudentRequirements($student, $otherProgram;)
-
-end
+//query CheckOtherUniSameLocation(Student $student, GradProgram $program)
+//
+//    $university: University() from $program.getUniversity()
+//    $otherProgram: GradProgram(this != $program , university ==$university)
+//    eval($student.getLocation().equals($university.getLocation()))
+//    CheckStudentRequirements($student, $otherProgram;)
+//
+//end
+//
+//query CheckOtherUni(Student $student, GradProgram $program)
+//
+//    $university: University() from $program.getUniversity()
+//    $otherProgram: GradProgram(this != $program , university ==$university)
+//    eval(!($student.getLocation().equals($university.getLocation()) ))
+//    CheckStudentRequirements($student, $otherProgram;)
+//
+//end
 
 rule "Trigger CheckStudentRequirements Query"
     when

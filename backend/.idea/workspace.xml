@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="forward chaining done">
-      <change afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="initial backwards">
       <change beforePath="$PROJECT_DIR$/kjar/src/main/resources/rules/backward/backward.drl" beforeDir="false" afterPath="$PROJECT_DIR$/kjar/src/main/resources/rules/backward/backward.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature/cep2" />
+        <entry key="$PROJECT_DIR$/.." value="feature/forward_1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -68,7 +65,7 @@
     "Spring Boot.BackendApplication.executor": "Run",
     "Spring Boot.ServiceApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/forward__1",
+    "git-widget-placeholder": "feature/backwards__1",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/uros/Documents/kbs/Vezbe3/backward-example",
     "node.js.detected.package.eslint": "true",
@@ -164,7 +161,7 @@
       <workItem from="1715419502142" duration="55000" />
       <workItem from="1715550646360" duration="4942000" />
       <workItem from="1715603262401" duration="13176000" />
-      <workItem from="1715966267057" duration="16289000" />
+      <workItem from="1715966267057" duration="16838000" />
     </task>
     <task id="LOCAL-00001" summary="added loader for companies">
       <option name="closed" value="true" />
@@ -198,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715974278542</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="initial backwards">
+      <option name="closed" value="true" />
+      <created>1715992071395</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715992071395</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +226,8 @@
     <MESSAGE value="added almost all rules for forward scenario 1" />
     <MESSAGE value="added new project proposal" />
     <MESSAGE value="forward chaining done" />
-    <option name="LAST_COMMIT_MESSAGE" value="forward chaining done" />
+    <MESSAGE value="initial backwards" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial backwards" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
