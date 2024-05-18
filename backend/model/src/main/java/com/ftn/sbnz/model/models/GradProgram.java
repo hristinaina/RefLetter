@@ -4,6 +4,7 @@ import com.ftn.sbnz.model.events.FinancialAid;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.kie.api.definition.type.Position;
 
 import javax.persistence.*;
 import java.util.ArrayList;
