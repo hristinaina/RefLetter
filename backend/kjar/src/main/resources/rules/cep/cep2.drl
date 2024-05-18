@@ -1,16 +1,24 @@
 package cep;
 import  com.ftn.sbnz.model.models.Student;
 import  com.ftn.sbnz.model.events.InterestChange;
+import java.util.Date;
+
+declare window Changes
+    @doc("last 720h")
+    InterestChange() over window:time(720h)
+end
 
 rule "Check for Interest Change Event"
-    salience 10
+    salience 2
     when
-        $s1: Student($sId: id, $interest1: researchInterest)
+        $s1: Student($sId: id, $interest1: researchInterest, $date1: updatedTimestamp)
         $s2: Student(
             this != $s1, 
             id == $sId, 
             $interest2: researchInterest,
-            !$s2.researchInterest.equals($interest1)
+            $date2: updatedTimestamp,
+            eval($date2.after($date1)),
+            !$interest2.equals($interest1)
         )
     then
         insert(new InterestChange($interest1, $interest2, $sId));
@@ -18,18 +26,17 @@ rule "Check for Interest Change Event"
 end
 
 
-rule "Student is indecisive"
-    salience 5
+rule "Check if student is indecisive"
+    salience 1
     when
-        $ic1: InterestChange($sId: studentId)
-        Number(intValue >= 10) from accumulate(
-            $ic2: InterestChange(
-                this != $ic1, 
-                studentId == $sId, 
-                this after[0s, 720h] $ic1
-            ),
-            count($ic2)
+        $s1: Student($sId: id)
+        accumulate(
+            InterestChange(studentId == $sId)
+             over window:time(720h),
+             $count : count(1)
         )
+        eval($count >= 10)
     then
         System.out.println("Prikazuje se statistika");
+        delete($s1);
 end
