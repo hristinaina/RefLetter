@@ -1,4 +1,4 @@
-package cep;
+package cep2;
 import  com.ftn.sbnz.model.models.Student;
 import  com.ftn.sbnz.model.events.InterestChange;
 import java.util.Date;

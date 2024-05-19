@@ -1,4 +1,4 @@
-package cep;
+package cep1;
 
 import com.ftn.sbnz.model.events.FinancialAid;
 import com.ftn.sbnz.model.models.Student;
@@ -7,6 +7,7 @@ import com.ftn.sbnz.model.models.Notification;
 global java.util.List notificationList;
 
 rule "Notify Candidates about Financial Aid"
+    agenda-group "new-aid"
     when
         $aid: FinancialAid( $aidInterest: requirement.researchInterest)
         $candidate: Student( $studentInterest: researchInterest)
@@ -19,10 +20,11 @@ rule "Notify Candidates about Financial Aid"
 end
 
 rule "Reminder for Financial Aid Deadline"
+    agenda-group "aid-deadline"
     when
         $aid: FinancialAid($deadline: deadline, $aidInterest: requirement.researchInterest)
         $candidate: Student($studentInterest: researchInterest)
-        eval($deadline.getTime() - System.currentTimeMillis() <= 24 * 60 * 60 * 1000)       // One day before deadline
+        eval($deadline.getTime() - System.currentTimeMillis() <= 24 * 60 * 60 * 1000)    
         $match : String() from $studentInterest
         eval($aidInterest.contains($match))
     then
