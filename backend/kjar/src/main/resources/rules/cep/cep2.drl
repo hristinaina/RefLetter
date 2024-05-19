@@ -3,6 +3,7 @@ import  com.ftn.sbnz.model.models.Student;
 import  com.ftn.sbnz.model.events.InterestChange;
 import java.util.Date;
 
+
 declare window Changes
     @doc("last 720h")
     InterestChange() over window:time(720h)

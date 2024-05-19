@@ -20,6 +20,6 @@ public class FinancialAid {
     private Long id;
     private FinancialAidType type;
     private double amount;
-    private Requirement requrement;
+    private Requirement requirement;
     private Date deadline;
 }
