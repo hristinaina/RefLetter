@@ -17,6 +17,13 @@ import lombok.NoArgsConstructor;
 @Role(Role.Type.EVENT)
 @Timestamp("deadline")
 public class FinancialAid {
+
+    public FinancialAid(Long id, Requirement requirement, Date date) {
+        this.id = id;
+        this.requirement = requirement;
+        this.deadline = date;
+    }
+    
     private Long id;
     private FinancialAidType type;
     private double amount;
