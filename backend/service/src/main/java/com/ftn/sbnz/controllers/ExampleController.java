@@ -2,6 +2,7 @@ package com.ftn.sbnz.controllers;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,9 +34,9 @@ public class ExampleController {
 
 		updatedStudent.setUpdatedTimestamp(new Date());
 
-		int fired = this.sampleService.updateStudent(updatedStudent);
+		Map<String, Integer> interests = this.sampleService.updateStudent(updatedStudent);
 
-		return ResponseEntity.ok().body(fired);
+		return ResponseEntity.ok().body(interests);
     }
 	
 	@PostMapping(value = "/newAid", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)

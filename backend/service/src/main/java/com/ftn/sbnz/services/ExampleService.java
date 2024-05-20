@@ -3,11 +3,14 @@ package com.ftn.sbnz.services;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.slf4j.Logger;
@@ -42,26 +45,28 @@ public class ExampleService implements InitializingBean{
         scheduler.scheduleAtFixedRate(this::checkFinancialAidDeadlines, 0, 1, TimeUnit.DAYS);
     }
 
-	public int updateStudent(Student newStudent) {
+	public Map<String, Integer> updateStudent(Student newStudent) {
 
 		//todo: studenta dobaviti iz baze po id-ju
-		ArrayList<String> interests = new ArrayList<>();
-		interests.add(new String("ai"));
-		interests.add(new String("gaming"));
-		interests.add(new String("animation"));
-		Student oldStudent = new Student((long) 1, interests,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));
+		ArrayList<String> interests1 = new ArrayList<>();
+		interests1.add(new String("ai"));
+		interests1.add(new String("gaming"));
+		interests1.add(new String("animation"));
+		Student oldStudent = new Student((long) 1, interests1,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));
+
+		Map<String, Integer> frequentInterestsMap = new HashMap<>();
         KieSession kieSession = this.cepSession;
+		kieSession.setGlobal("frequentInterestsMap", frequentInterestsMap);
 
         kieSession.insert(oldStudent);
         kieSession.insert(newStudent);
 
         int fired = kieSession.fireAllRules();
 
-		KieSessionUtil.removeFromSessionByClass(kieSession, Student.class);
-
         System.out.println(fired);
-		return fired;
-		//todo zapravo iskucati neku statistiku u pravilu
+		System.out.println(frequentInterestsMap);
+		KieSessionUtil.removeFromSessionByClass(kieSession, Student.class);
+		return frequentInterestsMap;
 	}
 
 	public List<Notification> newFinancialAid(FinancialAid aid) {
