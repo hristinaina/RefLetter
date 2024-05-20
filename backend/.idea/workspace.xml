@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="initial backwards">
+    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="added proper recursion">
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Mentored.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kjar/src/main/resources/rules/backward/backward.drl" beforeDir="false" afterPath="$PROJECT_DIR$/kjar/src/main/resources/rules/backward/backward.drl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/University.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/UniversityStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +168,12 @@
       <workItem from="1715419502142" duration="55000" />
       <workItem from="1715550646360" duration="4942000" />
       <workItem from="1715603262401" duration="13176000" />
-      <workItem from="1715966267057" duration="16838000" />
+      <workItem from="1715966267057" duration="21317000" />
+      <workItem from="1716038958091" duration="916000" />
+      <workItem from="1716046495949" duration="1144000" />
+      <workItem from="1716208251910" duration="2181000" />
+      <workItem from="1716221830057" duration="1010000" />
+      <workItem from="1716240887079" duration="7903000" />
     </task>
     <task id="LOCAL-00001" summary="added loader for companies">
       <option name="closed" value="true" />
@@ -203,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715992071395</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added proper recursion">
+      <option name="closed" value="true" />
+      <created>1715992461580</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715992461580</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +247,8 @@
     <MESSAGE value="added new project proposal" />
     <MESSAGE value="forward chaining done" />
     <MESSAGE value="initial backwards" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial backwards" />
+    <MESSAGE value="added proper recursion" />
+    <option name="LAST_COMMIT_MESSAGE" value="added proper recursion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -236,6 +257,11 @@
           <url>file://$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java</url>
           <line>58</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

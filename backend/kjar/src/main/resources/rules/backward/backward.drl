@@ -3,56 +3,42 @@ package backward;
 import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.Requirement;
 import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.model.models.Person;
+import com.ftn.sbnz.model.models.Professor;
+import com.ftn.sbnz.model.models.Mentored;
 import com.ftn.sbnz.model.models.University;
 import com.ftn.sbnz.model.events.FinancialAid;
+import java.util.List;
 
-global Student globalStudent;
-global GradProgram globalProgram;
-
-global Student globalStudent;
-global GradProgram globalProgram;
+global Professor mentor;
+global java.util.ArrayList results;
 
 query CheckStudentRequirements (Student $student, GradProgram $program)
     Requirement($requiredScores: testScores, $requiredExperience: researchExperience) from $program.getRequirement()
-    $testName: String() from $requiredScores.keySet()
-    eval($student.getTestScores().containsKey($testName) && Double.parseDouble($student.getTestScores().get($testName).toString()) >= Double.parseDouble($requiredScores.get($testName).toString()))
-    $requiredExp: String() from $requiredExperience
-    eval($student.getResearchExperience().contains($requiredExp))
+        $testName: String() from $requiredScores.keySet()
+        eval($student.getTestScores().containsKey($testName) && Double.parseDouble($student.getTestScores().get($testName).toString()) >= Double.parseDouble($requiredScores.get($testName).toString()))
+        $requiredExp: String() from $requiredExperience
+        eval($student.getResearchExperience().contains($requiredExp))
+    $student1 : Student(this == $student)
 end
 
 
-query StudentEligibleForProgram(Student $student, GradProgram $program)
-
-    CheckStudentRequirements($student,$program;)
-    or ( $university: University() from $program.getUniversity()
-    and $otherProgram: GradProgram(this != $program , university ==$university)
-    and StudentEligibleForProgram($student, $otherProgram;))
-
-
+query FindMentorsAndStudents(Person $mentor,Person $student)
+//exists(
+    Mentored(mentor == $mentor, student == $student)
+    ||(
+        Mentored($mentor, x;) and FindMentorsAndStudents(x,$student;)
+//    )
+)
 end
 
-//query CheckOtherUniSameLocation(Student $student, GradProgram $program)
-//
-//    $university: University() from $program.getUniversity()
-//    $otherProgram: GradProgram(this != $program , university ==$university)
-//    eval($student.getLocation().equals($university.getLocation()))
-//    CheckStudentRequirements($student, $otherProgram;)
-//
-//end
-//
-//query CheckOtherUni(Student $student, GradProgram $program)
-//
-//    $university: University() from $program.getUniversity()
-//    $otherProgram: GradProgram(this != $program , university ==$university)
-//    eval(!($student.getLocation().equals($university.getLocation()) ))
-//    CheckStudentRequirements($student, $otherProgram;)
-//
-//end
 
 rule "Trigger CheckStudentRequirements Query"
     when
-        StudentEligibleForProgram(globalStudent, globalProgram ;)
+        $studentProf : Professor(this != mentor)
+        FindMentorsAndStudents(mentor,$studentProf;)
     then
-        System.out.println("Student meets requirements for program " + globalProgram.getName());
+    results.add($studentProf);
+       System.out.println("Mentor: " + mentor.getName() + ", Student: " + $studentProf.getName());
 
 end

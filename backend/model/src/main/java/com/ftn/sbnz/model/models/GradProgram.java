@@ -4,7 +4,6 @@ import com.ftn.sbnz.model.events.FinancialAid;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.kie.api.definition.type.Position;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 //TODO da li je bitno ko je kreator? Bolje samo univerzitet sacuvati
-public class GradProgram {
+public class GradProgram  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,9 +23,11 @@ public class GradProgram {
     private University university;
     @ManyToOne
     private Requirement requirement;
-    private String name;
     @OneToMany
     private List<FinancialAid> financialAids;
+    private String name;
+    @ManyToOne
+    private Professor professor;
 
     public void addFinancialAid(FinancialAid financialAid){
         if (this.financialAids == null) {

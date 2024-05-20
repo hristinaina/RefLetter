@@ -34,7 +34,6 @@ public class GradProgramRecommendation {
         this.financialAids.add(financialAid);
     }
 
-
     public GradProgramRecommendation(Student student, GradProgram gradProgram) {
         this.student = student;
         this.gradProgram = gradProgram;
