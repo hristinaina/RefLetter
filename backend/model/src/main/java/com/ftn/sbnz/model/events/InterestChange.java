@@ -1,5 +1,6 @@
 package com.ftn.sbnz.model.events;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,4 +20,13 @@ public class InterestChange {
     private List<String> oldInterests;
     private List<String> currentInterests;
     private Date timestamp;
+    private Long studentId;
+
+    public InterestChange(List<String> oldinterests, List<String> newinterests, Long sId) {
+        this.studentId = sId;
+        this.oldInterests = oldinterests;
+        this.currentInterests = newinterests;
+        this.timestamp = new Date();
+    }
 }
+

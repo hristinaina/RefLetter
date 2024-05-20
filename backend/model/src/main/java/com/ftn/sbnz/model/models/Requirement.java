@@ -11,8 +11,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Requirement {
+
     private double gpa;
     private List<String> researchInterest;
     private Map<String, Double> testScores; 
     private List<String> researchExperience;
+
+    public Requirement(List<String> interests) {
+        this.researchInterest = interests;
+    }
 }
