@@ -30,7 +30,7 @@ public class Student extends Person {
     private Date updatedTimestamp;
 
     public Student(Long id, ArrayList<String> interests, Date updatedTimestamp) {
-        this.id = id;
+        this.setId(id);
         this.researchInterest = interests;
         this.updatedTimestamp = updatedTimestamp;
     }
