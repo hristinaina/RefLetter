@@ -11,22 +11,33 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Role(Role.Type.EVENT)
 @Timestamp("deadline")
+@Entity
 public class FinancialAid {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private FinancialAidType type;
+    private double amount;
+    @ManyToOne
+    private Requirement requirement;
+    private Date deadline;
 
+    public FinancialAid(FinancialAidType type, double amount, Requirement requirement, Date deadline) {
+        this.type = type;
+        this.amount = amount;
+        this.requirement = requirement;
+        this.deadline = deadline;
+    }
     public FinancialAid(Long id, Requirement requirement, Date date) {
         this.id = id;
         this.requirement = requirement;
         this.deadline = date;
     }
-    
-    private Long id;
-    private FinancialAidType type;
-    private double amount;
-    private Requirement requirement;
-    private Date deadline;
 }

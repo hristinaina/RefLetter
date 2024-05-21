@@ -4,63 +4,116 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/UniversityRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ModelHelper/UniversityCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/configs/LoadDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/resources/data/World_University_Rankings_2023.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/University.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/resources/application.properties.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/application.properties.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/application.properties.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/World_University_Rankings_2023.csv" beforeDir="false" />
+    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="merged with develop">
+      <change beforePath="$PROJECT_DIR$/kjar/src/main/resources/rules/backward/backward.drl" beforeDir="false" afterPath="$PROJECT_DIR$/kjar/src/main/resources/rules/backward/backward.drl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="feature/forward_1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ili0n&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hristinaina/RefLetter&quot;,
+    &quot;accountId&quot;: &quot;64d53d1d-4268-43ae-82f6-d914be217b62&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2gHg7nUwDOsrkxcuvtu7t84L9RJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.ServiceApplication.executor": "Debug",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/db__loader",
-    "last_opened_file_path": "C:/Users/hrist/Desktop/SIIT/VIII_semestar/SBNZ/grad-school-recommendation/backend",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.BackwardsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExampleTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/backwards__1&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/uros/Documents/kbs/Vezbe3/backward-example&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b43fdd98b1fd705ae4c3a10cf25aad8a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.ServiceApplication">
+}</component>
+  <component name="RunManager" selected="JUnit.BackwardsTest">
+    <configuration name="BackwardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ftn.sbnz.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ftn.sbnz.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.ftn.sbnz.tests.BackwardsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExampleTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ftn.sbnz.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ftn.sbnz.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.ftn.sbnz.tests.ExampleTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.refletter.backend.BackendApplication" />
@@ -83,9 +136,19 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BackwardsTest" />
+        <item itemvalue="JUnit.ExampleTest.test" />
         <item itemvalue="Spring Boot.ServiceApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -97,7 +160,72 @@
       <updated>1715359754785</updated>
       <workItem from="1715359756528" duration="209000" />
       <workItem from="1715419502142" duration="55000" />
+      <workItem from="1715550646360" duration="4942000" />
+      <workItem from="1715603262401" duration="13176000" />
+      <workItem from="1715966267057" duration="21317000" />
+      <workItem from="1716038958091" duration="916000" />
+      <workItem from="1716046495949" duration="1144000" />
+      <workItem from="1716208251910" duration="2181000" />
+      <workItem from="1716221830057" duration="1010000" />
+      <workItem from="1716240887079" duration="7903000" />
     </task>
+    <task id="LOCAL-00001" summary="added loader for companies">
+      <option name="closed" value="true" />
+      <created>1715596020170</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715596020170</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added almost all rules for forward scenario 1">
+      <option name="closed" value="true" />
+      <created>1715638606221</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715638606221</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added new project proposal">
+      <option name="closed" value="true" />
+      <created>1715639741859</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715639741859</updated>
+    </task>
+    <task id="LOCAL-00004" summary="forward chaining done">
+      <option name="closed" value="true" />
+      <created>1715974278542</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715974278542</updated>
+    </task>
+    <task id="LOCAL-00005" summary="initial backwards">
+      <option name="closed" value="true" />
+      <created>1715992071395</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715992071395</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added proper recursion">
+      <option name="closed" value="true" />
+      <created>1715992461580</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715992461580</updated>
+    </task>
+    <task id="LOCAL-00007" summary="merged with develop">
+      <option name="closed" value="true" />
+      <created>1716249853651</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716249853651</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,15 +243,23 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="added loader for companies" />
+    <MESSAGE value="added almost all rules for forward scenario one one" />
+    <MESSAGE value="added almost all rules for forward scenario 1" />
+    <MESSAGE value="added new project proposal" />
+    <MESSAGE value="forward chaining done" />
+    <MESSAGE value="initial backwards" />
+    <MESSAGE value="added proper recursion" />
+    <MESSAGE value="merged with develop" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged with develop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/configs/LoadDB.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

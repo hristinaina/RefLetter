@@ -1,4 +1,5 @@
 <kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://jboss.org/kie/6.0.0/kmodule">
+
     <kbase name="bwBase" packages="backward">
         <ksession name="bwKsession"/>
     </kbase>
@@ -7,5 +8,8 @@
     </kbase>
     <kbase name="cep2Kbase" eventProcessingMode="stream" packages="cep2">
         <ksession name="cep2Ksession" clockType="pseudo"/>
+    </kbase>
+    <kbase name="fwBase" packages="forward">
+        <ksession name="fwKsession"/>
     </kbase>
 </kmodule>
