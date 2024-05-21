@@ -35,4 +35,9 @@ public class FinancialAid {
         this.requirement = requirement;
         this.deadline = deadline;
     }
+    public FinancialAid(Long id, Requirement requirement, Date date) {
+        this.id = id;
+        this.requirement = requirement;
+        this.deadline = date;
+    }
 }

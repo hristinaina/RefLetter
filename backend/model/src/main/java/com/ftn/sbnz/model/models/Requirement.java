@@ -32,4 +32,8 @@ public class Requirement {
     private Map<String, Double> testScores;
     @ElementCollection
     private List<String> researchExperience;
+
+    public Requirement(List<String> interests) {
+        this.researchInterest = interests;
+    }
 }
