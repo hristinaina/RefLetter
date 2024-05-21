@@ -12,6 +12,7 @@ import java.util.List;
 
 global Professor mentor;
 global java.util.ArrayList results;
+global Boolean allRequirementsMet;
 
 query CheckStudentRequirements (Student $student, GradProgram $program)
     Requirement($requiredScores: testScores, $requiredExperience: researchExperience) from $program.getRequirement()
@@ -22,6 +23,24 @@ query CheckStudentRequirements (Student $student, GradProgram $program)
     $student1 : Student(this == $student)
 end
 
+
+//rule "Check if GradProgram contains Student's interest and Student matches GradProgram's requirements"
+//    salience 10
+//    when
+//        $student: Student($interest: researchInterest)
+//        $program: GradProgram($requirement: requirement)
+//        $researchArea: String() from $requirement.getResearchInterest()
+//        eval($interest.contains($researchArea))
+//        Requirement($requiredScores: testScores, $requiredExperience: researchExperience) from $program.getRequirement()
+//        $testName: String() from $requiredScores.keySet()
+//        eval($student.getTestScores().containsKey($testName) && Double.parseDouble($student.getTestScores().get($testName).toString()) >= Double.parseDouble($requiredScores.get($testName).toString()))
+//        $requiredExp: String() from $requiredExperience
+//        eval($student.getResearchExperience().contains($requiredExp))
+//    then
+//        System.out.println("The GradProgram " + $program.getName() + " at " + $program.getUniversity().getName() + " contains the interest of the student " + $student.getName());
+//        System.out.println("The student " + $student.getName() + " at " + $program.getUniversity().getName() + " matches the test scores and research experience requirements of the GradProgram " + $program.getName());
+//        allRequirementsMet = true;
+//end
 
 query FindMentorsAndStudents(Person $mentor,Person $student)
 //exists(

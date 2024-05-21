@@ -34,7 +34,7 @@ public class BackwardsTest {
         Mentored mentored5 = new Mentored(prof3, prof5);
         Mentored mentored6 = new Mentored(prof4, prof5);
 
-        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Arrays.asList("Computer Science", "Machine Learning"), Map.of("GRE", 328.0), Arrays.asList("Research in Machine Learning"),false);
+        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Arrays.asList("Data Science", "Software Engineering"), Map.of("GRE", 328.0), Arrays.asList("Research in Data Science"),false);
 // Create some requirements
         Requirement req3 = new Requirement(3.5, Arrays.asList("Data Science"), Map.of("GRE", 315.0), Arrays.asList("Research in Data Science"));
         Requirement req4 = new Requirement(3.7, Arrays.asList("Software Engineering"), Map.of("GRE", 320.0), Arrays.asList("Research in Software Engineering"));
