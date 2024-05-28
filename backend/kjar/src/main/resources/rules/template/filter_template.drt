@@ -1,0 +1,25 @@
+template header
+rank
+location
+researchScore
+citationScore
+
+
+package template;
+
+import com.ftn.sbnz.model.models.University;
+import com.ftn.sbnz.model.models.GradProgram;
+
+
+template "universityFilter"
+
+rule "FilterGraduateProgram_@{row.rowNumber}"
+    when
+        $university : University(Double.parseDouble( rank) <= @{rank}, $location: location, researchScore >=@{researchScore}, citationScore >= @{citationScore})
+        eval($location.equals("@{location}"))
+        $gradProgram : GradProgram(university == $university, this != null)
+    then
+        System.out.println("The GradProgram " + $gradProgram.getName() + " at " + $gradProgram.getUniversity().getName());
+end
+
+end template
