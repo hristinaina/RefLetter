@@ -9,5 +9,5 @@ import java.util.Map;
 public interface UniversityRepo extends JpaRepository<University, Long> {
     University findByName(String name);
 
-    List<University> getAll();
+    List<University> findAll();
 }

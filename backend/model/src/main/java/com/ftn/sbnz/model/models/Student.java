@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.MappedSuperclass;
 
@@ -24,8 +25,11 @@ import java.util.Map;
 public class Student extends Person {
     private double gpa;
     private String location;
+    @ElementCollection
     private List<String> researchInterest;
-    private Map<String, Double> testScores; 
+    @ElementCollection
+    private Map<String, Double> testScores;
+    @ElementCollection
     private List<String> researchExperience;
     private Date updatedTimestamp;
 
