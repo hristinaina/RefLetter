@@ -14,9 +14,11 @@ import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.conf.ClockTypeOption;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.ftn.sbnz.model.models.Student;
 
+@SpringBootTest
 public class Cep2Test {
 
     @Test
