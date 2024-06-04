@@ -51,7 +51,7 @@ public class CriteriaTemplateTest {
         ksession.insert(jane);
 
         int fired = ksession.fireAllRules();
-        assertEquals(2, fired);
+        assertEquals(3, fired);
     }
 
     private KieSession createKieSessionFromDRL(String drl){

@@ -14,11 +14,11 @@ rule "AdmissionCriteria_@{row.rowNumber}"
     when
         $student : Student(gpa >= @{gpa})
         $testName: String() from @{requiredScores}.keySet()
-        eval($student.getTestScores().containsKey($testName) && Double.parseDouble($student.getTestScores().get($testName).toString()) >= Double.parseDouble($requiredScores.get($testName).toString()))
+        eval($student.getTestScores().containsKey($testName) && Double.parseDouble($student.getTestScores().get($testName).toString()) >= Double.parseDouble(@{requiredScores}.get($testName).toString()))
         $requiredExp: String() from @{requiredExperience}
-        eval($student.getResearchExperience().contains($requiredExp))
+        eval($student.getResearchExperience().contains(@{requiredExperience})
     then
-        System.out.println("Student " + $student.getId() + " meets the criteria for admission.");
+        System.out.println("Student " + $student.getName() + " meets the criteria for admission.");
 end
 
 end template
