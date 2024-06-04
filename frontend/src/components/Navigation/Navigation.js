@@ -39,8 +39,9 @@ const Navigation = () => {
             </NavLink>
           </NavItem>
           <NavItem className="logout">
+            {/* todo change this to profile and have menu with "view profile" and "logout" */}
             <NavLink tag={Link} className="text-light" to="/">
-              Log out
+              Profile
             </NavLink>
           </NavItem>
         </ul>
