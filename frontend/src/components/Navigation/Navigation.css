@@ -1,0 +1,62 @@
+@media (min-width: 768px) {
+  .navbar {
+    font-size: 24px;
+  }
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 47px;
+}
+
+.navbar {
+  background-color: var(--background-red);
+  height: 100px;
+  padding: 25px 150px 0 130px;
+}
+
+ul {
+  height: 100px;
+  list-style: none;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+.text-light {
+  display: inline-block;
+  position: relative;
+  color: white;
+  margin: 0 33px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.text-light::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.text-light:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.logout {
+  margin-left: auto;
+}
