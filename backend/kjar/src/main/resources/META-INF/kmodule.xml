@@ -12,7 +12,10 @@
     <kbase name="fwBase" packages="forward">
         <ksession name="fwKsession"/>
     </kbase>
-    <kbase name="tfBase" packages="template-dtable">
+    <kbase name="tfBase" packages="template">
         <ksession name="tfKsession"/>
+    </kbase>
+        <kbase name="criteriaBase" packages="template">
+        <ksession name="criteriaKsession"/>
     </kbase>
 </kmodule>

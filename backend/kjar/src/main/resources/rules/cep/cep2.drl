@@ -1,6 +1,7 @@
 package cep2;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.model.events.InterestChange;
+import com.ftn.sbnz.model.events.IndecisiveStudent;
 import java.util.Date;
 import java.util.Map;
 import java.util.HashMap;
@@ -10,14 +11,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.Collection;
 
+
 declare window InterestChanges
     @doc("last 720h")
     InterestChange() over window:time(720h)
 end
  
+
 global Map<String, Integer> frequentInterestsMap;
 
-rule "Check for Interest Change Event"
+
+rule "Check if student's interests have changed"
     salience 4
     when
         $s1: Student($sId: id, $interest1: researchInterest, $date1: updatedTimestamp)
@@ -41,8 +45,19 @@ when
     $s1: Student($sId: id)
     $changes: List(size >= 10)
     from collect(InterestChange(studentId == $sId) over window:time(720h))  
+    not (IndecisiveStudent(studentId == $sId))
+then
+    insert(new IndecisiveStudent($sId));
+    delete($s1);
+end
+
+
+rule "Generate statistics for indecisive student"
+    salience 2
+when
+    IndecisiveStudent($sId: studentId)
     $interestsTemp: List() from accumulate(
-        InterestChange($currentInterests: currentInterests) from $changes,
+        InterestChange($currentInterests: currentInterests, studentId == $sId) over window:time(720h),
         collectList($currentInterests)
     )
 then
@@ -57,7 +72,6 @@ then
     }
 
     System.out.println(frequentInterestsMap);
-    delete($s1);
 end
 
 

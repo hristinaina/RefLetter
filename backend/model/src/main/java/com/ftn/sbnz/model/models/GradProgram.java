@@ -13,7 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-//TODO da li je bitno ko je kreator? Bolje samo univerzitet sacuvati
 public class GradProgram  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
