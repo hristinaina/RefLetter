@@ -4,25 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="fixed security issues&#10;added data.sql data">
+    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="implemented forward chaining endpoint">
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/MentoredRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/MentorshipController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/MentoredService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/MentoredServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/InterestChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/InterestChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Mentored.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Mentored.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Requirement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/ExampleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/ExampleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature/template_criteria" />
+        <entry key="$PROJECT_DIR$/.." value="feature/back/recommendations" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -85,7 +74,7 @@
     "Spring Boot.BackendApplication.executor": "Run",
     "Spring Boot.ServiceApplication.executor": "Debug",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/back/recommendations",
+    "git-widget-placeholder": "feature/back/mentorship",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/uros/Documents/kbs/Vezbe3/template-example",
     "node.js.detected.package.eslint": "true",
@@ -105,6 +94,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ftn.sbnz.services" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.ServiceApplication">
     <configuration name="BackwardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service" />
@@ -203,8 +197,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServiceApplication" />
-        <item itemvalue="JUnit.ExampleTest.test" />
         <item itemvalue="JUnit.FilterTemplateTest.test" />
+        <item itemvalue="JUnit.ExampleTest.test" />
         <item itemvalue="JUnit.BackwardsTest" />
         <item itemvalue="JUnit.FilterTemplateTest.testSimpleTemplateWithObjects" />
       </list>
@@ -330,7 +324,8 @@
     <MESSAGE value="added proper recursion" />
     <MESSAGE value="merged with develop" />
     <MESSAGE value="fixed security issues&#10;added data.sql data" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed security issues&#10;added data.sql data" />
+    <MESSAGE value="implemented forward chaining endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented forward chaining endpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -349,21 +344,6 @@
           <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java</url>
           <line>85</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -30,10 +30,6 @@ public class DroolForwardServiceImpl implements DroolForwardService {
         this.kieSession = fwKsession;
     }
 
-    @PostConstruct
-    public void init() {
-
-    }
 
     @Override
     public List<GradProgramRecommendation> executeRules(Student student) {
