@@ -69,7 +69,7 @@ public class Cep2Test {
 
     
     private Student createStudent(int i){
-        HashSet<String> interests1 = new HashSet<>();
+        Set<String> interests1 = new HashSet<>();
 		interests1.add(new String("ai"));
 		interests1.add(new String("gaming"));
 		interests1.add(new String("animation"));

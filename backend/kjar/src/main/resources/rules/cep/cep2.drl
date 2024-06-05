@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 import java.util.ArrayList;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -16,7 +17,7 @@ declare window InterestChanges
     @doc("last 720h")
     InterestChange() over window:time(720h)
 end
- 
+
 
 global Map<String, Integer> frequentInterestsMap;
 
@@ -26,8 +27,8 @@ rule "Check if student's interests have changed"
     when
         $s1: Student($sId: id, $interest1: researchInterest, $date1: updatedTimestamp)
         $s2: Student(
-            this != $s1, 
-            id == $sId, 
+            this != $s1,
+            id == $sId,
             $interest2: researchInterest,
             $date2: updatedTimestamp,
             eval($date2.after($date1)),
@@ -44,7 +45,7 @@ rule "Check if student is indecisive"
 when
     $s1: Student($sId: id)
     $changes: List(size >= 10)
-    from collect(InterestChange(studentId == $sId) over window:time(720h))  
+    from collect(InterestChange(studentId == $sId) over window:time(720h))
     not (IndecisiveStudent(studentId == $sId))
 then
     insert(new IndecisiveStudent($sId));
@@ -62,7 +63,7 @@ when
     )
 then
     Map<String, Integer> interestCountMap = new HashMap<>();
-    for (List<String> interests : (List<List<String>>) $interestsTemp) {
+    for (Set<String> interests : (List<Set<String>>) $interestsTemp) {
         for (String interest : interests) {
             interestCountMap.put(interest, interestCountMap.getOrDefault(interest, 0) + 1);
         }
