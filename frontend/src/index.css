@@ -1,6 +1,5 @@
 :root {
-  --background-color: #3a0820;
-  --background-red: #59253A;
+  --background-red: #3a0820;
   --accent-red: #78244c;
   --light-red: #895061;
   --background-blue: #2d4159;
@@ -19,7 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-red);
-  color: white;
+  color: var(--text-color);
 }
 
 code {

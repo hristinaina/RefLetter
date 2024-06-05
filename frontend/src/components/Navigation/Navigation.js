@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, NavItem, NavLink } from "reactstrap";
 import { Link, useLocation } from "react-router-dom";
 import "./Navigation.css";
 
 const Navigation = () => {
   const location = useLocation();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
     <header>
@@ -14,7 +17,7 @@ const Navigation = () => {
           <NavItem>
             <NavLink
               tag={Link}
-              className={`text-light ${location.pathname === '/programs' ? 'active' : ''}`}
+              className={`text-light ${location.pathname === "/programs" ? "active" : ""}`}
               to="/programs"
             >
               Programs
@@ -23,7 +26,7 @@ const Navigation = () => {
           <NavItem>
             <NavLink
               tag={Link}
-              className={`text-light ${location.pathname === '/recommendation' ? 'active' : ''}`}
+              className={`text-light ${location.pathname === "/recommendation" ? "active" : ""}`}
               to="/recommendation"
             >
               Recommendation
@@ -32,17 +35,30 @@ const Navigation = () => {
           <NavItem>
             <NavLink
               tag={Link}
-              className={`text-light ${location.pathname === '/mentorship' ? 'active' : ''}`}
+              className={`text-light ${location.pathname === "/mentorship" ? "active" : ""}`}
               to="/mentorship"
             >
               Mentorship
             </NavLink>
           </NavItem>
-          <NavItem className="logout">
-            {/* todo change this to profile and have menu with "view profile" and "logout" */}
-            <NavLink tag={Link} className="text-light" to="/">
+          <NavItem
+            className="profile-dropdown"
+            onMouseEnter={toggleDropdown}
+            onMouseLeave={toggleDropdown}
+          >
+            <NavLink tag={Link} className={`text-light ${location.pathname === "/profile" ? "active" : ""} ${dropdownOpen ? "active" : ""}`} to="#">
               Profile
             </NavLink>
+            {dropdownOpen && (
+              <div className="dropdown-menu">
+                <NavLink tag={Link} className="dropdown-item" to="/profile">
+                  View Profile
+                </NavLink>
+                <NavLink tag={Link} className="dropdown-item" to="/">
+                  Logout
+                </NavLink>
+              </div>
+            )}
           </NavItem>
         </ul>
       </Navbar>
