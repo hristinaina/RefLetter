@@ -1,13 +1,17 @@
 package com.ftn.sbnz.services;
 
+import java.io.InputStream;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler;
+import org.drools.template.ObjectDataCompiler;
+import org.kie.api.builder.Results;
+import org.kie.api.io.ResourceType;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
+import org.kie.internal.utils.KieHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -133,4 +137,28 @@ public class ExampleService implements InitializingBean{
 
         log.info("Fired {} rules. Notifications: {}", fired, notificationList);
     }
+
+	public Boolean checkCriteria(Long i) {
+		InputStream template = ExampleService.class.getResourceAsStream("/rules/template/criteria_template.drt");
+        List<Requirement> data = new ArrayList<>();
+        data.add(new Requirement(3.5, new HashSet<>(), Map.of("GRE", 320.0), Set.of("Research in AI")));
+        data.add(new Requirement(3.7, new HashSet<>(), Map.of("GRE", 325.0), Set.of("Research in Machine Learning")));
+
+        ObjectDataCompiler converter = new ObjectDataCompiler();
+        String drl = converter.compile(data, template);
+		KieHelper kieHelper = new KieHelper();
+        kieHelper.addContent(drl, ResourceType.DRL);
+        //Results results = kieHelper.verify();
+        KieSession ksession = kieHelper.build().newKieSession();
+
+        Student john = new Student("John", "Doe","john@gmail.com", "password", 3.6, "USA", Set.of("Computer Science", "AI"), Map.of("GRE", 322.0), Set.of("Research in AI"),true);
+        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Set.of("Computer Science", "Machine Learning"), Map.of("GRE", 328.0), Set.of("Research in Machine Learning"),false);
+
+        ksession.insert(john);
+        ksession.insert(jane);
+
+        int fired = ksession.fireAllRules();
+		System.out.println(fired);
+		return true;
+	}
 }
