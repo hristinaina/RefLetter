@@ -2261,7 +2261,6 @@ INSERT INTO financial_aid (id, type, amount, requirement_id, deadline) VALUES (1
 
 insert into grad_program_financial_aids (grad_program_id, financial_aids_id) values (1, 1);
 
-insert into professor_grad_programs (professor_id, grad_programs_id) values (1,1);
 
 insert into requirement_research_experience (requirement_id, research_experience) values (1,'Research in AI');
 insert into requirement_research_interest (requirement_id, research_interest) values (1,'Computer Science');

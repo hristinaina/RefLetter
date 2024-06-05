@@ -4,26 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="merged with develop">
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/FinancialAidRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/GradProgramRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/StudentServiceImpl.java" afterDir="false" />
+    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="fixed security issues&#10;added data.sql data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kjar/src/main/resources/META-INF/kmodule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kjar/src/main/resources/META-INF/kmodule.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/InterestChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/InterestChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Mentored.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Mentored.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Requirement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/configs/LoadDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/ExampleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/ExampleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
   "keyToString": {
     "JUnit.BackwardsTest.executor": "Run",
     "JUnit.CriteriaTemplateTest.executor": "Run",
-    "JUnit.ExampleTest.test.executor": "Run",
+    "JUnit.ExampleTest.test.executor": "Debug",
     "JUnit.FilterTemplateTest.test.executor": "Run",
     "JUnit.FilterTemplateTest.testSimpleTemplateWithObjects.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -204,8 +203,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServiceApplication" />
-        <item itemvalue="JUnit.FilterTemplateTest.test" />
         <item itemvalue="JUnit.ExampleTest.test" />
+        <item itemvalue="JUnit.FilterTemplateTest.test" />
         <item itemvalue="JUnit.BackwardsTest" />
         <item itemvalue="JUnit.FilterTemplateTest.testSimpleTemplateWithObjects" />
       </list>
@@ -237,7 +236,8 @@
       <workItem from="1716208251910" duration="2181000" />
       <workItem from="1716221830057" duration="1010000" />
       <workItem from="1716240887079" duration="7903000" />
-      <workItem from="1717596527096" duration="5292000" />
+      <workItem from="1717596527096" duration="9115000" />
+      <workItem from="1717612830845" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="added loader for companies">
       <option name="closed" value="true" />
@@ -295,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716249853651</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed security issues&#10;added data.sql data">
+      <option name="closed" value="true" />
+      <created>1717601972845</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717601972845</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +329,8 @@
     <MESSAGE value="initial backwards" />
     <MESSAGE value="added proper recursion" />
     <MESSAGE value="merged with develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged with develop" />
+    <MESSAGE value="fixed security issues&#10;added data.sql data" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed security issues&#10;added data.sql data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -333,13 +342,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java</url>
-          <line>33</line>
+          <line>30</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/StudentController.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java</url>
@@ -347,14 +351,19 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/LoginController.java</url>
-          <line>104</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

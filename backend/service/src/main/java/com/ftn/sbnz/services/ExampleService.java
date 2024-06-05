@@ -1,11 +1,6 @@
 package com.ftn.sbnz.services;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -48,7 +43,7 @@ public class ExampleService implements InitializingBean{
 	public Map<String, Integer> updateStudent(Student newStudent) {
 
 		//todo: studenta dobaviti iz baze po id-ju
-		ArrayList<String> interests1 = new ArrayList<>();
+		Set<String> interests1 = new HashSet<>();
 		interests1.add(new String("ai"));
 		interests1.add(new String("gaming"));
 		interests1.add(new String("animation"));
@@ -71,9 +66,9 @@ public class ExampleService implements InitializingBean{
 
 	public List<Notification> newFinancialAid(FinancialAid aid) {
 		//todo: dobaviti sve studente iz baze i proslijediti ih pravilu
-		ArrayList<String> interests1 = new ArrayList<>();
-		ArrayList<String> interests2 = new ArrayList<>();
-		ArrayList<String> interests3 = new ArrayList<>();
+		HashSet<String> interests1 = new HashSet<>();
+		HashSet<String> interests2 = new HashSet<>();
+		HashSet<String> interests3 = new HashSet<>();
 		Student s1 = new Student((long) 1, interests1,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));	
 		interests2.add(new String("ai"));
 		interests3.add(new String("ai"));
@@ -106,16 +101,16 @@ public class ExampleService implements InitializingBean{
 		//todo financialAid dobaviti iz baze, i studente isto
         FinancialAid f1 = new FinancialAid(
                 1L,
-                new Requirement(Arrays.asList("ai", "data science")),
+                new Requirement(Set.of("ai", "data science")),
                 new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
         );
 		FinancialAid f2 = new FinancialAid(
 			2L,
-			new Requirement(Arrays.asList("gaming", "data science")),
+			new Requirement(Set.of("gaming", "data science")),
 			new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
 		);
-		ArrayList<String> interests2 = new ArrayList<>();
-		ArrayList<String> interests3 = new ArrayList<>();
+		HashSet<String> interests2 = new HashSet<>();
+		HashSet<String> interests3 = new HashSet<>();
 		interests2.add(new String("ai"));
 		interests3.add(new String("ai"));
 		interests3.add(new String("gaming"));

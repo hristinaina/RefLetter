@@ -14,10 +14,7 @@ import org.kie.internal.utils.KieHelper;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootTest
 public class FilterTemplateTest {
@@ -42,8 +39,8 @@ public class FilterTemplateTest {
     }
 
     private void doTest(KieSession ksession){
-        Requirement req1 = new Requirement(3.5, Arrays.asList("Computer Science", "AI"), Map.of("GRE", 320.0), Arrays.asList("Research in AI"));
-        Requirement req2 = new Requirement(3.7, Arrays.asList("Computer Science", "Machine Learning"), Map.of("GRE", 325.0), Arrays.asList("Research in Machine Learning"));
+        Requirement req1 = new Requirement(3.5, Set.of("Computer Science", "AI"), Map.of("GRE", 320.0), Set.of("Research in AI"));
+        Requirement req2 = new Requirement(3.7, Set.of("Computer Science", "Machine Learning"), Map.of("GRE", 325.0), Set.of("Research in Machine Learning"));
 
         University mit = new University("MIT", "Cambridge, MA", "1", 11332, 3.0, 34.0, "100", 100.0, 100.0);
         University stanford = new University("Stanford", "Stanford, CA", "2", 17005, 3.9, 23.0, "98.7", 98.7, 99.9);

@@ -3,6 +3,7 @@ package com.ftn.sbnz.model.events;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import org.kie.api.definition.type.Role;
 import org.kie.api.definition.type.Timestamp;
@@ -17,12 +18,12 @@ import lombok.NoArgsConstructor;
 @Role(Role.Type.EVENT)
 @Timestamp("timestamp")
 public class InterestChange {
-    private List<String> oldInterests;
-    private List<String> currentInterests;
+    private Set<String> oldInterests;
+    private Set<String> currentInterests;
     private Date timestamp;
     private Long studentId;
 
-    public InterestChange(List<String> oldinterests, List<String> newinterests, Long sId) {
+    public InterestChange(Set<String> oldinterests, Set<String> newinterests, Long sId) {
         this.studentId = sId;
         this.oldInterests = oldinterests;
         this.currentInterests = newinterests;

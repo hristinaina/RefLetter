@@ -8,8 +8,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 @Data
 @NoArgsConstructor
@@ -26,7 +25,7 @@ public class Person implements UserDetails {
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private List<Role> roles;
+    private Set<Role> roles;
 
     public Person(String name, String surname, String email, String password) {
         this.name = name;
@@ -37,7 +36,7 @@ public class Person implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.roles;
+        return new ArrayList<>(this.roles);
     }
 
     @Override
