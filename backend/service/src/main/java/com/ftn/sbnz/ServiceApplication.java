@@ -2,6 +2,7 @@ package com.ftn.sbnz;
 
 import java.util.Arrays;
 
+import org.kie.api.runtime.KieSession;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.kie.api.KieServices;
@@ -40,6 +41,19 @@ public class ServiceApplication  {
 		KieScanner kScanner = ks.newKieScanner(kContainer);
 		kScanner.start(1000);
 		return kContainer;
+	}
+	@Bean
+	public KieSession fwKsession() {
+		KieServices ks = KieServices.Factory.get();
+		KieContainer kContainer = ks.getKieClasspathContainer();
+		return kContainer.newKieSession("fwKsession");
+	}
+
+	@Bean
+	public KieSession bwKsession() {
+		KieServices ks = KieServices.Factory.get();
+		KieContainer kContainer = ks.getKieClasspathContainer();
+		return kContainer.newKieSession("bwKsession");
 	}
 	
 	/*

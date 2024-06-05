@@ -5,33 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="merged with develop">
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/dto/CredentialsDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/dto/PersonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/dto/TokenDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/security/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/PersonRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/RoleRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/MyValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/MyValidatorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/RestAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/TokenBasedAuthentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/FinancialAidRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/GradProgramRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/StudentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kjar/src/main/resources/META-INF/kmodule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kjar/src/main/resources/META-INF/kmodule.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/application.properties.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/configs/LoadDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +33,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature/template_filter" />
+        <entry key="$PROJECT_DIR$/.." value="feature/template_criteria" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -82,6 +73,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.BackwardsTest.executor": "Run",
+    "JUnit.CriteriaTemplateTest.executor": "Run",
     "JUnit.ExampleTest.test.executor": "Run",
     "JUnit.FilterTemplateTest.test.executor": "Run",
     "JUnit.FilterTemplateTest.testSimpleTemplateWithObjects.executor": "Run",
@@ -92,15 +84,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.ServiceApplication.executor": "Run",
+    "Spring Boot.ServiceApplication.executor": "Debug",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/login",
+    "git-widget-placeholder": "feature/back/recommendations",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/uros/Documents/kbs/Vezbe3/template-example",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
     "vue.rearranger.settings.migration": "true"
   },
@@ -110,12 +106,6 @@
     ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.ftn.sbnz.services" />
-      <recent name="com.ftn.sbnz" />
-    </key>
-  </component>
   <component name="RunManager" selected="Spring Boot.ServiceApplication">
     <configuration name="BackwardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service" />
@@ -214,10 +204,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServiceApplication" />
-        <item itemvalue="JUnit.FilterTemplateTest.testSimpleTemplateWithObjects" />
         <item itemvalue="JUnit.FilterTemplateTest.test" />
-        <item itemvalue="JUnit.BackwardsTest" />
         <item itemvalue="JUnit.ExampleTest.test" />
+        <item itemvalue="JUnit.BackwardsTest" />
+        <item itemvalue="JUnit.FilterTemplateTest.testSimpleTemplateWithObjects" />
       </list>
     </recent_temporary>
   </component>
@@ -247,8 +237,7 @@
       <workItem from="1716208251910" duration="2181000" />
       <workItem from="1716221830057" duration="1010000" />
       <workItem from="1716240887079" duration="7903000" />
-      <workItem from="1717440864978" duration="5783000" />
-      <workItem from="1717516477782" duration="2095000" />
+      <workItem from="1717596527096" duration="5292000" />
     </task>
     <task id="LOCAL-00001" summary="added loader for companies">
       <option name="closed" value="true" />
@@ -346,6 +335,26 @@
           <url>file://$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java</url>
           <line>33</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/StudentController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/LoginController.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

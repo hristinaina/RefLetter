@@ -50,8 +50,8 @@ public class ExampleTest {
         kieSession.insert(jane);
         kieSession.insert(mitCS);
         kieSession.insert(stanfordCS);
-        kieSession.insert(mit);
-        kieSession.insert(stanford);
+//        kieSession.insert(mit);
+//        kieSession.insert(stanford);
         kieSession.insert(mitAid);
         List<GradProgramRecommendation> results = new ArrayList<>();
         kieSession.setGlobal("results", results);

@@ -11,6 +11,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
 import java.util.Date;
@@ -113,14 +114,10 @@ public class JwtTokenUtil {
      * @return JWT token
      */
     public String getToken(HttpServletRequest request) {
-        String authHeader = getAuthHeaderFromHeader(request);
-
-        // Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-
+        String authHeader = request.getHeader("Authorization");
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
-            return authHeader.substring(7).replace("\"","");
+            return authHeader.substring(7);
         }
-
         return null;
     }
 
