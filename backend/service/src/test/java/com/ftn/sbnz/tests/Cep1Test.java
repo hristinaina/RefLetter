@@ -2,10 +2,7 @@ package com.ftn.sbnz.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.kie.api.KieServices;
@@ -33,7 +30,7 @@ public class Cep1Test {
 
         FinancialAid aid = new FinancialAid(
             1L,
-            new Requirement(Arrays.asList("ai", "data science")),
+            new Requirement(Set.of("ai", "data science")),
             new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
         );
         List<Student> students = createStudents();
@@ -60,12 +57,12 @@ public class Cep1Test {
 
         FinancialAid f1 = new FinancialAid(
                 1L,
-                new Requirement(Arrays.asList("ai", "data science")),
+                new Requirement(Set.of("ai", "data science")),
                 new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
         );
 		FinancialAid f2 = new FinancialAid(
 			2L,
-			new Requirement(Arrays.asList("gaming", "data science")),
+			new Requirement(Set.of("gaming", "data science")),
 			new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
 		);
 
@@ -85,9 +82,9 @@ public class Cep1Test {
         
     private List<Student> createStudents(){
         ArrayList<Student> students = new ArrayList<>();
-        ArrayList<String> interests1 = new ArrayList<>();
-		ArrayList<String> interests2 = new ArrayList<>();
-		ArrayList<String> interests3 = new ArrayList<>();
+        HashSet<String> interests1 = new HashSet<>();
+        HashSet<String> interests2 = new HashSet<>();
+        HashSet<String> interests3 = new HashSet<>();
 		interests2.add(new String("ai"));
 		interests3.add(new String("ai"));
 		interests3.add(new String("gaming"));
