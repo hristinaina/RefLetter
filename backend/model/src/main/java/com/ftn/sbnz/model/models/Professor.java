@@ -15,9 +15,6 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 public class Professor extends Person{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     @ManyToOne
     private University university;
     @OneToMany
