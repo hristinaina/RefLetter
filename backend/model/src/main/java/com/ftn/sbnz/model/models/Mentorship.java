@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
-public class Mentored {
+public class Mentorship {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,7 +20,7 @@ public class Mentored {
     @Position(1)
     private Professor student;
 
-    public Mentored(Professor mentor, Professor student) {
+    public Mentorship(Professor mentor, Professor student) {
         this.mentor = mentor;
         this.student = student;
     }
