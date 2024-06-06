@@ -81,7 +81,7 @@ public class Cep1Test {
 
         
     private List<Student> createStudents(){
-        List<Student> students = new ArrayList<>();
+        ArrayList<Student> students = new ArrayList<>();
         HashSet<String> interests1 = new HashSet<>();
         HashSet<String> interests2 = new HashSet<>();
         HashSet<String> interests3 = new HashSet<>();

@@ -42,7 +42,7 @@ public class CriteriaTemplateTest {
     private void doTest(KieSession ksession){
         
         Student john = new Student("John", "Doe","john@gmail.com", "password", 3.6, "USA", Set.of("Computer Science", "AI"), Map.of("GRE", 322.0), Set.of("Research in AI"),true);
-        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Set.of("Computer Science", "Machine Learning"), Map.of("GRE", 328.0), Set.of("Research in Machine Learning"),false);
+        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Set.of("Computer Science", "Machine Learning"), Map.of("GRE", 328.0),Set.of("Research in Machine Learning"),false);
 
         ksession.insert(john);
         ksession.insert(jane);
