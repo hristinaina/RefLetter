@@ -9,9 +9,11 @@ import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.rule.QueryResults;
 import org.kie.api.runtime.rule.QueryResultsRow;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 
+@SpringBootTest
 public class BackwardsTest {
     @Test
     public void testBackwardsWithMoreMentors() {
@@ -34,10 +36,10 @@ public class BackwardsTest {
         Mentored mentored5 = new Mentored(prof3, prof5);
         Mentored mentored6 = new Mentored(prof4, prof5);
 
-        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Arrays.asList("Data Science", "Software Engineering"), Map.of("GRE", 328.0), Arrays.asList("Research in Data Science"),false);
+        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Set.of("Data Science", "Software Engineering"), Map.of("GRE", 328.0), Set.of("Research in Data Science"),false);
 // Create some requirements
-        Requirement req3 = new Requirement(3.5, Arrays.asList("Data Science"), Map.of("GRE", 315.0), Arrays.asList("Research in Data Science"));
-        Requirement req4 = new Requirement(3.7, Arrays.asList("Software Engineering"), Map.of("GRE", 320.0), Arrays.asList("Research in Software Engineering"));
+        Requirement req3 = new Requirement(3.5,Set.of("Data Science"), Map.of("GRE", 315.0), Set.of("Research in Data Science"));
+        Requirement req4 = new Requirement(3.7, Set.of("Software Engineering"), Map.of("GRE", 320.0), Set.of("Research in Software Engineering"));
 
         University mit = new University("MIT", "Cambridge, MA", "1", 11332, 3.0, 34.0, "100", 100.0, 100.0);
         University stanford = new University("Stanford", "Stanford, CA", "2", 17005, 3.9, 23.0, "98.7", 98.7, 99.9);
@@ -47,20 +49,16 @@ public class BackwardsTest {
         GradProgram softwareEngProgram = new GradProgram(60000.0, stanford, req4,"Software Engineering",new ArrayList<>());
 
 // Add the programs to professors
-        prof1.addGradProgram(dataScienceProgram);
-        prof2.addGradProgram(softwareEngProgram);
 
         // Create some additional requirements
-        Requirement req5 = new Requirement(3.5, Arrays.asList("Data Science"), Map.of("GRE", 315.0), Arrays.asList("Research in Data Science"));
-        Requirement req6 = new Requirement(3.7, Arrays.asList("Software Engineering"), Map.of("GRE", 320.0), Arrays.asList("Research in Software Engineering"));
+        Requirement req5 = new Requirement(3.5, Set.of("Data Science"), Map.of("GRE", 315.0),Set.of("Research in Data Science"));
+        Requirement req6 = new Requirement(3.7, Set.of("Software Engineering"), Map.of("GRE", 320.0), Set.of("Research in Software Engineering"));
 
 // Create some additional grad programs
         GradProgram dataScienceProgram2 = new GradProgram(55000.0, mit, req5,"Data Science2",new ArrayList<>());
         GradProgram softwareEngProgram2 = new GradProgram(60000.0, stanford, req6,"Software Engineering2",new ArrayList<>());
 
 // Add the programs to professors
-        prof3.addGradProgram(dataScienceProgram);
-        prof5.addGradProgram(softwareEngProgram);
 
 // Insert the programs into the KieSession
         kieSession.insert(dataScienceProgram);
@@ -93,13 +91,7 @@ public class BackwardsTest {
         kieSession.fireAllRules();
 
         List<GradProgram> programs = new ArrayList<>();
-        for(Professor p : results){
-            try {
-                programs.addAll(p.getGradPrograms());
-            } catch (Exception e) {
-                System.out.println("No grad programs for professor: " + p.getName());
-            }
-        }
+
 
         for(GradProgram p : programs) {
             QueryResults results1 = kieSession.getQueryResults("CheckStudentRequirements", jane,p );

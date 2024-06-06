@@ -2,6 +2,7 @@ package com.ftn.sbnz.model.models;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,22 +19,22 @@ public class Requirement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double gpa;
-    @ElementCollection
-    private List<String> researchInterest;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> researchInterest;
 
-    public Requirement(double gpa, List<String> researchInterest, Map<String, Double> testScores, List<String> researchExperience) {
+    public Requirement(double gpa, Set<String> researchInterest, Map<String, Double> testScores, Set<String> researchExperience) {
         this.gpa = gpa;
         this.researchInterest = researchInterest;
         this.testScores = testScores;
         this.researchExperience = researchExperience;
     }
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private Map<String, Double> testScores;
-    @ElementCollection
-    private List<String> researchExperience;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> researchExperience;
 
-    public Requirement(List<String> interests) {
+    public Requirement(Set<String> interests) {
         this.researchInterest = interests;
     }
 }

@@ -13,10 +13,10 @@ public class Mentored {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @Position(0)
     private Professor mentor;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @Position(1)
     private Professor student;
 

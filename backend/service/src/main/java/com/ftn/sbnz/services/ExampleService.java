@@ -1,12 +1,7 @@
 package com.ftn.sbnz.services;
 
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -52,7 +47,7 @@ public class ExampleService implements InitializingBean{
 	public Map<String, Integer> updateStudent(Student newStudent) {
 
 		//todo: studenta dobaviti iz baze po id-ju
-		ArrayList<String> interests1 = new ArrayList<>();
+		Set<String> interests1 = new HashSet<>();
 		interests1.add(new String("ai"));
 		interests1.add(new String("gaming"));
 		interests1.add(new String("animation"));
@@ -75,9 +70,9 @@ public class ExampleService implements InitializingBean{
 
 	public List<Notification> newFinancialAid(FinancialAid aid) {
 		//todo: dobaviti sve studente iz baze i proslijediti ih pravilu
-		ArrayList<String> interests1 = new ArrayList<>();
-		ArrayList<String> interests2 = new ArrayList<>();
-		ArrayList<String> interests3 = new ArrayList<>();
+		HashSet<String> interests1 = new HashSet<>();
+		HashSet<String> interests2 = new HashSet<>();
+		HashSet<String> interests3 = new HashSet<>();
 		Student s1 = new Student((long) 1, interests1,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));	
 		interests2.add(new String("ai"));
 		interests3.add(new String("ai"));
@@ -110,16 +105,16 @@ public class ExampleService implements InitializingBean{
 		//todo financialAid dobaviti iz baze, i studente isto
         FinancialAid f1 = new FinancialAid(
                 1L,
-                new Requirement(Arrays.asList("ai", "data science")),
+                new Requirement(Set.of("ai", "data science")),
                 new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
         );
 		FinancialAid f2 = new FinancialAid(
 			2L,
-			new Requirement(Arrays.asList("gaming", "data science")),
+			new Requirement(Set.of("gaming", "data science")),
 			new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
 		);
-		ArrayList<String> interests2 = new ArrayList<>();
-		ArrayList<String> interests3 = new ArrayList<>();
+		HashSet<String> interests2 = new HashSet<>();
+		HashSet<String> interests3 = new HashSet<>();
 		interests2.add(new String("ai"));
 		interests3.add(new String("ai"));
 		interests3.add(new String("gaming"));
@@ -146,8 +141,8 @@ public class ExampleService implements InitializingBean{
 	public Boolean checkCriteria(Long i) {
 		InputStream template = ExampleService.class.getResourceAsStream("/rules/template/criteria_template.drt");
         List<Requirement> data = new ArrayList<>();
-        data.add(new Requirement(3.5, new ArrayList<>(), Map.of("GRE", 320.0), Arrays.asList("Research in AI")));
-        data.add(new Requirement(3.7, new ArrayList<>(), Map.of("GRE", 325.0), Arrays.asList("Research in Machine Learning")));
+        data.add(new Requirement(3.5, new HashSet<>(), Map.of("GRE", 320.0), Set.of("Research in AI")));
+        data.add(new Requirement(3.7, new HashSet<>(), Map.of("GRE", 325.0), Set.of("Research in Machine Learning")));
 
         ObjectDataCompiler converter = new ObjectDataCompiler();
         String drl = converter.compile(data, template);
@@ -156,8 +151,8 @@ public class ExampleService implements InitializingBean{
         //Results results = kieHelper.verify();
         KieSession ksession = kieHelper.build().newKieSession();
 
-        Student john = new Student("John", "Doe","john@gmail.com", "password", 3.6, "USA", Arrays.asList("Computer Science", "AI"), Map.of("GRE", 322.0), Arrays.asList("Research in AI"),true);
-        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Arrays.asList("Computer Science", "Machine Learning"), Map.of("GRE", 328.0), Arrays.asList("Research in Machine Learning"),false);
+        Student john = new Student("John", "Doe","john@gmail.com", "password", 3.6, "USA", Set.of("Computer Science", "AI"), Map.of("GRE", 322.0), Set.of("Research in AI"),true);
+        Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Set.of("Computer Science", "Machine Learning"), Map.of("GRE", 328.0), Set.of("Research in Machine Learning"),false);
 
         ksession.insert(john);
         ksession.insert(jane);

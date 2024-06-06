@@ -6,8 +6,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -15,17 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 public class Professor extends Person{
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private University university;
-    @OneToMany
-    private List<GradProgram> gradPrograms;
 
-    public void addGradProgram(GradProgram gradProgram){
-        if (this.gradPrograms == null) {
-            this.gradPrograms = new ArrayList<>();
-        }
-        this.gradPrograms.add(gradProgram);
-    }
 
     public Professor(String name, String surname, String email, String password, University university) {
         super(name, surname, email, password);

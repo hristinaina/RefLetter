@@ -1,20 +1,19 @@
 package com.ftn.sbnz.model.models;
 import com.ftn.sbnz.model.models.security.Role;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.*;
-import javax.persistence.Id;
-import java.util.Collection;
-import java.util.List;
+
+import java.util.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 public class Person implements UserDetails {
     @Id
@@ -26,7 +25,7 @@ public class Person implements UserDetails {
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private List<Role> roles;
+    private Set<Role> roles;
 
     public Person(String name, String surname, String email, String password) {
         this.name = name;
@@ -37,7 +36,7 @@ public class Person implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
+        return new ArrayList<>(this.roles);
     }
 
     @Override

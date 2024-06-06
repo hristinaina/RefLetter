@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -17,19 +19,19 @@ public class GradProgramRecommendation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Student student;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private GradProgram gradProgram;
-    @OneToMany
-    private List<FinancialAid> financialAids;
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set<FinancialAid> financialAids;
     private double score;
     private boolean passesRequirements;
 
 
     public void addFinancialAid(FinancialAid financialAid) {
         if (this.financialAids == null) {
-            this.financialAids = new ArrayList<>();
+            this.financialAids = new HashSet<>();
         }
         this.financialAids.add(financialAid);
     }
@@ -39,7 +41,7 @@ public class GradProgramRecommendation {
         this.gradProgram = gradProgram;
         score = 0;
         passesRequirements = false;
-        financialAids = new ArrayList<>();
+        financialAids = new HashSet<>();
 
     }
 }

@@ -2,10 +2,7 @@ package com.ftn.sbnz.tests;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import org.drools.core.time.SessionPseudoClock;
@@ -72,7 +69,7 @@ public class Cep2Test {
 
     
     private Student createStudent(int i){
-        ArrayList<String> interests1 = new ArrayList<>();
+        Set<String> interests1 = new HashSet<>();
 		interests1.add(new String("ai"));
 		interests1.add(new String("gaming"));
 		interests1.add(new String("animation"));

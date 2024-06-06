@@ -4,34 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="merged with develop">
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/dto/CredentialsDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/dto/PersonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/dto/TokenDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/security/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/PersonRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/repo/RoleRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/MyValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/MyValidatorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/controllers/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/RestAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/TokenBasedAuthentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/resources/data.sql" afterDir="false" />
+    <list default="true" id="4d75b616-93f7-4a3e-b5e7-72a0eeb3a8e3" name="Changes" comment="fixed security issues&#10;added data.sql data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/FinancialAid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/InterestChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/events/InterestChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/GradProgramRecommendation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Mentored.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Mentored.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Requirement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/ftn/sbnz/model/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/application.properties.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/ServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/ExampleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/ExampleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/BackwardsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/ExampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +32,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature/template_filter" />
+        <entry key="$PROJECT_DIR$/.." value="feature/template_criteria" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -82,7 +72,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.BackwardsTest.executor": "Run",
-    "JUnit.ExampleTest.test.executor": "Run",
+    "JUnit.CriteriaTemplateTest.executor": "Run",
+    "JUnit.ExampleTest.test.executor": "Debug",
     "JUnit.FilterTemplateTest.test.executor": "Run",
     "JUnit.FilterTemplateTest.testSimpleTemplateWithObjects.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -92,15 +83,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.ServiceApplication.executor": "Run",
+    "Spring Boot.ServiceApplication.executor": "Debug",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/login",
+    "git-widget-placeholder": "feature/back/recommendations",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/uros/Documents/kbs/Vezbe3/template-example",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
     "vue.rearranger.settings.migration": "true"
   },
@@ -110,12 +105,6 @@
     ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.ftn.sbnz.services" />
-      <recent name="com.ftn.sbnz" />
-    </key>
-  </component>
   <component name="RunManager" selected="Spring Boot.ServiceApplication">
     <configuration name="BackwardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service" />
@@ -214,10 +203,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServiceApplication" />
-        <item itemvalue="JUnit.FilterTemplateTest.testSimpleTemplateWithObjects" />
+        <item itemvalue="JUnit.ExampleTest.test" />
         <item itemvalue="JUnit.FilterTemplateTest.test" />
         <item itemvalue="JUnit.BackwardsTest" />
-        <item itemvalue="JUnit.ExampleTest.test" />
+        <item itemvalue="JUnit.FilterTemplateTest.testSimpleTemplateWithObjects" />
       </list>
     </recent_temporary>
   </component>
@@ -247,8 +236,8 @@
       <workItem from="1716208251910" duration="2181000" />
       <workItem from="1716221830057" duration="1010000" />
       <workItem from="1716240887079" duration="7903000" />
-      <workItem from="1717440864978" duration="5783000" />
-      <workItem from="1717516477782" duration="2095000" />
+      <workItem from="1717596527096" duration="9115000" />
+      <workItem from="1717612830845" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="added loader for companies">
       <option name="closed" value="true" />
@@ -306,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716249853651</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed security issues&#10;added data.sql data">
+      <option name="closed" value="true" />
+      <created>1717601972845</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717601972845</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +329,8 @@
     <MESSAGE value="initial backwards" />
     <MESSAGE value="added proper recursion" />
     <MESSAGE value="merged with develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged with develop" />
+    <MESSAGE value="fixed security issues&#10;added data.sql data" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed security issues&#10;added data.sql data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -344,8 +342,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/test/java/com/ftn/sbnz/tests/FilterTemplateTest.java</url>
-          <line>33</line>
+          <line>30</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/security/jwt/JwtRequestFilter.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/src/main/java/com/ftn/sbnz/services/DroolForwardServiceImpl.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

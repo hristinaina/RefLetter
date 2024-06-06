@@ -42,7 +42,7 @@ public class LoginController {
     private AuthenticationManager authenticationManager;
 
     String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@#$%^&(){}\\[\\]:;<>,.?/~_+-=|\\\\]).{8,20}$";
-    @PermitAll
+
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody PersonDTO dto) {
         try {
@@ -77,7 +77,6 @@ public class LoginController {
         return new ResponseEntity<>(person, HttpStatus.OK);
     }
 
-    @PermitAll
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody CredentialsDTO credentialsDTO) {
         try {

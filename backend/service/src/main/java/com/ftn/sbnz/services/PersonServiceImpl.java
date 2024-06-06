@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -33,7 +35,7 @@ public class PersonServiceImpl implements PersonService {
 
     private Person createNewPassenger(PersonDTO personDTO) {
         var newPassenger = personDTO.toEntity();
-        List<Role> passengerRole = roleService.findByName("student");
+        Set<Role> passengerRole = new HashSet<>(roleService.findByName("student"));
         newPassenger.setRoles(passengerRole);
 
         String encodedPassword = passwordEncoder.encode(newPassenger.getPassword());

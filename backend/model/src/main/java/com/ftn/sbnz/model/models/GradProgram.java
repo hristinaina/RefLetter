@@ -18,14 +18,14 @@ public class GradProgram  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double price;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private University university;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Requirement requirement;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<FinancialAid> financialAids;
     private String name;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Professor professor;
 
     public void addFinancialAid(FinancialAid financialAid){
