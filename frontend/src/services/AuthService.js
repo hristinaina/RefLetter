@@ -1,34 +1,23 @@
+import httpClient from "../interceptor/interceptor";
+
 class AuthService {
   
     async loginUser(email, password) {
       try {
-        const response = await fetch('http://localhost:8081/api/users/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password }),
-          credentials: 'include',
-        });
-    
-        if (response.ok) {
-          return { success: true };
-        } else {
-          const data = await response.json();
-          return { success: false, error: data.error };
-        }
+        const response = await httpClient.get('http://localhost:8081/api/users/login');
+        
       } catch (error) {
-        console.error('Greška prilikom slanja zahtjeva:', error);
-        return { success: false, error: 'Network error' };
+        console.error('Error fetching data:', error);
+        throw error;
       }
-    };
+      }
   
-    async setUser(user) {
-      localStorage.setItem('user', JSON.stringify(user));
+    async setToken(user) {
+      localStorage.setItem('token', JSON.stringify(user));
     }
     
-    getCurrentUser() {
-      const user = JSON.parse(localStorage.getItem('user'));
+    getToken() {
+      const user = JSON.parse(localStorage.getItem('token'));
       if (!user) {
         window.location.href = '/';
       }
