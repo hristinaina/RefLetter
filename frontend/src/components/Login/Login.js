@@ -149,8 +149,8 @@ const Login = () => {
                 </form>
             </div>
             <div className="right-side">
-                <img src="/edu.png" className="edu-image" alt="education image" />
-                <p className='title'>Welcome to <span style={{ color: "var(--yellow-color)" }} > RefLetter! </span></p>
+                <img src="/edu.gif" className="edu-image" alt="education image" />
+                <p className='title'>Welcome to <span style={{ color: "var(--background-blue)" }} > RefLetter! </span></p>
                 <p className='text'>Your Compass to Higher Education</p>
             </div>
         </div>
