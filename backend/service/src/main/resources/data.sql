@@ -2275,3 +2275,21 @@ insert into student_test_scores (student_id, test_scores, test_scores_key) value
 insert into person_roles (person_id, roles_id) values (1,2);
 insert into person_roles (person_id, roles_id) values (2,1);
 
+INSERT INTO person (id, name, surname, email, password) VALUES (3, 'Professor2', 'Surname2', 'email2@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password) VALUES (4, 'Professor3', 'Surname3', 'email3@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+
+insert into professor (id, university_id) values (3,1);
+insert into professor (id, university_id) values (4,2);
+
+-- Inserting data into the GradProgram table
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (2,'CS2',12000.0,3,1,1);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (3,'CS3',15000.0,4,1,2);
+
+-- Inserting data into the mentorship table
+INSERT INTO mentorship (id, mentor_id, student_id) VALUES (1, 1, 4);
+INSERT INTO mentorship (id, mentor_id, student_id) VALUES (2, 1, 3);
+
+-- Assigning roles to the new professors
+insert into person_roles (person_id, roles_id) values (3,2);
+insert into person_roles (person_id, roles_id) values (4,2);
+

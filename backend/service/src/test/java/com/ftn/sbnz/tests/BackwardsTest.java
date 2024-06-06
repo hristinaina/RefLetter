@@ -1,7 +1,5 @@
 package com.ftn.sbnz.tests;
 
-import com.ftn.sbnz.model.enums.FinancialAidType;
-import com.ftn.sbnz.model.events.FinancialAid;
 import com.ftn.sbnz.model.models.*;
 import org.junit.Test;
 import org.kie.api.KieServices;
@@ -27,12 +25,12 @@ public class BackwardsTest {
         Professor prof5 = new Professor("Prof5", "prof5@gmail.com", "password", "USA", null);
 
         // Create more mentor-student relationships
-        Mentored mentored1 = new Mentored(prof1, prof2);
-        Mentored mentored2 = new Mentored(prof1, prof3);
-        Mentored mentored3 = new Mentored(prof2, prof3);
-        Mentored mentored4 = new Mentored(prof2, prof4);
-        Mentored mentored5 = new Mentored(prof3, prof5);
-        Mentored mentored6 = new Mentored(prof4, prof5);
+        Mentorship mentorship1 = new Mentorship(prof1, prof2);
+        Mentorship mentorship2 = new Mentorship(prof1, prof3);
+        Mentorship mentorship3 = new Mentorship(prof2, prof3);
+        Mentorship mentorship4 = new Mentorship(prof2, prof4);
+        Mentorship mentorship5 = new Mentorship(prof3, prof5);
+        Mentorship mentorship6 = new Mentorship(prof4, prof5);
 
         Student jane = new Student("Jane", "Doe","jane@gmail.com", "password", 3.8,"USA",  Set.of("Data Science", "Software Engineering"), Map.of("GRE", 328.0), Set.of("Research in Data Science"),false);
 // Create some requirements
@@ -69,12 +67,12 @@ public class BackwardsTest {
         kieSession.insert(prof3);
         kieSession.insert(prof4);
         kieSession.insert(prof5);
-        kieSession.insert(mentored1);
-        kieSession.insert(mentored2);
-        kieSession.insert(mentored3);
-        kieSession.insert(mentored4);
-        kieSession.insert(mentored5);
-        kieSession.insert(mentored6);
+        kieSession.insert(mentorship1);
+        kieSession.insert(mentorship2);
+        kieSession.insert(mentorship3);
+        kieSession.insert(mentorship4);
+        kieSession.insert(mentorship5);
+        kieSession.insert(mentorship6);
         kieSession.insert(jane);
 
 

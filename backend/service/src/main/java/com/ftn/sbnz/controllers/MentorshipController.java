@@ -2,8 +2,8 @@ package com.ftn.sbnz.controllers;
 
 import com.ftn.sbnz.model.models.Professor;
 import com.ftn.sbnz.model.models.Student;
-import com.ftn.sbnz.model.repo.MentoredRepo;
-import com.ftn.sbnz.services.MentoredService;
+import com.ftn.sbnz.model.repo.MentorshipRepo;
+import com.ftn.sbnz.services.MentorshipService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/mentorship")
 public class MentorshipController {
     @Autowired
-    private MentoredRepo mentoredRepo;
+    private MentorshipRepo mentorshipRepo;
 
     @Autowired
-    private MentoredService mentoredService;
+    private MentorshipService mentoredService;
 
     @PreAuthorize("hasAuthority('professor')")
     @GetMapping()
     public ResponseEntity<?> get() {
         try {
             var professor = (Professor) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-            return ResponseEntity.ok(mentoredRepo.findAllByMentorId(professor.getId()));
+            return ResponseEntity.ok(mentorshipRepo.findAllByMentorId(professor.getId()));
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
@@ -48,6 +48,18 @@ public class MentorshipController {
         try {
             var professor = (Professor) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
             return ResponseEntity.ok(mentoredService.create(id, professor));
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PreAuthorize("hasAuthority('student')")
+    @GetMapping("mentored/{id}")
+    public ResponseEntity<?> getAllMentorshipPrograms(@PathVariable Long id) {
+        try {
+            var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            return mentoredService.getAllMentorshipPrograms(student, id);
+
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }

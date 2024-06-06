@@ -5,14 +5,13 @@ import com.ftn.sbnz.model.models.Requirement;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.model.models.Person;
 import com.ftn.sbnz.model.models.Professor;
-import com.ftn.sbnz.model.models.Mentored;
+import com.ftn.sbnz.model.models.Mentorship;
 import com.ftn.sbnz.model.models.University;
 import com.ftn.sbnz.model.events.FinancialAid;
 import java.util.List;
 
 global Professor mentor;
 global java.util.ArrayList results;
-global Boolean allRequirementsMet;
 
 query CheckStudentRequirements (Student $student, GradProgram $program)
     Requirement($requiredScores: testScores, $requiredExperience: researchExperience) from $program.getRequirement()
@@ -44,9 +43,9 @@ end
 
 query FindMentorsAndStudents(Person $mentor,Person $student)
 //exists(
-    Mentored(mentor == $mentor, student == $student)
+    Mentorship(mentor == $mentor, student == $student)
     ||(
-        Mentored($mentor, x;) and FindMentorsAndStudents(x,$student;)
+        Mentorship($mentor, x;) and FindMentorsAndStudents(x,$student;)
 //    )
 )
 end

@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface GradProgramRepo extends JpaRepository<GradProgram, Long> {
      List<GradProgram> findAll();
+     List<GradProgram> findAllByProfessorId(Long id);
 
 }
