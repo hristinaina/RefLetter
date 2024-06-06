@@ -9,10 +9,10 @@ httpClient.interceptors.request.use(
         config.headers['Authorization'] = `Bearer ${token}`;
         
         // // Add CORS headers
-        // config.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'; 
-        // config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'; 
-        // config.headers['Access-Control-Allow-Headers'] = '*'; 
-
+        config.headers['Access-Control-Allow-Origin'] = '*'; // Allow all origins
+        config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';
+        config.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization';
+        config.headers['Access-Control-Allow-Credentials'] = 'true';
         return config;
     },
     (error) => {

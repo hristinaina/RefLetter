@@ -20,7 +20,19 @@ const Login = () => {
             try {
                 const result = await authService.validateUser();
                 console.log(result);
-                !result ? navigate('/') : navigate('/real-estates');
+
+                if (result.name === "student") {
+                    console.log("student");
+                    navigate('/programs');
+                }
+                else if (result.name === "professor") {
+                    console.log("professor");
+                    navigate('/professor');
+                }
+                else {
+                    console.log("login");
+                    navigate("/login");
+                }
             } catch (error) {
                 console.error('Error:', error);
             }
@@ -38,9 +50,19 @@ const Login = () => {
 
     const handleLogin = async () => {
         const result = await authService.loginUser(username, password);
-        if (result.success) {
+        console.log(result);
+        if (result.status ===200) {
             const result = await authService.validateUser();
-            !result ? navigate('/reset-password?token=superadmin') : navigate('/real-estates');
+            console.log(result);
+            if (result.name === 'student') {
+                navigate('/programs');
+            }
+            else if (result.name === 'professor') {
+                navigate('/professor');
+            }
+            else {
+                navigate('/login');
+            }
         } else {
             setSnackbarMessage(result.error);
             handleClick();
