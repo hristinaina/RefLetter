@@ -86,6 +86,7 @@ const Login = () => {
     return (
         <ThemeProvider theme={lightTheme}>
         <div className="background">
+            <img src="/logo-white.png" className="top-right-logo" alt="Logo" />
             <div className="left-side">
                 <p className="title-login">Login</p>
                 <form>
@@ -135,6 +136,9 @@ const Login = () => {
                     >
                         Login
                     </Button>
+                    <Link to="/reg" style={{textDecoration: "none"}}>
+                        <p className="reg" variant="contained" style={{textTransform: 'none' }}>No account yet? SIGN UP</p>
+                    </Link>
                     <Snackbar
                         open={open}
                         autoHideDuration={1000}
@@ -145,8 +149,8 @@ const Login = () => {
                 </form>
             </div>
             <div className="right-side">
-                <img src="/edu.png" className="ice-image" alt="education image" />
-                <p className='title'>Welcome to RefLetter!</p>
+                <img src="/edu.png" className="edu-image" alt="education image" />
+                <p className='title'>Welcome to <span style={{ color: "var(--yellow-color)" }} > RefLetter! </span></p>
                 <p className='text'>Your Compass to Higher Education</p>
             </div>
         </div>
