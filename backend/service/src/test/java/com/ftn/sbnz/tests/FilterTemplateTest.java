@@ -1,9 +1,6 @@
 package com.ftn.sbnz.tests;
 
-import com.ftn.sbnz.model.models.GradProgram;
-import com.ftn.sbnz.model.models.Requirement;
-import com.ftn.sbnz.model.models.University;
-import com.ftn.sbnz.model.models.FilterTemplateModel;
+import com.ftn.sbnz.model.models.*;
 import org.drools.template.ObjectDataCompiler;
 import org.junit.jupiter.api.Test;
 import org.kie.api.builder.Message;
@@ -56,8 +53,14 @@ public class FilterTemplateTest {
         ksession.insert(stanford);
         ksession.insert(stanfordCS);
 
+        List<GradProgram> results = new ArrayList<>();
+        ksession.setGlobal("results", results);
 
         ksession.fireAllRules();
+
+        for(GradProgram gradProgram : results){
+            System.out.println(gradProgram.getName());
+        }
 
         // Add assertions to check the results of the rules
     }
