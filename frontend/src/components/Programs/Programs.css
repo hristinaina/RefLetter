@@ -1,0 +1,18 @@
+.filter-button {
+    bottom: 2vh;
+}
+
+.left-side {
+    width: 50%;
+    float: left;
+}
+
+.right-side {
+    width: 50%;
+    float: right;
+}
+
+
+.program-card.selected {
+    background-color: #3a746e; /* Replace with your theme's primary color */
+}

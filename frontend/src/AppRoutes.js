@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Programs } from './components/Programs';
+import { Programs } from './components/Programs/Programs';
 import Login from './components/Login/Login';
 import {Recommendation} from "./components/Recommendation/Recommendation";
 
