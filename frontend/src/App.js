@@ -3,7 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import { ThemeProvider } from '@mui/material/styles';
-import lightTheme from './themes/lightTheme'; 
+import lightTheme from './themes/lightTheme';
+
 
 
 function App() {
