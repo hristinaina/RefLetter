@@ -55,6 +55,29 @@ class ProgramService {
             throw error;
         }
     }
+    async getAllProfs() {
+
+        try {
+            const response = await httpClient.get('http://localhost:8080/api/professor/all');
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            throw error;
+        }
+    }
+
+    async getMentorshipPrograms(id) {
+
+        try {
+            const response = await httpClient.get(`http://localhost:8080/api/mentorship/mentored/${id}`);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            throw error;
+        }
+    }
 
 }
 
