@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/mentorship")
+@CrossOrigin(origins = "*")
 public class MentorshipController {
     @Autowired
     private MentorshipRepo mentorshipRepo;

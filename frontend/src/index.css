@@ -2,7 +2,7 @@
   --background-red: #3a0820;
   --accent-red: #78244c;
   --light-red: #895061;
-  --background-blue: #2d4159;
+  --background-blue: #3a746e;
   --accent-blue: #0677a1;
   --primary-color: #0056a7;
   --yellow-color: #c7e410;
@@ -19,6 +19,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-red);
   color: var(--text-color);
+}
+
+input{
+  color: black !important;
 }
 
 code {

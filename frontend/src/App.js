@@ -3,12 +3,13 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme'; 
+import lightTheme from './themes/lightTheme';
+
 
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
       <Router>
         <AppRoutes />
       </Router>

@@ -1,20 +1,20 @@
 package com.ftn.sbnz.controllers;
 
 
+import com.ftn.sbnz.model.models.FilterTemplateModel;
 import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.model.models.dto.CredentialsDTO;
 import com.ftn.sbnz.model.models.dto.PersonDTO;
 import com.ftn.sbnz.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/student")
+@CrossOrigin(origins = "*")
 public class StudentController {
     @Autowired
     private StudentService studentService;
@@ -22,7 +22,7 @@ public class StudentController {
 
     @PreAuthorize("hasAuthority('student')")
     @GetMapping("/recommendation")
-    public ResponseEntity<?> register() {
+    public ResponseEntity<?> recommendation() {
         try {
             var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
             return ResponseEntity.ok(studentService.recommendGradPrograms(student));
@@ -32,4 +32,16 @@ public class StudentController {
         }
 
     }
+    @PreAuthorize("hasAuthority('student')")
+    @PostMapping("/filter")
+    public ResponseEntity<?> filter(@RequestBody FilterTemplateModel filterTemplateModel) {
+        try {
+            var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            return ResponseEntity.ok(studentService.filterGradPrograms(filterTemplateModel));
+        }
+        catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
