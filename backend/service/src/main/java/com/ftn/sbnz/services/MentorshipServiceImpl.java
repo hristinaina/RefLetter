@@ -1,13 +1,17 @@
 package com.ftn.sbnz.services;
 
+import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.Mentorship;
 import com.ftn.sbnz.model.models.Professor;
 import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.model.models.dto.GradProgramDTO;
 import com.ftn.sbnz.model.repo.MentorshipRepo;
 import com.ftn.sbnz.model.repo.ProfessorRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.stream.Collectors;
 
 
 @Service
@@ -53,7 +57,9 @@ public class MentorshipServiceImpl implements MentorshipService {
     public ResponseEntity<?> getAllMentorshipPrograms(Student student, Long id) {
         try {
             var professor = professorRepo.findById(id).get();
-            return ResponseEntity.ok(droolBackwardService.executeRules(professor, student));
+            var programs = droolBackwardService.executeRules(professor, student);
+            var programsDTO = programs.stream().map(GradProgramDTO::new).collect(Collectors.toList());
+            return ResponseEntity.ok(programsDTO);
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }

@@ -15,6 +15,7 @@ import java.util.*;
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"email"}))
 public class Person implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

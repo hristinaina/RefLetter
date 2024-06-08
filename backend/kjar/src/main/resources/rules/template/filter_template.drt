@@ -17,7 +17,7 @@ template "universityFilter"
 rule "FilterGraduateProgram_@{row.rowNumber}"
     when
         $university : University(Double.parseDouble( rank) <= @{rank}, $location: location, researchScore >=@{researchScore}, citationScore >= @{citationScore})
-        eval($location.equals("@{location}"))
+        eval($location.equals("@{location}") || "@{location}".equals("Any"))
         $gradProgram : GradProgram(university == $university, this != null)
     then
      results.add($gradProgram);

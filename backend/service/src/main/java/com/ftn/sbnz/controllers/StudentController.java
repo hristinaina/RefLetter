@@ -32,16 +32,6 @@ public class StudentController {
         }
 
     }
-    @PreAuthorize("hasAuthority('student')")
-    @PostMapping("/filter")
-    public ResponseEntity<?> filter(@RequestBody FilterTemplateModel filterTemplateModel) {
-        try {
-            var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-            return ResponseEntity.ok(studentService.filterGradPrograms(filterTemplateModel));
-        }
-        catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
-    }
+
 
 }

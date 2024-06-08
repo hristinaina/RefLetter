@@ -1,11 +1,12 @@
 package com.ftn.sbnz.model.models.dto;
 
+import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.GradProgramRecommendation;
 import lombok.Data;
 
 @Data
 
-public class RecommendationDTO {
+public class GradProgramDTO {
     Long id;
     private double price;
     String name;
@@ -13,7 +14,7 @@ public class RecommendationDTO {
     String requirementName;
     String location;
 
-    public RecommendationDTO(GradProgramRecommendation recommendation){
+    public GradProgramDTO(GradProgramRecommendation recommendation){
         this.id =recommendation.getGradProgram().getId();
         this.price = recommendation.getGradProgram().getPrice();
         this.name = recommendation.getGradProgram().getName();
@@ -21,5 +22,13 @@ public class RecommendationDTO {
         this.requirementName = recommendation.getGradProgram().getRequirement().toString();
         this.location = recommendation.getGradProgram().getUniversity().getLocation();
 
+    }
+    public GradProgramDTO(GradProgram gradProgram){
+        this.id = gradProgram.getId();
+        this.price = gradProgram.getPrice();
+        this.name = gradProgram.getName();
+        this.universityName = gradProgram.getUniversity().getName();
+        this.requirementName = gradProgram.getRequirement().toString();
+        this.location = gradProgram.getUniversity().getLocation();
     }
 }
