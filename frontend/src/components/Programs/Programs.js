@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Navigation from '../Navigation/Navigation';
+import StudentNavigation from '../StudentNavigation/StudentNavigation';
 import darkTheme from '../../themes/darkTheme';
 import { ThemeProvider } from '@emotion/react';
 import programService from "../../services/ProgramService";
@@ -75,7 +75,7 @@ export function Programs() {
     return (
         <ThemeProvider theme={darkTheme}>
             <div className='App'>
-                <Navigation></Navigation>
+                <StudentNavigation></StudentNavigation>
                 <div className='left-side'>
                     <Button onClick={handleOpen} className="filter-button">
                         <Icon>filter_list</Icon>

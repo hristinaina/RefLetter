@@ -1,16 +1,17 @@
 package com.ftn.sbnz.services;
 
-import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.Mentorship;
 import com.ftn.sbnz.model.models.Professor;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.model.models.dto.GradProgramDTO;
+import com.ftn.sbnz.model.models.dto.MentorshipDTO;
 import com.ftn.sbnz.model.repo.MentorshipRepo;
 import com.ftn.sbnz.model.repo.ProfessorRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 
@@ -39,13 +40,13 @@ public class MentorshipServiceImpl implements MentorshipService {
     }
 
     @Override
-    public ResponseEntity<?> create(Long id, Professor professor) {
+    public ResponseEntity<?> create(String email, Professor professor) {
         try {
-            var mentored = professorRepo.findById(id).get();
+            var mentored = professorRepo.findByEmail(email).get();
             if (mentored.getId() != professor.getId()) {
                 var mentorship = new Mentorship(professor, mentored);
                 mentorshipRepo.save(mentorship);
-                return ResponseEntity.ok().build();
+                return ResponseEntity.ok(new MentorshipDTO(mentorship));
             }
             return ResponseEntity.badRequest().build();
         } catch (Exception e) {
@@ -63,6 +64,11 @@ public class MentorshipServiceImpl implements MentorshipService {
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @Override
+    public List<MentorshipDTO> findAllByMentorId(Long id) {
+        return mentorshipRepo.findAllByMentorId(id).stream().map(MentorshipDTO::new).collect(Collectors.toList());
     }
 
 }

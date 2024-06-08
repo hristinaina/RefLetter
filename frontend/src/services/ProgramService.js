@@ -79,6 +79,42 @@ class ProgramService {
         }
     }
 
+    async getProfMentorship(id) {
+
+        try {
+            const response = await httpClient.get(`http://localhost:8080/api/mentorship`);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            throw error;
+        }
+    }
+
+    async deleteMentorship(id) {
+        try {
+            const response = await httpClient.delete(`http://localhost:8080/api/mentorship/${id}`);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Error deleting mentorship:', error);
+            throw error;
+        }
+    }
+
+    async addMentorship(email) {
+        try {
+            const response = await httpClient.post(`http://localhost:8080/api/mentorship`,{
+                email
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Creating mentorship:', error);
+            throw error;
+        }
+    }
+
 }
 
 const programService = new ProgramService();

@@ -58,7 +58,7 @@ const Login = () => {
                 navigate('/programs');
             }
             else if (result.name === 'professor') {
-                navigate('/professor');
+                navigate('/prof-mentorship');
             }
             else {
                 navigate('/login');

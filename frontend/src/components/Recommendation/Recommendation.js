@@ -1,6 +1,6 @@
 import {ThemeProvider} from "@emotion/react";
 import darkTheme from "../../themes/darkTheme";
-import Navigation from "../Navigation/Navigation";
+import StudentNavigation from "../StudentNavigation/StudentNavigation";
 import React, {useEffect, useState} from "react";
 import { Card } from '@mui/material';
 import Button from '@mui/material/Button';
@@ -50,7 +50,7 @@ export function Recommendation() {
     return (
         <ThemeProvider theme={darkTheme}>
             <div className='App'>
-                <Navigation></Navigation>
+                <StudentNavigation></StudentNavigation>
                 <div style={{width: '50%', float: 'left'}}>
                     {dataToShow.map((item) => (
                         <Card key={item.id}

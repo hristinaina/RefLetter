@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import programService from "../../services/ProgramService";
 import {ThemeProvider} from "@emotion/react";
 import darkTheme from "../../themes/darkTheme";
-import Navigation from "../Navigation/Navigation";
+import StudentNavigation from "../StudentNavigation/StudentNavigation";
 import Button from "@mui/material/Button";
 import Icon from "@mui/material/Icon";
 import {Card, Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
@@ -62,7 +62,7 @@ export const Mentorship = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <div className='App'>
-                <Navigation></Navigation>
+                <StudentNavigation></StudentNavigation>
                 <div className={styles['left-side']}>
                     {professors.map((professor) => (
                         <Card key={professor.id}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Navbar, NavItem, NavLink } from "reactstrap";
 import { Link, useLocation } from "react-router-dom";
-import "./Navigation.css";
+import "./StudentNavigation.css";
 
-const Navigation = () => {
+const StudentNavigation = () => {
   const location = useLocation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -66,4 +66,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default StudentNavigation;
