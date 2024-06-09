@@ -50,8 +50,9 @@ class AuthService {
 
     async registerStudent(student){
         try {
+            console.log(student);
             const response = await httpClient.post('http://localhost:8080/api/register/student',{
-                student
+                ...student
             });
             await this.setToken(response.data['accessToken']);
             return response;
