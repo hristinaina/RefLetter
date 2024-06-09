@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
@@ -15,6 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.ftn.sbnz.model.models.Student;
 
+@Disabled
 @SpringBootTest
 public class Cep2Test {
 

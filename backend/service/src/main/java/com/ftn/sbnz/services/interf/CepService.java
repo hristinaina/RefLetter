@@ -11,5 +11,4 @@ public interface CepService {
     List<Notification> newFinancialAid(FinancialAid aid);
     Map<String, Integer> updateStudent(Student newStudent);
 
-    Boolean checkCriteria(Long i);
 }

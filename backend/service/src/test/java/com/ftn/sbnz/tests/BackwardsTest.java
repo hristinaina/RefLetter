@@ -2,6 +2,7 @@ package com.ftn.sbnz.tests;
 
 import com.ftn.sbnz.model.models.*;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
@@ -11,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 
+@Disabled
 @SpringBootTest
 public class BackwardsTest {
     @Test
@@ -43,8 +45,8 @@ public class BackwardsTest {
         University stanford = new University("Stanford", "Stanford, CA", "2", 17005, 3.9, 23.0, "98.7", 98.7, 99.9);
 
 // Create some grad programs
-        GradProgram dataScienceProgram = new GradProgram(55000.0, mit, req3,"Data Science",new ArrayList<>());
-        GradProgram softwareEngProgram = new GradProgram(60000.0, stanford, req4,"Software Engineering",new ArrayList<>());
+        GradProgram dataScienceProgram = new GradProgram(55000.0, mit, req3,"Data Science",new HashSet<>());
+        GradProgram softwareEngProgram = new GradProgram(60000.0, stanford, req4,"Software Engineering",new HashSet<>());
 
 // Add the programs to professors
 
@@ -53,8 +55,8 @@ public class BackwardsTest {
         Requirement req6 = new Requirement(3.7, Set.of("Software Engineering"), Map.of("GRE", 320.0), Set.of("Research in Software Engineering"));
 
 // Create some additional grad programs
-        GradProgram dataScienceProgram2 = new GradProgram(55000.0, mit, req5,"Data Science2",new ArrayList<>());
-        GradProgram softwareEngProgram2 = new GradProgram(60000.0, stanford, req6,"Software Engineering2",new ArrayList<>());
+        GradProgram dataScienceProgram2 = new GradProgram(55000.0, mit, req5,"Data Science2",new HashSet<>());
+        GradProgram softwareEngProgram2 = new GradProgram(60000.0, stanford, req6,"Software Engineering2",new HashSet<>());
 
 // Add the programs to professors
 

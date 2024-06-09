@@ -7,6 +7,7 @@ import com.ftn.sbnz.model.models.Requirement;
 import com.ftn.sbnz.model.repo.FinancialAidRepo;
 import com.ftn.sbnz.model.repo.GradProgramRepo;
 import com.ftn.sbnz.model.repo.RequirementRepo;
+import com.ftn.sbnz.services.interf.CepService;
 import com.ftn.sbnz.services.interf.FinancialAidService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class FinancialAidServiceImpl implements FinancialAidService {
     private GradProgramRepo gradProgramRepo;
 
     @Autowired
-    private CepServiceImpl cepService;
+    private CepService cepService;
 
 
     @Override

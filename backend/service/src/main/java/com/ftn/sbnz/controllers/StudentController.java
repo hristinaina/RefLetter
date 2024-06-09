@@ -2,6 +2,7 @@ package com.ftn.sbnz.controllers;
 
 
 import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.services.interf.CriteriaTemplateService;
 import com.ftn.sbnz.services.interf.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,8 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @Autowired
+    private CriteriaTemplateService criteriaTemplateService;
 
     @PreAuthorize("hasAuthority('student')")
     @GetMapping("/recommendation")
@@ -27,7 +30,6 @@ public class StudentController {
         catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
-
     }
 
     @PreAuthorize("hasAuthority('student')")
@@ -40,7 +42,18 @@ public class StudentController {
         catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
+    }
 
+    @PreAuthorize("hasAuthority('student')")
+    @GetMapping("/criteria/{programId}")
+    public ResponseEntity<?> checkCriteria(@PathVariable Long programId) {
+        try {
+            var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            return ResponseEntity.ok(criteriaTemplateService.checkCriteria(programId, student));
+        }
+        catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 

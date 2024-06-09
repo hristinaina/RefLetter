@@ -2239,7 +2239,7 @@ INSERT INTO role (id,name) VALUES (2,'professor');
 -- pw Admin_123
 
 -- Inserting data into the Professor table
-INSERT INTO person (id, name, surname, email, password) VALUES (1, 'Professor1', 'Surname1', 'email1@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password) VALUES (1, 'Professor1', 'Surname1', 'email1@example.com', '$2a$10$BTXgy1OgsbaifVFfjX06M.GY7YMsSKnDlwF5gKqV4TFqV19b3lzPi');
 
 insert into professor (id, university_id) values (1,1);
 
@@ -2252,7 +2252,7 @@ insert into grad_program (id, name, price, professor_id, requirement_id, univers
 
 
 -- Inserting data into the Student table
-INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ruzic', 'ruza@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ruzic', 'ruza@example.com', '$2a$10$BTXgy1OgsbaifVFfjX06M.GY7YMsSKnDlwF5gKqV4TFqV19b3lzPi');
 
 insert into student (gpa, location, requires_financial_aid, id) values (3.8,'United States',true,2);
 
@@ -2293,3 +2293,12 @@ INSERT INTO mentorship (id, mentor_id, student_id) VALUES (2, 1, 3);
 insert into person_roles (person_id, roles_id) values (3,2);
 insert into person_roles (person_id, roles_id) values (4,2);
 
+SELECT setval('financial_aid_id_seq', 2500);
+SELECT setval('grad_program_id_seq', 2500);
+SELECT setval('grad_program_recommendation_id_seq', 2500);
+SELECT setval('mentorship_id_seq', 2500);
+-- SELECT setval('person_id_seq', 2500);
+SELECT setval('requirement_id_seq', 2500);
+SELECT setval('notification_id_seq', 2500);
+SELECT setval('role_id_seq', 2500);
+SELECT setval('university_id_seq', 2500);

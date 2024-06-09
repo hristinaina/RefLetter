@@ -8,6 +8,7 @@ import com.ftn.sbnz.model.repo.FinancialAidRepo;
 import com.ftn.sbnz.model.repo.GradProgramRepo;
 import com.ftn.sbnz.model.repo.RequirementRepo;
 import com.ftn.sbnz.model.repo.UniversityRepo;
+import com.ftn.sbnz.services.interf.CepService;
 import com.ftn.sbnz.services.interf.DroolFilterTemplateService;
 import com.ftn.sbnz.services.interf.GradProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,7 @@ public class GradProgramServiceImpl implements GradProgramService {
     private FinancialAidRepo financialAidRepo;
 
     @Autowired
-    private CepServiceImpl cepService;
+    private CepService cepService;
 
     @Autowired
     private UniversityRepo universityRepo;

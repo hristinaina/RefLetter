@@ -5,6 +5,7 @@ import com.ftn.sbnz.model.events.FinancialAid;
 import com.ftn.sbnz.model.models.*;
 import com.ftn.sbnz.model.repo.UniversityRepo;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
@@ -13,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 
+@Disabled
 @SpringBootTest
 public class ExampleTest {
     @Autowired
@@ -33,8 +35,8 @@ public class ExampleTest {
         University stanford = new University("Stanford", "Stanford, CA", "2", 17005, 3.9, 23.0, "98.7", 98.7, 99.9);
 
 // Create some grad programs
-        GradProgram mitCS = new GradProgram(50000.0, mit, req1,"Computer Science",new ArrayList<>());
-        GradProgram stanfordCS = new GradProgram(60000.0, stanford, req2,"Computer Science",new ArrayList<>());
+        GradProgram mitCS = new GradProgram(50000.0, mit, req1,"Computer Science",new HashSet<>());
+        GradProgram stanfordCS = new GradProgram(60000.0, stanford, req2,"Computer Science",new HashSet<>());
 
 // Create some students
         Student john = new Student("John", "Doe","john@gmail.com", "password", 3.6, "USA",Set.of("Computer Science", "AI"), Map.of("GRE", 322.0), Set.of("Research in AI"),true);

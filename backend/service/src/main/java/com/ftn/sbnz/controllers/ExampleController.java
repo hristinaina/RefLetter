@@ -36,12 +36,4 @@ public class ExampleController {
 		return ResponseEntity.ok().body(interests);
     }
 
-	// iz tokena izvuci studenta, a ulazni parametar ce da bude id studijskog programa
-	@PutMapping(value = "/checkCriteria/{id}")
-    public ResponseEntity<?> checkCriteria(@PathVariable String id) {
-	
-		Boolean flag = this.sampleService.checkCriteria(Long.parseLong(id));
-
-		return ResponseEntity.ok().body(flag);
-    }
 }
