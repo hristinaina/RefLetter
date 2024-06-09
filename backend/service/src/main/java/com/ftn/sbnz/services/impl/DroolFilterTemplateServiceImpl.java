@@ -1,16 +1,15 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.impl;
 
 import com.ftn.sbnz.model.models.FilterTemplateModel;
 import com.ftn.sbnz.model.models.GradProgram;
-import com.ftn.sbnz.model.models.GradProgramRecommendation;
 import com.ftn.sbnz.model.repo.GradProgramRepo;
 import com.ftn.sbnz.model.repo.UniversityRepo;
+import com.ftn.sbnz.services.interf.DroolFilterTemplateService;
 import org.drools.template.ObjectDataCompiler;
 import org.kie.api.builder.Message;
 import org.kie.api.builder.Results;
 import org.kie.api.io.ResourceType;
 import org.kie.api.runtime.KieSession;
-import org.kie.api.runtime.rule.FactHandle;
 import org.kie.internal.utils.KieHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,12 +1,13 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.impl;
 
-import com.ftn.sbnz.model.models.FilterTemplateModel;
-import com.ftn.sbnz.model.models.GradProgram;
-import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.model.models.*;
 import com.ftn.sbnz.model.models.dto.GradProgramDTO;
 import com.ftn.sbnz.model.models.dto.GradProgramDetailsDTO;
 import com.ftn.sbnz.model.repo.GradProgramRepo;
+import com.ftn.sbnz.services.interf.DroolFilterTemplateService;
+import com.ftn.sbnz.services.interf.GradProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +20,36 @@ public class GradProgramServiceImpl implements GradProgramService {
 
     @Autowired
     private DroolFilterTemplateService droolFilterTemplateService;
+
+    @Override
+    public ResponseEntity<?> delete(Long id, Professor professor) {
+        try {
+            //todo obrisati financial aid i requirement ili dodati da ide kaskadno (ne i za profesora)
+            var program = gradProgramRepo.findById(id).get();
+            if (program.getProfessor().getId() == professor.getId()) {
+                gradProgramRepo.delete(program);
+                return ResponseEntity.ok().build();
+            }
+            return ResponseEntity.badRequest().build();
+
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @Override
+    public ResponseEntity<?> create(GradProgram gp, Professor professor) {
+        try {
+            //todo insertovati posebno financialaid i requirement pa ih dodati kao polje zbog id-ja
+            gp.setProfessor(professor);
+            gp = gradProgramRepo.save(gp);
+            System.out.println("POZZZZ");
+            System.out.println(gp);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
     @Override
     public GradProgramDetailsDTO getDetails(Long id) {
@@ -58,4 +89,5 @@ public class GradProgramServiceImpl implements GradProgramService {
         var filtered = droolFilterTemplateService.executeRules(filterTemplateModel);
         return filtered.stream().map(GradProgramDTO::new).collect(Collectors.toList());
     }
+
 }

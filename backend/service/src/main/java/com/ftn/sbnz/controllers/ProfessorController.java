@@ -1,6 +1,6 @@
 package com.ftn.sbnz.controllers;
 
-import com.ftn.sbnz.services.ProfessorService;
+import com.ftn.sbnz.services.interf.ProfessorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

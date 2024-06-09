@@ -3,7 +3,7 @@ package com.ftn.sbnz.controllers;
 import com.ftn.sbnz.model.models.Professor;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.model.repo.MentorshipRepo;
-import com.ftn.sbnz.services.MentorshipService;
+import com.ftn.sbnz.services.interf.MentorshipService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

@@ -1,8 +1,9 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.impl;
 
-import com.ftn.sbnz.model.models.FilterTemplateModel;
 import com.ftn.sbnz.model.models.dto.GradProgramDTO;
 import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.services.interf.DroolForwardService;
+import com.ftn.sbnz.services.interf.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -8,7 +8,7 @@ import com.ftn.sbnz.model.models.dto.PersonDTO;
 import com.ftn.sbnz.model.models.dto.TokenDTO;
 import com.ftn.sbnz.model.repo.PersonRepo;
 import com.ftn.sbnz.security.jwt.JwtTokenUtil;
-import com.ftn.sbnz.services.PersonService;
+import com.ftn.sbnz.services.interf.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +20,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.security.PermitAll;
 
 @RestController
 @RequestMapping("/api")

@@ -1,12 +1,13 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.impl;
 
-import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.Mentorship;
 import com.ftn.sbnz.model.models.Professor;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.model.models.dto.GradProgramDTO;
 import com.ftn.sbnz.model.repo.MentorshipRepo;
 import com.ftn.sbnz.model.repo.ProfessorRepo;
+import com.ftn.sbnz.services.interf.DroolBackwardService;
+import com.ftn.sbnz.services.interf.MentorshipService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

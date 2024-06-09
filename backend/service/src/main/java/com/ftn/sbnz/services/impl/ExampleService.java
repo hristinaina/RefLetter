@@ -1,4 +1,4 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.impl;
 
 import java.io.InputStream;
 import java.util.*;
@@ -6,8 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.ftn.sbnz.services.KieSessionUtil;
 import org.drools.template.ObjectDataCompiler;
-import org.kie.api.builder.Results;
 import org.kie.api.io.ResourceType;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;

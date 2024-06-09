@@ -1,4 +1,4 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.impl;
 
 import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.Professor;
@@ -7,6 +7,7 @@ import com.ftn.sbnz.model.repo.GradProgramRepo;
 import com.ftn.sbnz.model.repo.MentorshipRepo;
 import com.ftn.sbnz.model.repo.ProfessorRepo;
 import com.ftn.sbnz.model.repo.StudentRepo;
+import com.ftn.sbnz.services.interf.DroolBackwardService;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.rule.FactHandle;
 import org.kie.api.runtime.rule.QueryResults;

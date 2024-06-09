@@ -1,4 +1,4 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.interf;
 
 import com.ftn.sbnz.model.models.FilterTemplateModel;
 import com.ftn.sbnz.model.models.GradProgram;

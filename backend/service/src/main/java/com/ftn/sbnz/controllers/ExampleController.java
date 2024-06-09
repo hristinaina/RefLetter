@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.MediaType;
 
-import com.ftn.sbnz.services.ExampleService;
+import com.ftn.sbnz.services.impl.ExampleService;
 import com.ftn.sbnz.model.events.FinancialAid;
 import  com.ftn.sbnz.model.models.Student;
 import  com.ftn.sbnz.model.models.Notification;

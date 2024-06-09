@@ -1,11 +1,8 @@
 package com.ftn.sbnz.controllers;
 
 
-import com.ftn.sbnz.model.models.FilterTemplateModel;
 import com.ftn.sbnz.model.models.Student;
-import com.ftn.sbnz.model.models.dto.CredentialsDTO;
-import com.ftn.sbnz.model.models.dto.PersonDTO;
-import com.ftn.sbnz.services.StudentService;
+import com.ftn.sbnz.services.interf.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
