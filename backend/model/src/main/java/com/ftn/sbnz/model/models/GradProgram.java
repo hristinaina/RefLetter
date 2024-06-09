@@ -25,19 +25,19 @@ public class GradProgram  {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Requirement requirement;
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<FinancialAid> financialAids;
+    private Set<FinancialAid> financialAids;
     private String name;
     @ManyToOne(fetch = FetchType.EAGER)
     private Professor professor;
 
     public void addFinancialAid(FinancialAid financialAid){
         if (this.financialAids == null) {
-            this.financialAids = new ArrayList<>();
+            this.financialAids = new HashSet<>();
         }
         this.financialAids.add(financialAid);
     }
 
-    public GradProgram(double price, University university, Requirement requirement, String name, List<FinancialAid> financialAids) {
+    public GradProgram(double price, University university, Requirement requirement, String name, Set<FinancialAid> financialAids) {
         this.price = price;
         this.university = university;
         this.requirement = requirement;

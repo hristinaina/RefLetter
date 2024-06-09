@@ -60,7 +60,7 @@ public class GradProgramServiceImpl implements GradProgramService {
                     ChangeSetPersister.NotFoundException::new));
             Requirement requirement = requirementRepo.save(gp.getRequirement());
             gp.setRequirement(requirement);
-            List<FinancialAid> aids = new ArrayList<>();
+            Set<FinancialAid> aids = new HashSet<>();
             for (FinancialAid aid: gp.getFinancialAids()){
                 requirement = requirementRepo.save(aid.getRequirement());
                 aid.setRequirement(requirement);

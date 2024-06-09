@@ -5,11 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
 public class GradProgramDetailsDTO {
-    List<FinancialAid> financialAids;
+    Set<FinancialAid> financialAids;
     String professorName;
     private String rank;
     private int numberOfStudents;

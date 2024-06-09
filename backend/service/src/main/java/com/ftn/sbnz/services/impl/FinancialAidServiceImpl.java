@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class FinancialAidServiceImpl implements FinancialAidService {
@@ -34,14 +35,14 @@ public class FinancialAidServiceImpl implements FinancialAidService {
         try {
             GradProgram gp = gradProgramRepo.findById(programId).get();
 
-            //if (gp.getProfessor().getId() != professor.getId()) return ResponseEntity.badRequest().build();
+            if (gp.getProfessor().getId() != professor.getId()) return ResponseEntity.badRequest().build();
 
             Requirement requirement = requirementRepo.save(aid.getRequirement());
             aid.setRequirement(requirement);
             aid = financialAidRepo.save(aid);
 
             // when new aid is created, it should be added to corresponding grad program
-            List<FinancialAid> aids = gp.getFinancialAids();
+            Set<FinancialAid> aids = gp.getFinancialAids();
             aids.add(aid);
             gp.setFinancialAids(aids);
             gradProgramRepo.save(gp);
@@ -58,7 +59,7 @@ public class FinancialAidServiceImpl implements FinancialAidService {
     public ResponseEntity<?> update(FinancialAid aid, Long programId, Professor professor) {
         try {
             GradProgram gp = gradProgramRepo.findById(programId).get();
-            //if (gp.getProfessor().getId() != professor.getId()) return ResponseEntity.badRequest().build();
+            if (gp.getProfessor().getId() != professor.getId()) return ResponseEntity.badRequest().build();
 
             FinancialAid oldAid = financialAidRepo.findById(aid.getId()).get();
 
@@ -81,17 +82,17 @@ public class FinancialAidServiceImpl implements FinancialAidService {
     public ResponseEntity<?> delete(Long id, Long programId, Professor professor) {
         try {
             GradProgram program = gradProgramRepo.findById(programId).get();
-            //if (program.getProfessor().getId() == professor.getId()) {
+            if (program.getProfessor().getId() == professor.getId()) {
                 FinancialAid aid = financialAidRepo.findById(id).get();
-                List<FinancialAid> aids = program.getFinancialAids();
+                Set<FinancialAid> aids = program.getFinancialAids();
                 aids.remove(aid);
                 program.setFinancialAids(aids);
                 gradProgramRepo.save(program);
 
                 financialAidRepo.delete(aid);
                 return ResponseEntity.ok().build();
-            //}
-           // return ResponseEntity.badRequest().build();
+            }
+           return ResponseEntity.badRequest().build();
 
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
