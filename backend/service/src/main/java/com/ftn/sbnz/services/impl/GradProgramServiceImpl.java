@@ -29,6 +29,8 @@ public class GradProgramServiceImpl implements GradProgramService {
     @Autowired
     private FinancialAidRepo financialAidRepo;
 
+    @Autowired
+    private CepServiceImpl cepService;
 
     @Autowired
     private UniversityRepo universityRepo;
@@ -64,8 +66,10 @@ public class GradProgramServiceImpl implements GradProgramService {
             for (FinancialAid aid: gp.getFinancialAids()){
                 requirement = requirementRepo.save(aid.getRequirement());
                 aid.setRequirement(requirement);
-                financialAidRepo.save(aid);
+                aid = financialAidRepo.save(aid);
                 aids.add(aid);
+
+                cepService.newFinancialAid(aid);
             }
             gp.setFinancialAids(aids);
             gradProgramRepo.save(gp);

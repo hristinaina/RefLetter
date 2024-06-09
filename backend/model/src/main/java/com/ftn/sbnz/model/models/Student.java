@@ -16,7 +16,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-//TODO check attribue types
 public class Student extends Person {
     private double gpa;
     private String location;

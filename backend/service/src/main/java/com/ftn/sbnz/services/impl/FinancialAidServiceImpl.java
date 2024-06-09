@@ -9,12 +9,9 @@ import com.ftn.sbnz.model.repo.GradProgramRepo;
 import com.ftn.sbnz.model.repo.RequirementRepo;
 import com.ftn.sbnz.services.interf.FinancialAidService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 @Service
@@ -28,6 +25,9 @@ public class FinancialAidServiceImpl implements FinancialAidService {
 
     @Autowired
     private GradProgramRepo gradProgramRepo;
+
+    @Autowired
+    private CepServiceImpl cepService;
 
 
     @Override
@@ -47,7 +47,7 @@ public class FinancialAidServiceImpl implements FinancialAidService {
             gp.setFinancialAids(aids);
             gradProgramRepo.save(gp);
 
-            //todo call cep
+            cepService.newFinancialAid(aid);
 
             return ResponseEntity.ok(aid);
         } catch (Exception e) {

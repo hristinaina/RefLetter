@@ -6,7 +6,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.ftn.sbnz.model.repo.FinancialAidRepo;
+import com.ftn.sbnz.model.repo.NotificationRepo;
+import com.ftn.sbnz.model.repo.StudentRepo;
 import com.ftn.sbnz.services.KieSessionUtil;
+import com.ftn.sbnz.services.interf.CepService;
 import org.drools.template.ObjectDataCompiler;
 import org.kie.api.io.ResourceType;
 import org.kie.api.runtime.KieContainer;
@@ -24,24 +28,32 @@ import  com.ftn.sbnz.model.models.Notification;
 import  com.ftn.sbnz.model.models.Requirement;
 
 @Service
-public class ExampleService implements InitializingBean{
+public class CepServiceImpl implements InitializingBean, CepService {
 
-	private static Logger log = LoggerFactory.getLogger(ExampleService.class);
-
+	private static Logger log = LoggerFactory.getLogger(CepServiceImpl.class);
 	private final KieContainer kieContainer;
-	private final KieSession cepSession;
+	private final KieSession cep2Session;
 	private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
 	@Autowired
-	public ExampleService(KieContainer kieContainer) {
+	StudentRepo studentRepo;
+
+	@Autowired
+	FinancialAidRepo financialAidRepo;
+
+	@Autowired
+	NotificationRepo notificationRepo;
+
+	@Autowired
+	public CepServiceImpl(KieContainer kieContainer) {
 		log.info("Initialising a new session.");
 		this.kieContainer = kieContainer;
-		this.cepSession = kieContainer.newKieSession("cep2Ksession");
+		this.cep2Session = kieContainer.newKieSession("cep2Ksession");
 	}
 
 	@Override
     public void afterPropertiesSet() {
-        scheduler.scheduleAtFixedRate(this::checkFinancialAidDeadlines, 0, 1, TimeUnit.DAYS);
+        scheduler.scheduleAtFixedRate(this::checkFinancialAidDeadlines, 3, 60*24, TimeUnit.MINUTES);
     }
 
 	public Map<String, Integer> updateStudent(Student newStudent) {
@@ -54,7 +66,7 @@ public class ExampleService implements InitializingBean{
 		Student oldStudent = new Student((long) 1, interests1,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));
 
 		Map<String, Integer> frequentInterestsMap = new HashMap<>();
-        KieSession kieSession = this.cepSession;
+        KieSession kieSession = this.cep2Session;
 		kieSession.setGlobal("frequentInterestsMap", frequentInterestsMap);
 
         kieSession.insert(oldStudent);
@@ -69,57 +81,27 @@ public class ExampleService implements InitializingBean{
 	}
 
 	public List<Notification> newFinancialAid(FinancialAid aid) {
-		//todo: dobaviti sve studente iz baze i proslijediti ih pravilu
-		HashSet<String> interests1 = new HashSet<>();
-		HashSet<String> interests2 = new HashSet<>();
-		HashSet<String> interests3 = new HashSet<>();
-		Student s1 = new Student((long) 1, interests1,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));	
-		interests2.add(new String("ai"));
-		interests3.add(new String("ai"));
-		interests3.add(new String("gaming"));
-		interests3.add(new String("animation"));
-		Student s2 = new Student((long) 2, interests2,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));
-		Student s3 = new Student((long) 3, interests3,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));
-		
+		List<Student> students = studentRepo.findAll();
 		KieSession kieSession = kieContainer.newKieSession("cep1Ksession");;
 		kieSession.getAgenda().getAgendaGroup("new-aid").setFocus(); 
 
 		List<Notification> notificationList = new ArrayList<>();
         kieSession.setGlobal("notificationList", notificationList);
 
-        kieSession.insert(s1);
-        kieSession.insert(s2);
-		kieSession.insert(s3);
+		kieSession.insert(students);
 		kieSession.insert(aid);
 
-        int fired = kieSession.fireAllRules();
-
+		int fired = kieSession.fireAllRules();
 		kieSession.dispose();
 
-		System.out.println(fired);
-		System.out.println(notificationList);
+		notificationList = notificationRepo.saveAll(notificationList);
+		log.info("Fired {} rules. Notifications: {}", fired, notificationList);
 		return notificationList;
 	}
 
 	public void checkFinancialAidDeadlines() {
-		//todo financialAid dobaviti iz baze, i studente isto
-        FinancialAid f1 = new FinancialAid(
-                1L,
-                new Requirement(Set.of("ai", "data science")),
-                new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
-        );
-		FinancialAid f2 = new FinancialAid(
-			2L,
-			new Requirement(Set.of("gaming", "data science")),
-			new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(2))
-		);
-		HashSet<String> interests2 = new HashSet<>();
-		HashSet<String> interests3 = new HashSet<>();
-		interests2.add(new String("ai"));
-		interests3.add(new String("ai"));
-		interests3.add(new String("gaming"));
-		Student s2 = new Student((long) 2, interests2,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));
-		Student s3 = new Student((long) 3, interests3,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));
+		List<Student> students = studentRepo.findAll();
+		List<FinancialAid> aids = financialAidRepo.findAll();
 
         KieSession kieSession = kieContainer.newKieSession("cep1Ksession");
 		kieSession.getAgenda().getAgendaGroup("aid-deadline").setFocus();
@@ -127,19 +109,19 @@ public class ExampleService implements InitializingBean{
         List<Notification> notificationList = new ArrayList<>();
         kieSession.setGlobal("notificationList", notificationList);
 
-        kieSession.insert(s2);
-		kieSession.insert(s3);
-		kieSession.insert(f1);
-		kieSession.insert(f2);
+        kieSession.insert(students);
+		kieSession.insert(aids);
 
         int fired = kieSession.fireAllRules();
         kieSession.dispose();
+
+		notificationList = notificationRepo.saveAll(notificationList);
 
         log.info("Fired {} rules. Notifications: {}", fired, notificationList);
     }
 
 	public Boolean checkCriteria(Long i) {
-		InputStream template = ExampleService.class.getResourceAsStream("/rules/template/criteria_template.drt");
+		InputStream template = CepServiceImpl.class.getResourceAsStream("/rules/template/criteria_template.drt");
         List<Requirement> data = new ArrayList<>();
         data.add(new Requirement(3.5, new HashSet<>(), Map.of("GRE", 320.0), Set.of("Research in AI")));
         data.add(new Requirement(3.7, new HashSet<>(), Map.of("GRE", 325.0), Set.of("Research in Machine Learning")));

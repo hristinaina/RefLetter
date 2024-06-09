@@ -30,5 +30,18 @@ public class StudentController {
 
     }
 
+    @PreAuthorize("hasAuthority('student')")
+    @GetMapping("/notifications")
+    public ResponseEntity<?> notifications() {
+        try {
+            var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            return ResponseEntity.ok(studentService.getNotifications(student));
+        }
+        catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+
+    }
+
 
 }
