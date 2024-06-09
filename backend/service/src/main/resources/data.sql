@@ -2293,3 +2293,11 @@ INSERT INTO mentorship (id, mentor_id, student_id) VALUES (2, 1, 3);
 insert into person_roles (person_id, roles_id) values (3,2);
 insert into person_roles (person_id, roles_id) values (4,2);
 
+SELECT setval('financial_aid_id_seq', 2500);
+SELECT setval('grad_program_id_seq', 2500);
+SELECT setval('grad_program_recommendation_id_seq', 2500);
+SELECT setval('mentorship_id_seq', 2500);
+SELECT setval('person_id_seq', 2500);
+SELECT setval('requirement_id_seq', 2500);
+SELECT setval('role_id_seq', 2500);
+SELECT setval('university_id_seq', 2500);

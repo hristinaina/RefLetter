@@ -18,7 +18,7 @@ import java.util.*;
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"email"}))
 public class Person implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String surname;

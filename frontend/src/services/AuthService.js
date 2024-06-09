@@ -22,7 +22,13 @@ class AuthService {
     }
 
     getToken() {
-        const user = JSON.parse(localStorage.getItem('token'));
+        const token = localStorage.getItem('token');
+        let user = null;
+        try {
+            user = JSON.parse(token);
+        } catch (error) {
+            console.error('Error parsing token:', error);
+        }
         return user;
     }
 
@@ -36,6 +42,37 @@ class AuthService {
         const roles = decodedToken.role;
 
         return roles ? roles[0] : null;
+    }
+
+    async logout() {
+      localStorage.removeItem('token');
+    }
+
+    async registerStudent(student){
+        try {
+            const response = await httpClient.post('http://localhost:8080/api/register/student',{
+                student
+            });
+            await this.setToken(response.data['accessToken']);
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            throw error;
+        }
+    }
+
+    async registerProfessor(professor){
+        try {
+            console.log(professor);
+            const response = await httpClient.post('http://localhost:8080/api/register/professor',{
+                ...professor
+            });
+            await this.setToken(response.data['accessToken']);
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            throw error;
+        }
     }
 }
   

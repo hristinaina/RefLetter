@@ -36,7 +36,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable();
         http.authorizeHttpRequests()
-                .antMatchers(HttpMethod.POST, "/api/login", "/api/unregisteredUser/**", "/api/register", "/h2-console/**", "/api/public").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/login", "/api/unregisteredUser/**", "/api/register/**", "/h2-console/**", "/api/public").permitAll()
                 .anyRequest().authenticated(); // All other requests need to be authenticated
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint);
@@ -51,7 +51,7 @@ public class SecurityConfiguration {
     }
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> web.ignoring().antMatchers(HttpMethod.POST, "/api/login", "/api/unregisteredUser/**", "/api/register", "/h2-console/**", "/api/public");
+        return (web) -> web.ignoring().antMatchers(HttpMethod.POST, "/api/login", "/api/unregisteredUser/**", "/api/register/**", "/h2-console/**", "/api/public");
     }
 
     @Bean
