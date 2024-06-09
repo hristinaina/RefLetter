@@ -76,4 +76,15 @@ public class ProgramController {
         }
     }
 
+    @PreAuthorize("hasAuthority('professor')")
+    @PutMapping("/update")
+    public ResponseEntity<?> update(@RequestBody GradProgram gradProgram) {
+        try {
+            var professor = (Professor) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            return ResponseEntity.ok(gradProgramService.update(gradProgram, professor));
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }

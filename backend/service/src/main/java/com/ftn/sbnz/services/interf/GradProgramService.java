@@ -22,4 +22,6 @@ public interface GradProgramService {
 
 
     List<GradProgramDTO> filterGradPrograms(FilterTemplateModel filterTemplateModel, Student student);
+
+    ResponseEntity<?> update(GradProgram gradProgram, Professor professor);
 }

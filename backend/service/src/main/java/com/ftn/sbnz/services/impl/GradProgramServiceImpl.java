@@ -1,16 +1,21 @@
 package com.ftn.sbnz.services.impl;
 
+import com.ftn.sbnz.model.events.FinancialAid;
 import com.ftn.sbnz.model.models.*;
 import com.ftn.sbnz.model.models.dto.GradProgramDTO;
 import com.ftn.sbnz.model.models.dto.GradProgramDetailsDTO;
+import com.ftn.sbnz.model.repo.FinancialAidRepo;
 import com.ftn.sbnz.model.repo.GradProgramRepo;
+import com.ftn.sbnz.model.repo.RequirementRepo;
+import com.ftn.sbnz.model.repo.UniversityRepo;
 import com.ftn.sbnz.services.interf.DroolFilterTemplateService;
 import com.ftn.sbnz.services.interf.GradProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,12 +24,22 @@ public class GradProgramServiceImpl implements GradProgramService {
     private GradProgramRepo gradProgramRepo;
 
     @Autowired
+    private RequirementRepo requirementRepo;
+
+    @Autowired
+    private FinancialAidRepo financialAidRepo;
+
+
+    @Autowired
+    private UniversityRepo universityRepo;
+
+    @Autowired
     private DroolFilterTemplateService droolFilterTemplateService;
 
     @Override
     public ResponseEntity<?> delete(Long id, Professor professor) {
         try {
-            //todo obrisati financial aid i requirement ili dodati da ide kaskadno (ne i za profesora)
+            // cascade deletion
             var program = gradProgramRepo.findById(id).get();
             if (program.getProfessor().getId() == professor.getId()) {
                 gradProgramRepo.delete(program);
@@ -40,12 +55,49 @@ public class GradProgramServiceImpl implements GradProgramService {
     @Override
     public ResponseEntity<?> create(GradProgram gp, Professor professor) {
         try {
-            //todo insertovati posebno financialaid i requirement pa ih dodati kao polje zbog id-ja
             gp.setProfessor(professor);
-            gp = gradProgramRepo.save(gp);
-            System.out.println("POZZZZ");
-            System.out.println(gp);
+            gp.setUniversity(universityRepo.findById(gp.getUniversity().getId()).orElseThrow(
+                    ChangeSetPersister.NotFoundException::new));
+            Requirement requirement = requirementRepo.save(gp.getRequirement());
+            gp.setRequirement(requirement);
+            List<FinancialAid> aids = new ArrayList<>();
+            for (FinancialAid aid: gp.getFinancialAids()){
+                requirement = requirementRepo.save(aid.getRequirement());
+                aid.setRequirement(requirement);
+                financialAidRepo.save(aid);
+                aids.add(aid);
+            }
+            gp.setFinancialAids(aids);
+            gradProgramRepo.save(gp);
+
             return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    //this method updates program data and doesn't update financial aid. Financial aid CRUD is handled in separated service
+    @Override
+    public ResponseEntity<?> update(GradProgram gp, Professor professor) {
+        try {
+            GradProgram oldProgram = gradProgramRepo.findById(gp.getId()).get();
+            if (oldProgram.getProfessor().getId() == professor.getId()) {
+
+                gp.setProfessor(professor);
+                gp.setId(oldProgram.getId());
+                gp.setUniversity(oldProgram.getUniversity());
+                gp.setFinancialAids(oldProgram.getFinancialAids());
+
+                Requirement req = gp.getRequirement();
+                req.setId(oldProgram.getRequirement().getId());
+                gp.setRequirement(req);
+                requirementRepo.save(gp.getRequirement());
+
+                gradProgramRepo.save(gp);
+                return ResponseEntity.ok().build();
+            }
+            return ResponseEntity.badRequest().build();
+
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
