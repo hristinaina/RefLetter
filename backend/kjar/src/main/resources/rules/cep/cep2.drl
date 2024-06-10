@@ -21,7 +21,6 @@ end
 
 global Map<String, Integer> frequentInterestsMap;
 
-
 rule "Check if student's interests have changed"
     salience 4
     when
@@ -44,19 +43,19 @@ rule "Check if student is indecisive"
     salience 3
 when
     $s1: Student($sId: id)
-    $changes: List(size >= 10)
+    $changes: List(size >= 3)
     from collect(InterestChange(studentId == $sId) over window:time(720h))
     not (IndecisiveStudent(studentId == $sId))
 then
     insert(new IndecisiveStudent($sId));
-    delete($s1);
 end
 
 
 rule "Generate statistics for indecisive student"
     salience 2
 when
-    IndecisiveStudent($sId: studentId)
+    $s1: Student($sId: id)
+    IndecisiveStudent(studentId == $sId)
     $interestsTemp: List() from accumulate(
         InterestChange($currentInterests: currentInterests, studentId == $sId) over window:time(720h),
         collectList($currentInterests)
@@ -72,6 +71,7 @@ then
         frequentInterestsMap.put(entry.getKey(), new Integer(entry.getValue()));
     }
 
+    delete($s1);
     System.out.println(frequentInterestsMap);
 end
 
