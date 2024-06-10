@@ -26,9 +26,10 @@
 }
 
 .program-card.selected {
-    background-color: #3a746e; /* Replace with your theme's primary color */
+    background-color: var(--gray-color); 
+    color: var(--old-red) !important;
 }
 
 .financial-aid-card{
-    background-color:var(--primary-color) !important;
+    background-color:var(--dark-red) !important;
 }

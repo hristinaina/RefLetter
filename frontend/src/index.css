@@ -2,11 +2,10 @@
   --background-red: #3a0820;
   --accent-red: #78244c;
   --light-red: #895061;
+  --old-red: #59253A;
   --background-blue: #3a746e;
-  --accent-blue: #0677a1;
-  --primary-color: #0056a7;
-  --yellow-color: #c7e410;
-  --gray-color: #4e4b66;
+  --yellow-color: #f5f9a4;
+  --gray-color: #DAD8D8;
   --text-color: white;
 }
 
@@ -19,10 +18,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-red);
   color: var(--text-color);
-}
-
-input{
-  color: black !important;
 }
 
 code {

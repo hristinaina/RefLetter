@@ -75,3 +75,6 @@
     color: var(--light-red) !important;
 }
 
+input{
+    color: black;
+  }

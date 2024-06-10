@@ -6,6 +6,8 @@ import {Recommendation} from "./components/Recommendation/Recommendation";
 import {Mentorship} from "./components/Mentorship/Mentorship";
 import ProfMentorship from "./components/ProfMentorship/ProfMentorship";
 import {MainRegister} from "./components/Registration/MainRegister";
+import StudentProfile from './components/Profile/StudentProfile';
+import ProfessorProfile from './components/Profile/ProfessorProfile';
 
 const AppRoutes = () => {
   return (
@@ -17,6 +19,8 @@ const AppRoutes = () => {
       <Route path="/mentorship" element={<Mentorship />} />
       <Route path="/prof-mentorship" element={<ProfMentorship />} />
       <Route path="/reg" element={<MainRegister />} />
+      <Route path="/studentProfile" element={<StudentProfile />} />
+      <Route path="/profProfile" element={<ProfessorProfile />} />
       {/* Add more routes if needed */}
     </Routes>
   );

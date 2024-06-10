@@ -37,12 +37,12 @@ const ProfNavigation = () => {
                         onMouseEnter={toggleDropdown}
                         onMouseLeave={toggleDropdown}
                     >
-                        <NavLink tag={Link} className={`text-light ${location.pathname === "/profile" ? "active" : ""} ${dropdownOpen ? "active" : ""}`} to="#">
+                        <NavLink tag={Link} className={`text-light ${location.pathname === "/profProfile" ? "active" : ""} ${dropdownOpen ? "active" : ""}`} to="#">
                             Profile
                         </NavLink>
                         {dropdownOpen && (
                             <div className="dropdown-menu">
-                                <NavLink tag={Link} className="dropdown-item" to="/profile">
+                                <NavLink tag={Link} className="dropdown-item" to="/profProfile">
                                     View Profile
                                 </NavLink>
                                 <NavLink tag={Link} className="dropdown-item" to="/">

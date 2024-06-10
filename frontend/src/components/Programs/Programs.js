@@ -94,7 +94,7 @@ export function Programs() {
                         </DialogContent>
                         <DialogActions>
                             <Button onClick={handleClose} style={{color: "white"}}>Cancel</Button>
-                            <Button onClick={handleSubmit} style={{color: "white", backgroundColor: "var(--accent-blue)"}}>Submit</Button>
+                            <Button onClick={handleSubmit} style={{color: "white"}}>Submit</Button>
                         </DialogActions>
                     </Dialog>
                     {dataToShow.map((item) => (
