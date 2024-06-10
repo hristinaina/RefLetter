@@ -43,7 +43,7 @@ rule "Check if student is indecisive"
     salience 3
 when
     $s1: Student($sId: id)
-    $changes: List(size >= 3)
+    $changes: List(size >= 6)
     from collect(InterestChange(studentId == $sId) over window:time(720h))
     not (IndecisiveStudent(studentId == $sId))
 then
