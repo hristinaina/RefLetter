@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Visibility from "@mui/icons-material/Visibility";
 import Icon from "@mui/material/Icon";
+import CloseIcon from '@mui/icons-material/Close';
 
 const StudentRegistration = () => {
 
@@ -31,17 +32,18 @@ const StudentRegistration = () => {
 
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [openSnackbar, setOpenSnackbar] = useState(false); // New state variable for controlling the Snackbar
-    const [openGpaSnackbar, setOpenGpaSnackbar] = useState(false); // New state variable for controlling the Snackbar
     const [testNameInput, setTestNameInput] = useState('');
     const [testScoreInput, setTestScoreInput] = useState('');
+    const [open, setOpen] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
 
 
     const handleChange = (e) => {
         if (e.target.name === 'gpa') {
             const trimmedValue = e.target.value.trim();
             if (trimmedValue === '' || isNaN(trimmedValue)) {
-                setOpenGpaSnackbar(true); // Show the Snackbar
+                setSnackbarMessage("GPA must be a number!");
+                handleClick();
                 setStudent({...student, gpa: ''}); // Clear the GPA field
                 gpaInputRef.current.value = '';
                 console.log(student);
@@ -51,13 +53,6 @@ const StudentRegistration = () => {
         console.log(student);
         setStudent({...student, [e.target.name]: e.target.value});
 
-    };
-
-    const handleCloseGpaSnackbar = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-        setOpenGpaSnackbar(false);
     };
 
     const handleAddTestScore = () => {
@@ -82,24 +77,25 @@ const StudentRegistration = () => {
     const handleScoreChange = (e) => {
         setStudent({...student, testScores: {...student.testScores, [e.target.name]: e.target.value}});
     };
-    const handleCloseSnackbar = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-        setOpenSnackbar(false);
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (student.password !== confirmPassword) {
-            setOpenSnackbar(true); // Show the Snackbar
+            setSnackbarMessage("Passwords do not match!"); // Show the Snackbar
+            handleClick();
             return;
         }
-        const result = await authService.registerStudent(student);
-        if (result.status === 200) {
-            console.log("Registered");
-            navigate('/login'); // Redirect to login page
+        try{
+            const result = await authService.registerStudent(student);
+            if (result.status === 200) {
+                console.log("Registered");
+                navigate('/login'); // Redirect to login page
+            }
+        }
+        catch (error) {
+            setSnackbarMessage('Please fill all the fields');
+            handleClick();
         }
         console.log(student);
     };
@@ -142,10 +138,30 @@ const StudentRegistration = () => {
         setStudent({...student, testScores: newTestScores});
     }
 
+        //snackbar
+        const handleClick = () => {
+            setOpen(true);
+        };
+    
+        const handleClose = (event, reason) => {
+            if (reason === 'clickaway') {
+                return;
+            }
+            setOpen(false);
+        };
+
+    const action = (
+        <React.Fragment>
+            <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
+                <CloseIcon fontSize="small"/>
+            </IconButton>
+        </React.Fragment>
+    );
+
     return (
         <ThemeProvider theme={lightTheme}>
 
-            <form onSubmit={handleSubmit}>
+            <form>
 
                 <div className="fields">
                     <TextField sx={{m: 1, width: '30ch'}} className="fields" name="name" label="Name"
@@ -342,23 +358,19 @@ const StudentRegistration = () => {
                     ))}
                 </div>
 
-                <Button type="submit"
+                <Button
                         id="login"
                         variant="contained"
                         style={{marginTop: "50px", textTransform: 'none'}}
                         sx={{m: 1, width: '39ch'}}
+                        onClick={handleSubmit}
                 >Register</Button>
                 <Snackbar
-                    open={openSnackbar}
-                    autoHideDuration={6000}
-                    onClose={handleCloseSnackbar}
-                    message="Passwords do not match!"
-                />
-                <Snackbar
-                    open={openGpaSnackbar}
-                    autoHideDuration={6000}
-                    onClose={handleCloseGpaSnackbar}
-                    message="GPA must be a number!"
+                    open={open}
+                    autoHideDuration={2000}
+                    onClose={handleClose}
+                    message={snackbarMessage}
+                    action={action}
                 />
             </form>
         </ThemeProvider>

@@ -10,6 +10,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
+import CloseIcon from '@mui/icons-material/Close';
 
 const ProfessorRegistration = () => {
     const navigate = useNavigate();
@@ -24,7 +25,8 @@ const ProfessorRegistration = () => {
 
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [openSnackbar, setOpenSnackbar] = useState(false); // New state variable for controlling the Snackbar
+    const [open, setOpen] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
 
     const handleChange = (e) => {
         setProfessor({...professor, [e.target.name]: e.target.value});
@@ -40,28 +42,49 @@ const ProfessorRegistration = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (professor.password !== confirmPassword) {
-            setOpenSnackbar(true); // Show the Snackbar
+            setSnackbarMessage("Passwords do not match!"); // Show the Snackbar
+            handleClick();
             return;
         }
-        const result = await authService.registerProfessor(professor);
-        if (result.status === 200) {
-            console.log("Registered");
-            navigate('/login'); // Redirect to login page
+        try{
+            const result = await authService.registerProfessor(professor);
+            if (result.status === 200) {
+                console.log("Registered");
+                navigate('/login'); // Redirect to login page
+            }
+        }        
+        catch (error) {
+            setSnackbarMessage('Please fill all the fields');
+            handleClick();
         }
+
         console.log(professor);
     };
 
-    const handleCloseSnackbar = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-        setOpenSnackbar(false);
-    };
+        //snackbar
+        const handleClick = () => {
+            setOpen(true);
+        };
+    
+        const handleClose = (event, reason) => {
+            if (reason === 'clickaway') {
+                return;
+            }
+            setOpen(false);
+        };
+
+        const action = (
+            <React.Fragment>
+                <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
+                    <CloseIcon fontSize="small"/>
+                </IconButton>
+            </React.Fragment>
+        );
 
     return (
         <ThemeProvider theme={lightTheme}>
 
-            <form onSubmit={handleSubmit}>
+            <form>
                 <div className="fields">
                     <TextField sx={{m: 1, width: '30ch'}} className="fields" name="university" label="University"
                                value={professor.university}
@@ -128,18 +151,19 @@ const ProfessorRegistration = () => {
                         }}
                     />
                 </div>
-                <Button type="submit"
+                <Button onClick={handleSubmit}
                         id="login"
                         variant="contained"
                         style={{marginTop: "50px", textTransform: 'none'}}
                         sx={{m: 1, width: '39ch'}}
                 >Register</Button>
                 <Snackbar
-                    open={openSnackbar}
-                    autoHideDuration={6000}
-                    onClose={handleCloseSnackbar}
-                    message="Passwords do not match!"
-                />
+                        open={open}
+                        autoHideDuration={1000}
+                        onClose={handleClose}
+                        message={snackbarMessage}
+                        action={action}
+                    />
             </form>
         </ThemeProvider>
     );

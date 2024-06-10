@@ -15,7 +15,7 @@ class AuthService {
         console.error('Error fetching data:', error);
         throw error;
       }
-      }
+    }
   
     async setToken(user) {
       localStorage.setItem('token', JSON.stringify(user));

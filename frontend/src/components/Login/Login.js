@@ -47,24 +47,30 @@ const Login = () => {
     const [snackbarMessage, setSnackbarMessage] = useState('');
 
     const handleLogin = async () => {
-        const result = await authService.loginUser(username, password);
-        console.log(result);
-        if (result) {
-            if (result.status === 200) {
-                const result = await authService.validateUser();
-                console.log(result);
-                if (result.name === 'student') {
-                    navigate('/programs');
-                } else if (result.name === 'professor') {
-                    navigate('/prof-mentorship');
+        try{
+            const result = await authService.loginUser(username, password);
+            console.log(result);
+            if (result) {
+                if (result.status === 200) {
+                    const result = await authService.validateUser();
+                    console.log(result);
+                    if (result.name === 'student') {
+                        navigate('/programs');
+                    } else if (result.name === 'professor') {
+                        navigate('/prof-mentorship');
+                    } else {
+                        navigate('/login');
+                    }
                 } else {
-                    navigate('/login');
+                    setSnackbarMessage(result.error);
+                    handleClick();
                 }
-            } else {
-                setSnackbarMessage(result.error);
-                handleClick();
             }
         }
+        catch (error) {
+            setSnackbarMessage("Invalid email or password");
+            handleClick();
+          }
     };
 
     const handleClickShowPassword = () => {

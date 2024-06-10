@@ -61,8 +61,8 @@ export const Mentorship = () => {
 
     return (
         <ThemeProvider theme={darkTheme}>
+            <StudentNavigation></StudentNavigation>
             <div className='App'>
-                <StudentNavigation></StudentNavigation>
                 <div className={styles['left-side']}>
                     {professors.map((professor) => (
                         <Card key={professor.id}

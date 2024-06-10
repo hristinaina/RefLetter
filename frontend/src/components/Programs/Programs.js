@@ -74,11 +74,12 @@ export function Programs() {
 
     return (
         <ThemeProvider theme={darkTheme}>
-            <div className='App'>
-                <StudentNavigation></StudentNavigation>
+            <StudentNavigation></StudentNavigation>
+            <div className='programs-container'>
                 <div className='left-side'>
                     <Button onClick={handleOpen} className="filter-button">
                         <Icon>filter_list</Icon>
+                        Filter
                     </Button>
                     <Dialog open={open} onClose={handleClose}>
                         <DialogTitle>Filter Programs</DialogTitle>
@@ -92,8 +93,8 @@ export function Programs() {
                                        onChange={(e) => setCitationScore(e.target.value)} fullWidth/>
                         </DialogContent>
                         <DialogActions>
-                            <Button onClick={handleClose}>Cancel</Button>
-                            <Button onClick={handleSubmit}>Submit</Button>
+                            <Button onClick={handleClose} style={{color: "white"}}>Cancel</Button>
+                            <Button onClick={handleSubmit} style={{color: "white", backgroundColor: "var(--accent-blue)"}}>Submit</Button>
                         </DialogActions>
                     </Dialog>
                     {dataToShow.map((item) => (
