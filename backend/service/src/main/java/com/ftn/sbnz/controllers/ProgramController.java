@@ -1,7 +1,6 @@
 package com.ftn.sbnz.controllers;
 
 import com.ftn.sbnz.model.models.FilterTemplateModel;
-import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.services.GradProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
