@@ -56,14 +56,7 @@ public class CepServiceImpl implements InitializingBean, CepService {
         scheduler.scheduleAtFixedRate(this::checkFinancialAidDeadlines, 3, 60*24, TimeUnit.MINUTES);
     }
 
-	public Map<String, Integer> updateStudent(Student newStudent) {
-
-		//todo: studenta dobaviti iz baze po id-ju
-		Set<String> interests1 = new HashSet<>();
-		interests1.add(new String("ai"));
-		interests1.add(new String("gaming"));
-		interests1.add(new String("animation"));
-		Student oldStudent = new Student((long) 1, interests1,  new Date(new Date().getTime() - TimeUnit.DAYS.toMillis(3)));
+	public Map<String, Integer> updateStudent(Student newStudent, Student oldStudent) {
 
 		Map<String, Integer> frequentInterestsMap = new HashMap<>();
         KieSession kieSession = this.cep2Session;
@@ -74,8 +67,6 @@ public class CepServiceImpl implements InitializingBean, CepService {
 
         int fired = kieSession.fireAllRules();
 
-        System.out.println(fired);
-		System.out.println(frequentInterestsMap);
 		KieSessionUtil.removeFromSessionByClass(kieSession, Student.class);
 		return frequentInterestsMap;
 	}

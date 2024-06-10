@@ -9,6 +9,6 @@ import java.util.Map;
 
 public interface CepService {
     List<Notification> newFinancialAid(FinancialAid aid);
-    Map<String, Integer> updateStudent(Student newStudent);
+    Map<String, Integer> updateStudent(Student newStudent, Student oldStudent);
 
 }

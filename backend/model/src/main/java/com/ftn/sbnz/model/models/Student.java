@@ -27,6 +27,16 @@ public class Student extends Person {
     private Set<String> researchExperience;
     private Date updatedTimestamp;
 
+    @PrePersist
+    protected void onCreate() {
+        this.updatedTimestamp = new Date();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        this.updatedTimestamp = new Date();
+    }
+
     public Student(Long id, Set<String> interests, Date updatedTimestamp) {
         this.setId(id);
         this.researchInterest = interests;
@@ -42,5 +52,6 @@ public class Student extends Person {
         this.testScores = testScores;
         this.researchExperience = researchExperience;
         this.requiresFinancialAid = requiresFinancialAid;
+        this.updatedTimestamp = new Date();
     }
 }

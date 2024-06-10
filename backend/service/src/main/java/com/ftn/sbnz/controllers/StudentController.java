@@ -1,6 +1,7 @@
 package com.ftn.sbnz.controllers;
 
 
+import com.ftn.sbnz.model.models.Professor;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.services.interf.CriteriaTemplateService;
 import com.ftn.sbnz.services.interf.StudentService;
@@ -28,6 +29,17 @@ public class StudentController {
             return ResponseEntity.ok(studentService.recommendGradPrograms(student));
         }
         catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PreAuthorize("hasAuthority('student')")
+    @PutMapping("/update")
+    public ResponseEntity<?> update(@RequestBody Student student) {
+        try {
+            var oldStudent = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            return ResponseEntity.ok(studentService.update(student, oldStudent));
+        } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
     }
