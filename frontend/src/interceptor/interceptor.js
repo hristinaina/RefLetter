@@ -5,9 +5,19 @@ const httpClient = axios.create();
 
 httpClient.interceptors.request.use(
     async (config) => {
-        const token = await authService.getToken();
-        config.headers['Authorization'] = `Bearer ${token}`;
-        
+        const skipUrls = ['/api/register/student', '/api/register/professor', '/api/login'];
+
+        // Only add the token if the URL is not in the skipUrls array
+        if (!skipUrls.includes(config.url)) {
+            const token = await authService.getToken();
+            config.headers['Authorization'] = `Bearer ${token}`;
+        }
+
+        return config;
+
+
+
+
         // // Add CORS headers
         config.headers['Access-Control-Allow-Origin'] = '*'; // Allow all origins
         config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';

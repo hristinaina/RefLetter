@@ -2,6 +2,7 @@ package com.ftn.sbnz.controllers;
 
 import com.ftn.sbnz.model.models.Professor;
 import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.model.models.dto.CreateMentorshipDTO;
 import com.ftn.sbnz.model.repo.MentorshipRepo;
 import com.ftn.sbnz.services.MentorshipService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +19,14 @@ public class MentorshipController {
     private MentorshipRepo mentorshipRepo;
 
     @Autowired
-    private MentorshipService mentoredService;
+    private MentorshipService mentorshipService;
 
     @PreAuthorize("hasAuthority('professor')")
     @GetMapping()
     public ResponseEntity<?> get() {
         try {
             var professor = (Professor) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-            return ResponseEntity.ok(mentorshipRepo.findAllByMentorId(professor.getId()));
+            return ResponseEntity.ok(mentorshipService.findAllByMentorId(professor.getId()));
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
@@ -36,7 +37,7 @@ public class MentorshipController {
     public ResponseEntity<?> delete(@PathVariable Long id) {
         try {
             var professor = (Professor) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-            return mentoredService.delete(id, professor);
+            return mentorshipService.delete(id, professor);
 
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
@@ -45,10 +46,10 @@ public class MentorshipController {
 
     @PreAuthorize("hasAuthority('professor')")
     @PostMapping()
-    public ResponseEntity<?> add(@RequestBody Long id) {
+    public ResponseEntity<?> add(@RequestBody CreateMentorshipDTO dto) {
         try {
             var professor = (Professor) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-            return ResponseEntity.ok(mentoredService.create(id, professor));
+            return ResponseEntity.ok(mentorshipService.create(dto.getEmail(), professor));
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
@@ -59,7 +60,7 @@ public class MentorshipController {
     public ResponseEntity<?> getAllMentorshipPrograms(@PathVariable Long id) {
         try {
             var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-            return mentoredService.getAllMentorshipPrograms(student, id);
+            return mentorshipService.getAllMentorshipPrograms(student, id);
 
         } catch (Exception e) {
             return ResponseEntity.notFound().build();

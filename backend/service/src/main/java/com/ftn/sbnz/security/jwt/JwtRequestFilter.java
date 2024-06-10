@@ -35,7 +35,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         String path = request.getRequestURI();
-        List<String> pathsToSkip = Arrays.asList("/api/login", "/api/register", "/api/unregisteredUser/**", "/api/public");
+        List<String> pathsToSkip = Arrays.asList("/api/login", "/api/register/**", "/api/unregisteredUser/**", "/api/public");
         return pathsToSkip.stream().anyMatch(path::startsWith);
     }
 
