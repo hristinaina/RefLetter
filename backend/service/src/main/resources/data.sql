@@ -2239,7 +2239,7 @@ INSERT INTO role (id,name) VALUES (2,'professor');
 -- pw Admin_123
 
 -- Inserting data into the Professor table
-INSERT INTO person (id, name, surname, email, password) VALUES (1, 'Professor1', 'Surname1', 'email1@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password) VALUES (1, 'Professor1', 'Surname1', 'email1@example.com', '$2a$10$BTXgy1OgsbaifVFfjX06M.GY7YMsSKnDlwF5gKqV4TFqV19b3lzPi');
 
 insert into professor (id, university_id) values (1,1);
 
@@ -2252,9 +2252,9 @@ insert into grad_program (id, name, price, professor_id, requirement_id, univers
 
 
 -- Inserting data into the Student table
-INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ruzic', 'ruza@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ruzic', 'ruza@example.com', '$2a$10$BTXgy1OgsbaifVFfjX06M.GY7YMsSKnDlwF5gKqV4TFqV19b3lzPi');
 
-insert into student (gpa, location, requires_financial_aid, id) values (3.8,'United States',true,2);
+insert into student (gpa, location, requires_financial_aid, id, updated_timestamp) values (3.8,'United States',true,2, '2024-05-10T07:37:50.637+00:00');
 
 -- Inserting data into the FinancialAid table
 INSERT INTO financial_aid (id, type, amount, requirement_id, deadline) VALUES (1, 2, 1000.0, 1, '2024-12-31');
@@ -2297,7 +2297,8 @@ SELECT setval('financial_aid_id_seq', 2500);
 SELECT setval('grad_program_id_seq', 2500);
 SELECT setval('grad_program_recommendation_id_seq', 2500);
 SELECT setval('mentorship_id_seq', 2500);
-SELECT setval('person_id_seq', 2500);
+-- SELECT setval('person_id_seq', 2500);
 SELECT setval('requirement_id_seq', 2500);
+SELECT setval('notification_id_seq', 2500);
 SELECT setval('role_id_seq', 2500);
 SELECT setval('university_id_seq', 2500);

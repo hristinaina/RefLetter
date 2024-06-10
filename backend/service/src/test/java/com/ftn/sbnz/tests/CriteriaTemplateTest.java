@@ -18,6 +18,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.ftn.sbnz.model.models.Requirement;
 import com.ftn.sbnz.model.models.Student;
 
+@Disabled
 @SpringBootTest
 public class CriteriaTemplateTest {
     

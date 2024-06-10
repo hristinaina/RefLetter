@@ -1,4 +1,5 @@
 template header
+id
 gpa
 requiredScores
 requiredExperience
@@ -7,6 +8,8 @@ package template;
 
 import com.ftn.sbnz.model.models.Requirement;
 import com.ftn.sbnz.model.models.Student;
+
+global java.util.ArrayList results;
 
 template "admissionCriteria"
 
@@ -19,6 +22,7 @@ rule "AdmissionCriteria_@{row.rowNumber}"
         eval($student.getResearchExperience().contains(@{requiredExperience})
     then
         System.out.println("Student " + $student.getName() + " meets the criteria for admission.");
+        results.add(@{id});
 end
 
 end template

@@ -16,7 +16,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-//TODO check attribue types
 public class Student extends Person {
     private double gpa;
     private String location;
@@ -27,6 +26,16 @@ public class Student extends Person {
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> researchExperience;
     private Date updatedTimestamp;
+
+    @PrePersist
+    protected void onCreate() {
+        this.updatedTimestamp = new Date();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        this.updatedTimestamp = new Date();
+    }
 
     public Student(Long id, Set<String> interests, Date updatedTimestamp) {
         this.setId(id);
@@ -43,5 +52,6 @@ public class Student extends Person {
         this.testScores = testScores;
         this.researchExperience = researchExperience;
         this.requiresFinancialAid = requiresFinancialAid;
+        this.updatedTimestamp = new Date();
     }
 }

@@ -4,12 +4,21 @@ import com.ftn.sbnz.MyValidator;
 import com.ftn.sbnz.MyValidatorException;
 import com.ftn.sbnz.model.models.Person;
 import com.ftn.sbnz.model.models.dto.*;
+import com.ftn.sbnz.model.models.Professor;
+import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.model.models.dto.CredentialsDTO;
+import com.ftn.sbnz.model.models.dto.PersonDTO;
+import com.ftn.sbnz.model.models.dto.TokenDTO;
 import com.ftn.sbnz.model.repo.PersonRepo;
 import com.ftn.sbnz.security.jwt.JwtTokenUtil;
-import com.ftn.sbnz.services.PersonService;
+import com.ftn.sbnz.services.interf.PersonService;
+
+import javax.annotation.security.PermitAll;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
@@ -18,8 +27,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.security.PermitAll;
 
 @RestController
 @RequestMapping("/api")
@@ -172,5 +179,24 @@ public class LoginController {
 
 
         return new ResponseEntity<TokenDTO>(tokens, HttpStatus.OK);
+    }
+
+    @PreAuthorize("hasAnyAuthority('student', 'professor')")
+    @GetMapping()
+    public ResponseEntity<?> getProfileData() {
+        try {
+            var person = (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            try{
+                Student student = (Student) person;
+                return ResponseEntity.ok(student);
+            }
+            catch (ClassCastException e){
+                Professor professor = (Professor) person;
+                return ResponseEntity.ok(professor);
+            }
+        }
+        catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

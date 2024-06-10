@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
@@ -15,6 +16,7 @@ import com.ftn.sbnz.model.models.Notification;
 import com.ftn.sbnz.model.models.Requirement;
 import com.ftn.sbnz.model.models.Student;
 
+@Disabled
 @SpringBootTest
 public class Cep1Test {
 

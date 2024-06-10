@@ -25,7 +25,7 @@ public class FinancialAid {
     private Long id;
     private FinancialAidType type;
     private double amount;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Requirement requirement;
     private Date deadline;
 

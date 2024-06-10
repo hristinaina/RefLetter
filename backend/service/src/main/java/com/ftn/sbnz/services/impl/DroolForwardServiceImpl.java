@@ -1,9 +1,10 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.impl;
 
 import com.ftn.sbnz.model.models.GradProgramRecommendation;
 import com.ftn.sbnz.model.models.Student;
 import com.ftn.sbnz.model.repo.FinancialAidRepo;
 import com.ftn.sbnz.model.repo.GradProgramRepo;
+import com.ftn.sbnz.services.interf.DroolForwardService;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.rule.FactHandle;
 import org.springframework.beans.factory.annotation.Autowired;

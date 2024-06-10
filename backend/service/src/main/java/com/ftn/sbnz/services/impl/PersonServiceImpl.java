@@ -1,4 +1,4 @@
-package com.ftn.sbnz.services;
+package com.ftn.sbnz.services.impl;
 
 import com.ftn.sbnz.MyValidatorException;
 import com.ftn.sbnz.model.models.Person;
@@ -12,6 +12,7 @@ import com.ftn.sbnz.model.repo.ProfessorRepo;
 import com.ftn.sbnz.model.repo.UniversityRepo;
 import com.ftn.sbnz.security.RoleService;
 import com.ftn.sbnz.security.jwt.JwtTokenUtil;
+import com.ftn.sbnz.services.interf.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

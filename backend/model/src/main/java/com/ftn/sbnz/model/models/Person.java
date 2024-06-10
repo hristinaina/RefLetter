@@ -1,4 +1,5 @@
 package com.ftn.sbnz.model.models;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ftn.sbnz.model.models.security.Role;
 import javax.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,6 +24,7 @@ public class Person implements UserDetails {
     private String name;
     private String surname;
     private String email;
+    @JsonIgnore
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -35,31 +37,32 @@ public class Person implements UserDetails {
         this.password = password;
     }
 
+    @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return new ArrayList<>(this.roles);
     }
-
+    @JsonIgnore
     @Override
     public String getUsername() {
         return email;
     }
-
+    @JsonIgnore
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
-
+    @JsonIgnore
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
-
+    @JsonIgnore
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
-
+    @JsonIgnore
     @Override
     public boolean isEnabled() {
         return true;
