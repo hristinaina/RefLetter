@@ -60,10 +60,10 @@ const ProfMentorshipCards = () => {
     return (
         <div>
             <ThemeProvider theme={darkTheme}>
+            <ProfNavigation/>
                 <div className='App'>
-                    <ProfNavigation/>
                     {mentorships.map((mentorship) => (
-                        <Card key={mentorship.id}>
+                        <Card key={mentorship.id} className='program-card'>
                             <h2>Student: {mentorship.studentName}</h2>
                             <p>{mentorship.studentEmail}</p>
                             <Button onClick={() => handleDelete(mentorship.id)}>

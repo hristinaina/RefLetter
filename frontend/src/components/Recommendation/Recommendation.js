@@ -6,7 +6,6 @@ import { Card } from '@mui/material';
 import Button from '@mui/material/Button';
 import Icon from '@mui/material/Icon';
 import programService from "../../services/ProgramService";
-import './Recommendations.css';
 
 export function Recommendation() {
     const [data, setData] = useState([]);
@@ -49,8 +48,8 @@ export function Recommendation() {
 
     return (
         <ThemeProvider theme={darkTheme}>
+            <StudentNavigation></StudentNavigation>
             <div className='App'>
-                <StudentNavigation></StudentNavigation>
                 <div style={{width: '50%', float: 'left'}}>
                     {dataToShow.map((item) => (
                         <Card key={item.id}

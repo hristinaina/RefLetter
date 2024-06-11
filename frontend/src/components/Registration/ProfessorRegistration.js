@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {TextField, Button, Snackbar} from '@mui/material'; // Snackbar is now imported
 import authService from "../../services/AuthService";
 import {useNavigate} from "react-router-dom";
@@ -10,8 +10,10 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
+import CloseIcon from '@mui/icons-material/Close';
+import userService from '../../services/UserService';
 
-const ProfessorRegistration = () => {
+const ProfessorRegistration = ({ theme, updated }) => {
     const navigate = useNavigate();
 
     const [professor, setProfessor] = useState({
@@ -24,7 +26,32 @@ const ProfessorRegistration = () => {
 
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [openSnackbar, setOpenSnackbar] = useState(false); // New state variable for controlling the Snackbar
+    const [open, setOpen] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
+
+    
+    useEffect(() => {
+        const fetchProfileData = async () => {
+            if (updated) {
+                try {
+                    const currentUser = await authService.getProfileData();
+                    console.log(currentUser);
+                    setProfessor({
+                        ...professor,
+                        id: currentUser.id,
+                        name: currentUser.name,
+                        surname: currentUser.surname,
+                        email: currentUser.email,
+                        university: currentUser.university.name,
+                    });
+                } catch (error) {
+                    console.error('Error fetching profile data:', error);
+                }
+            }
+        };
+
+        fetchProfileData();
+    }, [updated]);
 
     const handleChange = (e) => {
         setProfessor({...professor, [e.target.name]: e.target.value});
@@ -37,31 +64,70 @@ const ProfessorRegistration = () => {
         setShowPassword(!showPassword); // Toggle the visibility of the password
     };
 
+    const createProfessor = async (e) =>{
+        if (professor.password !== confirmPassword) {
+            setSnackbarMessage("Passwords do not match!"); // Show the Snackbar
+            handleClick();
+            return;
+        }
+        try{
+            const result = await authService.registerProfessor(professor);
+            if (result.status === 200) {
+                console.log("Registered");
+                navigate('/login'); // Redirect to login page
+            }
+        }        
+        catch (error) {
+            setSnackbarMessage('Please fill all the fields');
+            handleClick();
+        }
+
+        console.log(professor);
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (professor.password !== confirmPassword) {
-            setOpenSnackbar(true); // Show the Snackbar
-            return;
+
+        if (!updated) createProfessor(e);
+        else{
+            try {
+                const result = await userService.updateProfessor(professor);
+                if (result.status === 200) {
+                    console.log("updated");
+                    setSnackbarMessage("Successfully updated account data");
+                    handleClick();
+                }
+            } catch (error) {
+                setSnackbarMessage('Update was not successfull. Please check your data.');
+                handleClick();
+            }
         }
-        const result = await authService.registerProfessor(professor);
-        if (result.status === 200) {
-            console.log("Registered");
-            navigate('/login'); // Redirect to login page
-        }
-        console.log(professor);
     };
 
-    const handleCloseSnackbar = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-        setOpenSnackbar(false);
-    };
+        //snackbar
+        const handleClick = () => {
+            setOpen(true);
+        };
+    
+        const handleClose = (event, reason) => {
+            if (reason === 'clickaway') {
+                return;
+            }
+            setOpen(false);
+        };
+
+        const action = (
+            <React.Fragment>
+                <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
+                    <CloseIcon fontSize="small"/>
+                </IconButton>
+            </React.Fragment>
+        );
 
     return (
-        <ThemeProvider theme={lightTheme}>
+        <ThemeProvider theme={theme}>
 
-            <form onSubmit={handleSubmit}>
+            <form id='professor-reg'>
                 <div className="fields">
                     <TextField sx={{m: 1, width: '30ch'}} className="fields" name="university" label="University"
                                value={professor.university}
@@ -82,7 +148,7 @@ const ProfessorRegistration = () => {
                                value={professor.email}
                                onChange={handleChange}/>
                 </div>
-                <div className="fields">
+                { !updated && (<div className="fields">
                     <TextField
                         sx={{m: 1, width: '30ch'}}
                         className="fields"
@@ -105,7 +171,8 @@ const ProfessorRegistration = () => {
                         }}
                     />
                 </div>
-                <div className="fields">
+                )}
+                {!updated && (<div className="fields">
                     <TextField
                         sx={{m: 1, width: '30ch'}}
                         className="fields"
@@ -127,19 +194,20 @@ const ProfessorRegistration = () => {
                             ),
                         }}
                     />
-                </div>
-                <Button type="submit"
+                </div> )}
+                <Button onClick={handleSubmit}
                         id="login"
                         variant="contained"
-                        style={{marginTop: "50px", textTransform: 'none'}}
-                        sx={{m: 1, width: '39ch'}}
-                >Register</Button>
+                        style={{marginTop: "50px", textTransform: 'none', width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'block'}}
+                    
+                >{updated ? 'Update' : 'Register'}</Button>
                 <Snackbar
-                    open={openSnackbar}
-                    autoHideDuration={6000}
-                    onClose={handleCloseSnackbar}
-                    message="Passwords do not match!"
-                />
+                        open={open}
+                        autoHideDuration={4000}
+                        onClose={handleClose}
+                        message={snackbarMessage}
+                        action={action}
+                    />
             </form>
         </ThemeProvider>
     );

@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.repo.FinancialAidRepo;
 import com.ftn.sbnz.model.repo.NotificationRepo;
 import com.ftn.sbnz.model.repo.StudentRepo;
@@ -71,7 +72,7 @@ public class CepServiceImpl implements InitializingBean, CepService {
 		return frequentInterestsMap;
 	}
 
-	public List<Notification> newFinancialAid(FinancialAid aid) {
+	public List<Notification> newFinancialAid(FinancialAid aid, GradProgram gp) {
 		List<Student> students = studentRepo.findAll();
 		KieSession kieSession = kieContainer.newKieSession("cep1Ksession");;
 		kieSession.getAgenda().getAgendaGroup("new-aid").setFocus(); 
@@ -79,11 +80,14 @@ public class CepServiceImpl implements InitializingBean, CepService {
 		List<Notification> notificationList = new ArrayList<>();
         kieSession.setGlobal("notificationList", notificationList);
 
-		kieSession.insert(students);
+		for (Student s: students) kieSession.insert(s);
 		kieSession.insert(aid);
 
 		int fired = kieSession.fireAllRules();
 		kieSession.dispose();
+
+		for (Notification n : notificationList)
+			n.setProgramName(gp.getName());
 
 		notificationList = notificationRepo.saveAll(notificationList);
 		log.info("Fired {} rules. Notifications: {}", fired, notificationList);
@@ -100,8 +104,8 @@ public class CepServiceImpl implements InitializingBean, CepService {
         List<Notification> notificationList = new ArrayList<>();
         kieSession.setGlobal("notificationList", notificationList);
 
-        kieSession.insert(students);
-		kieSession.insert(aids);
+		for (Student s: students) kieSession.insert(s);
+		for (FinancialAid fa: aids) kieSession.insert(fa);
 
         int fired = kieSession.fireAllRules();
         kieSession.dispose();

@@ -4,22 +4,40 @@ import darkTheme from '../../themes/darkTheme';
 import { ThemeProvider } from '@emotion/react';
 import programService from "../../services/ProgramService";
 import {Card, Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
-import Button from "@mui/material/Button";
 import Icon from "@mui/material/Icon";
-import TextField from "@mui/material/TextField";
 import "./Programs.css";
+import authService from '../../services/AuthService';
+import ProfNavigation from '../ProfNavigation/ProfNavigation';
+import { TextField, Button } from '@mui/material';
+import AddProgramDialog from './AddProgram';
+
+
 
 export function Programs() {
     const [data, setData] = useState([]);
     const [selectedCardId, setSelectedCardId] = useState(null);
     const [selectedProgram, setSelectedProgram] = useState(null);
+    const [role, setRole] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await programService.getAll();
-            if (result.status === 200) {
-                setData(result.data);
+
+            const user = await authService.validateUser();
+            if (user.name === "professor") {
+                setRole(1);
+                const result = await programService.getByProfessor();
+                if (result.status === 200) {
+                    setData(result.data);
+                }
             }
+            else{
+                const result = await programService.getAll();
+                if (result.status === 200) {
+                    setData(result.data);
+                }
+            }
+
+            console.log(role);
         };
 
         fetchData();
@@ -70,15 +88,25 @@ export function Programs() {
         setCurrentPage((prevPageNumber) => prevPageNumber - 1);
     };
 
+    const handleDelete = async (id) => {
+        const response = await programService.deleteProgram(id);
+        if (response.status === 200) {
+            setData(data.filter((item) => item.id !== id));
+        }
+        console.log(`Delete program with id: ${id}`);
+    };
+
     const dataToShow = data.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
     return (
         <ThemeProvider theme={darkTheme}>
-            <div className='App'>
-                <StudentNavigation></StudentNavigation>
+            {role === 0 && (<StudentNavigation></StudentNavigation>)}
+            {role === 1 && (<ProfNavigation></ProfNavigation>)}
+            <div className='programs-container'>
                 <div className='left-side'>
                     <Button onClick={handleOpen} className="filter-button">
                         <Icon>filter_list</Icon>
+                        Filter
                     </Button>
                     <Dialog open={open} onClose={handleClose}>
                         <DialogTitle>Filter Programs</DialogTitle>
@@ -92,8 +120,8 @@ export function Programs() {
                                        onChange={(e) => setCitationScore(e.target.value)} fullWidth/>
                         </DialogContent>
                         <DialogActions>
-                            <Button onClick={handleClose}>Cancel</Button>
-                            <Button onClick={handleSubmit}>Submit</Button>
+                            <Button onClick={handleClose} style={{color: "white"}}>Cancel</Button>
+                            <Button onClick={handleSubmit} style={{color: "white"}}>Submit</Button>
                         </DialogActions>
                     </Dialog>
                     {dataToShow.map((item) => (
@@ -105,8 +133,18 @@ export function Programs() {
                             <p>Requirement: {item.requirementName}</p>
                             <p>Location: {item.location}</p>
                             <p>Price: {item.price}</p>
+                            {role == 1 && (
+                            <Button onClick={() => handleDelete(item.id)}>
+                                <Icon>delete</Icon>
+                            </Button>
+                            )}
                         </Card>
                     ))}
+                    {role == 1 && (
+                        <AddProgramDialog setData={setData} data={data}/>
+                    )}
+                    
+
                     <Button onClick={handlePrevious} disabled={currentPage === 0}>
                         <Icon>chevron_left</Icon>
                     </Button>

@@ -1,0 +1,123 @@
+.user-profile-container {
+    display: flex;
+    padding: 80px 50px;
+  }
+  
+  .side-menu {
+    width: 25%;
+    padding: 50px;
+    margin-left: 50px;
+    border-radius: 25px;
+    text-align: center;
+    border: 2px solid white,
+  }
+
+  .container-image {
+    position: relative;
+  }
+  
+  #profile-image {
+    width: 55%;
+    border-radius: 50%;
+  }
+
+  #add-image {
+    height: 25px;
+    position: absolute;
+    right: 3px;
+    bottom: 7%;
+    cursor: pointer;
+    margin-right: 14% !important;
+  }
+  
+  .menu-option {
+    cursor: pointer;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .menu-option::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .menu-option:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .selected::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .about-you {
+    text-align: center;
+    margin-top: 0 !important;
+    font-size: 2.5em !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .content {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .field-name {
+    text-align: left;
+    width: 95%;
+    margin: auto;
+  }
+  
+  .update-form {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .notification-container {
+    width: 30%;
+    margin-top: 15px;
+    padding-left: 1.7%;
+  }
+
+/* excluding search */
+  .notification-list {
+    height: 490px; /* Set your desired height */
+    overflow-y: auto; /* Enable vertical scroll */
+    text-align: justify;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .notif{
+    width: 100%;
+    padding: 14px;
+    border-radius: 15px !important;
+  }
+
+  .notification-item {
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
