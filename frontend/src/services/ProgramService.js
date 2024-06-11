@@ -117,6 +117,19 @@ class ProgramService {
         }
     }
 
+    async deleteAid(id, selectedItem) {
+        try {
+            const response = await httpClient.delete(`http://localhost:8080/api/aid/${id}`, {
+                data: { programId: selectedItem } 
+            });;
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Error deleting mentorship:', error);
+            throw error;
+        }
+    }
+
     async addMentorship(email) {
         try {
             const response = await httpClient.post(`http://localhost:8080/api/mentorship`,{

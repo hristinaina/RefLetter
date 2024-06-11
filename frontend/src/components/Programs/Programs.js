@@ -4,15 +4,15 @@ import darkTheme from '../../themes/darkTheme';
 import {ThemeProvider} from '@emotion/react';
 import programService from "../../services/ProgramService";
 import {Card, Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
-import Button from "@mui/material/Button";
 import Icon from "@mui/material/Icon";
-import TextField from "@mui/material/TextField";
 import "./Programs.css";
 import {useNavigate} from "react-router-dom";
 import authService from '../../services/AuthService';
 import ProfNavigation from '../ProfNavigation/ProfNavigation';
 import AddProgramDialog from './AddProgram';
-
+import { TextField, Button, Chip, Snackbar, Checkbox, FormControlLabel } from '@mui/material';
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from '@mui/icons-material/Close';
 
 
 export function Programs() {
@@ -21,6 +21,10 @@ export function Programs() {
     const [selectedProgram, setSelectedProgram] = useState(null);
     const navigate = useNavigate();
     const [role, setRole] = useState(0);
+
+    //snackbar
+    const [openSB, setOpenSB] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
 
 
     function validateRole() {
@@ -36,20 +40,26 @@ export function Programs() {
             validateRole();
             const user = await authService.validateUser();
 
-            if (user === "professor") {
-                setRole(1);
-                const result = await programService.getByProfessor();
-                if (result)
-                if (result.status === 200) {
-                    setData(result.data);
+            try{
+
+                if (user === "professor") {
+                    setRole(1);
+                    const result = await programService.getByProfessor();
+                    if (result) {
+                        if (result.status === 200) {
+                            setData(result.data);
+                        }
+                    }
                 }
-            }
-            else{
-                const result = await programService.getAll();
-                if (result)
-                if (result.status === 200) {
-                    setData(result.data);
+                else{
+                    const result = await programService.getAll();
+                    if (result)
+                    if (result.status === 200) {
+                        setData(result.data);
+                    }
                 }
+            } catch(e){
+                console.log('no data to show');
             }
 
             console.log(role);
@@ -117,9 +127,70 @@ export function Programs() {
         if (response)
         if (response.status === 200) {
             setData(data.filter((item) => item.id !== id));
+            setSnackbarMessage('Successfully deleted program!');
+            handleClickSB();
         }
         console.log(`Delete program with id: ${id}`);
     };
+
+    
+    const handleDeleteAid = async (id) => {
+        try {
+            const response = await programService.deleteAid(id, selectedCardId);
+    
+            if (response && response.status === 200) {
+                const updatedFinancialAids = selectedProgram.financialAids.filter(aid => aid.id !== id);
+    
+                const updatedSelectedProgram = {
+                    ...selectedProgram,
+                    financialAids: updatedFinancialAids
+                };
+    
+                const updatedData = data.map(program => {
+                    if (program.id === selectedCardId) {
+                        return {
+                            ...program,
+                            financialAids: updatedFinancialAids
+                        };
+                    } else {
+                        return program;
+                    }
+                });
+    
+                setSelectedProgram(updatedSelectedProgram);
+                setData(updatedData);
+    
+                setSnackbarMessage('Successfully deleted financial aid!');
+                handleClickSB();
+            }
+        } catch (error) {
+            console.error('Error deleting financial aid:', error);
+            setSnackbarMessage('An error occurred while deleting financial aid!');
+            handleClickSB();
+        }
+    };
+    
+    
+        // Snackbar
+        const handleClickSB = () => {
+            setOpenSB(true);
+        };
+    
+        const handleCloseSB = (event, reason) => {
+            if (reason === 'clickaway') {
+                return;
+            }
+            setOpenSB(false);
+        };
+    
+        const action = (
+            <React.Fragment>
+                <IconButton size="small" aria-label="close" color="inherit" onClick={handleCloseSB}>
+                    <CloseIcon fontSize="small" />
+                </IconButton>
+            </React.Fragment>
+        );
+    
 
     const dataToShow = data.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
@@ -194,11 +265,24 @@ export function Programs() {
                                 <p>Amount: {aid.amount}</p>
                                 <p>Requirement: {aid.requirement.name}</p>
                                 <p>Deadline: {aid.deadline}</p>
+                                {role == 1 && (
+                                    <Button onClick={() => handleDeleteAid(aid.id)}>
+                                        <Icon>delete</Icon>
+                                    </Button>
+                                    )}
                             </Card>
+                            
                         ))}
                     </div>
                 )}
             </div>
+            <Snackbar
+                    open={openSB}
+                    autoHideDuration={4000}
+                    onClose={handleCloseSB}
+                    message={snackbarMessage}
+                    action={action}
+                />
         </ThemeProvider>
     );
 }
