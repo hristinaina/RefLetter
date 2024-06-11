@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import StudentNavigation from '../StudentNavigation/StudentNavigation';
 import darkTheme from '../../themes/darkTheme';
-import { ThemeProvider } from '@emotion/react';
+import {ThemeProvider} from '@emotion/react';
 import programService from "../../services/ProgramService";
 import {Card, Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
+import Button from "@mui/material/Button";
 import Icon from "@mui/material/Icon";
+import TextField from "@mui/material/TextField";
 import "./Programs.css";
+import {useNavigate} from "react-router-dom";
 import authService from '../../services/AuthService';
 import ProfNavigation from '../ProfNavigation/ProfNavigation';
-import { TextField, Button } from '@mui/material';
 import AddProgramDialog from './AddProgram';
 
 
@@ -17,21 +19,34 @@ export function Programs() {
     const [data, setData] = useState([]);
     const [selectedCardId, setSelectedCardId] = useState(null);
     const [selectedProgram, setSelectedProgram] = useState(null);
+    const navigate = useNavigate();
     const [role, setRole] = useState(0);
+
+
+    function validateRole() {
+        const role = authService.validateUser();
+        console.log('PROGRAMS ROLE:' + role);
+        if (role !== 'student' && role !== 'professor') {
+            navigate('/login');
+        }
+    }
 
     useEffect(() => {
         const fetchData = async () => {
-
+            validateRole();
             const user = await authService.validateUser();
-            if (user.name === "professor") {
+
+            if (user === "professor") {
                 setRole(1);
                 const result = await programService.getByProfessor();
+                if (result)
                 if (result.status === 200) {
                     setData(result.data);
                 }
             }
             else{
                 const result = await programService.getAll();
+                if (result)
                 if (result.status === 200) {
                     setData(result.data);
                 }
@@ -39,9 +54,16 @@ export function Programs() {
 
             console.log(role);
         };
+        const handleUnauthorized = () => {
+            authService.logout();
+            navigate('/login');
+        };
+
+        window.addEventListener('unauthorized', handleUnauthorized);
 
         fetchData();
     }, []);
+
 
     const [open, setOpen] = useState(false);
     const [rank, setRank] = useState('');
@@ -72,9 +94,10 @@ export function Programs() {
     const handleCardClick = async (programID) => {
         setSelectedCardId(programID);
         const result = await programService.getFinancialAids(programID);
-        if (result.status === 200) {
-            setSelectedProgram(result.data);
-        }
+        if (result)
+            if (result.status === 200) {
+                setSelectedProgram(result.data);
+            }
     }
 
     const itemsPerPage = 2; // Change this to the number of items you want per page
@@ -90,6 +113,7 @@ export function Programs() {
 
     const handleDelete = async (id) => {
         const response = await programService.deleteProgram(id);
+        if (response)
         if (response.status === 200) {
             setData(data.filter((item) => item.id !== id));
         }
@@ -143,7 +167,7 @@ export function Programs() {
                     {role == 1 && (
                         <AddProgramDialog setData={setData} data={data}/>
                     )}
-                    
+
 
                     <Button onClick={handlePrevious} disabled={currentPage === 0}>
                         <Icon>chevron_left</Icon>

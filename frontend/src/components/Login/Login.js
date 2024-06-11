@@ -33,6 +33,7 @@ const Login = () => {
                 }
             } catch (error) {
                 console.error('Error:', error);
+                handleClick();
             }
         };
 
@@ -54,9 +55,9 @@ const Login = () => {
                 if (result.status === 200) {
                     const result = await authService.validateUser();
                     console.log(result);
-                    if (result.name === 'student') {
+                    if (result === 'student') {
                         navigate('/programs');
-                    } else if (result.name === 'professor') {
+                    } else if (result === 'professor') {
                         navigate('/prof-mentorship');
                     } else {
                         navigate('/login');
@@ -65,6 +66,11 @@ const Login = () => {
                     setSnackbarMessage(result.error);
                     handleClick();
                 }
+            }
+            else {
+                setSnackbarMessage("Invalid email or password");
+                handleClick();
+
             }
         }
         catch (error) {
@@ -168,7 +174,7 @@ const Login = () => {
                         </Link>
                         <Snackbar
                             open={open}
-                            autoHideDuration={1000}
+                            autoHideDuration={5000}
                             onClose={handleClose}
                             message={snackbarMessage}
                             action={action}

@@ -135,7 +135,7 @@ public class GradProgramServiceImpl implements GradProgramService {
 
 
     @Override
-    public List<GradProgramDTO> filterGradPrograms(FilterTemplateModel filterTemplateModel, Student student) {
+    public List<GradProgramDTO> filterGradPrograms(FilterTemplateModel filterTemplateModel) {
         if (filterTemplateModel == null) {
             return getAll();
         }

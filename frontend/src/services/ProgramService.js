@@ -10,7 +10,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
-            throw error;
         }
     }
 
@@ -22,7 +21,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
-            throw error;
         }
     }
 
@@ -45,7 +43,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
-            throw error;
         }
 
     }
@@ -64,7 +61,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Error posting data:', error);
-            throw error;
         }
     }
     async getAllProfs() {
@@ -75,7 +71,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
-            throw error;
         }
     }
 
@@ -87,7 +82,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
-            throw error;
         }
     }
 
@@ -99,7 +93,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
-            throw error;
         }
     }
 
@@ -110,7 +103,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Error deleting mentorship:', error);
-            throw error;
         }
     }
 
@@ -134,7 +126,6 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Creating mentorship:', error);
-            throw error;
         }
     }
 

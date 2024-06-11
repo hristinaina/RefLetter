@@ -22,7 +22,7 @@ public interface GradProgramService {
     List<GradProgramDTO> getAll();
 
 
-    List<GradProgramDTO> filterGradPrograms(FilterTemplateModel filterTemplateModel, Student student);
+    List<GradProgramDTO> filterGradPrograms(FilterTemplateModel filterTemplateModel);
 
     ResponseEntity<?> update(GradProgram gradProgram, Professor professor);
 

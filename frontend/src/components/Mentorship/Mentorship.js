@@ -8,6 +8,8 @@ import Icon from "@mui/material/Icon";
 import {Card, Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import styles from './Mentorship.module.css';
+import authService from "../../services/AuthService";
+import {useNavigate} from "react-router-dom";
 
 export const Mentorship = () => {
     const [data, setData] = useState([]);
@@ -15,16 +17,30 @@ export const Mentorship = () => {
     const [selectedProfCardId, setSelectedProfCardId] = useState(null);
     const [selectedProgram, setSelectedProgram] = useState(null);
     const [professors, setProfessors] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
+        const role = authService.validateUser();
+        if (role !== 'student') {
+            navigate('/login');
+        }
         const fetchProfessors = async () => {
             const result = await programService.getAllProfs();
-            if (result.status === 200) {
-                setProfessors(result.data);
-            }
+            if (result)
+                if (result.status === 200) {
+                    setProfessors(result.data);
+                }
         };
 
+        const handleUnauthorized = () => {
+            authService.logout();
+            navigate('/login');
+        };
+
+        window.addEventListener('unauthorized', handleUnauthorized);
+
         fetchProfessors();
+
     }, []);
 
 
