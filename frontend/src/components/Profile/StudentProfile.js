@@ -8,6 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import StudentNavigation from '../StudentNavigation/StudentNavigation';
 import { ThemeProvider } from '@emotion/react';
 import StudentRegistration from '../Registration/StudentRegistration';
+import Notifications from './Notifications';
 
 const StudentProfile = () => {
   const [selectedOption, setSelectedOption] = useState('PROFILE');
@@ -20,26 +21,6 @@ const StudentProfile = () => {
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
-  };
-
-  const handleUpdateProfile = async () => {
-    // const result = await superAdminService.EditSuperAdmin(name, surname, email)
-
-    // if (result.success) {
-    //     setSnackbarMessage("Successful account change");
-    //     handleClick();
-    //     await authService.validateUser()
-    //     user.Name = name;
-    //     user.Surname = surname;
-    // } else {
-    //     setSnackbarMessage(result.error);
-    //     handleClick()
-    // }
-  };
-
-  // Snackbar
-  const handleClick = () => {
-    setOpen(true);
   };
 
   const handleClose = (event, reason) => {
@@ -102,13 +83,13 @@ const StudentProfile = () => {
               <form className='update-form'> 
                 <p className='about-you'>About you</p>
                 <StudentRegistration theme={darkTheme} updated={true} />
-                <Snackbar
-                  open={open}
-                  autoHideDuration={1000}
-                  onClose={handleClose}
-                  message={snackbarMessage}
-                  action={action}
-                />
+              </form>
+            </>
+          )}
+          {selectedOption === 'NOTIFICATIONS' && (
+            <>
+              <form className='update-form'> 
+                <Notifications/>
               </form>
             </>
           )}

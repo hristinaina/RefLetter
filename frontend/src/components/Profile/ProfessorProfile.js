@@ -66,22 +66,6 @@ const ProfessorProfile = () => {
     setSelectedOption(option);
   };
 
-  const handleUpdateProfile = async () => {
-    // const result = await superAdminService.EditSuperAdmin(name, surname, email)
-
-    // if (result.success) {
-    //     setSnackbarMessage("Successful account change");
-    //     handleClick();
-    //     await authService.validateUser()
-    //     user.Name = name;
-    //     user.Surname = surname;
-    // } else {
-    //     setSnackbarMessage(result.error);
-    //     handleClick()
-    // }
-  };
-
-
   // snackbar
   const handleClick = () => {
     setOpen(true);

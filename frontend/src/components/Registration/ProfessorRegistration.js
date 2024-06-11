@@ -94,6 +94,8 @@ const ProfessorRegistration = ({ theme, updated }) => {
                 const result = await userService.updateProfessor(professor);
                 if (result.status === 200) {
                     console.log("updated");
+                    setSnackbarMessage("Successfully updated account data");
+                    handleClick();
                 }
             } catch (error) {
                 setSnackbarMessage('Update was not successfull. Please check your data.');
@@ -201,7 +203,7 @@ const ProfessorRegistration = ({ theme, updated }) => {
                 >{updated ? 'Update' : 'Register'}</Button>
                 <Snackbar
                         open={open}
-                        autoHideDuration={1000}
+                        autoHideDuration={4000}
                         onClose={handleClose}
                         message={snackbarMessage}
                         action={action}

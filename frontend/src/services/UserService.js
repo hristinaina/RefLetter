@@ -10,7 +10,7 @@ class UserService {
             console.log(response);
             return response;
         } catch (error) {
-            console.error('Creating mentorship:', error);
+            console.error('Updating student:', error);
             throw error;
         }
     }
@@ -23,7 +23,18 @@ class UserService {
             console.log(response);
             return response;
         } catch (error) {
-            console.error('Creating mentorship:', error);
+            console.error('Updating professor', error);
+            throw error;
+        }
+    }
+
+    async getNotifications() {
+        try {
+            const response = await httpClient.get(`http://localhost:8080/api/student/notifications`);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Getting notifications:', error);
             throw error;
         }
     }

@@ -70,7 +70,7 @@ public class GradProgramServiceImpl implements GradProgramService {
                 aid = financialAidRepo.save(aid);
                 aids.add(aid);
 
-                cepService.newFinancialAid(aid);
+                cepService.newFinancialAid(aid, gp);
             }
             gp.setFinancialAids(aids);
             gradProgramRepo.save(gp);

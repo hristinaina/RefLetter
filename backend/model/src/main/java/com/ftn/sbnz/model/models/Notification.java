@@ -21,6 +21,7 @@ public class Notification {
     private String message;
     private Date notifiedAt;
     private Long financialAidId;
+    private String programName;
 
     public Notification(Long userId, String message, Long financialAidId) {
         this.userId = userId;

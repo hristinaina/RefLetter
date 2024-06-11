@@ -48,7 +48,7 @@ public class FinancialAidServiceImpl implements FinancialAidService {
             gp.setFinancialAids(aids);
             gradProgramRepo.save(gp);
 
-            cepService.newFinancialAid(aid);
+            cepService.newFinancialAid(aid, gp);
 
             return ResponseEntity.ok(aid);
         } catch (Exception e) {
