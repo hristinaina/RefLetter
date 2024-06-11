@@ -1,33 +1,29 @@
-#reg-card{
+#reg-card {
     margin: 100px 10%;
     background-color: white;
     border-radius: 25px;
     padding: 0 10%;
 }
 
-.contain-reg{
+.contain-reg {
     text-align: center;
     padding: 60px 0;
 }
 
-.title-reg{
-    font-size: 450%; 
+.title-reg {
+    font-size: 450%;
     margin-bottom: 30px;
     margin-top: 0% !important;
     color: black !important;
 }
 
-.left-side-reg{
+.left-side-reg, .right-side-reg {
     text-align: center;
     width: 50%;
     display: inline-block;
+    vertical-align: top;
 }
 
-.right-side-reg{
-    text-align: center;
-    width: 50%;
-    display: inline-block;
-}
 
 #professor-reg{
     width: 70%;
@@ -36,7 +32,7 @@
     text-align: center;
 }
 
-.fields{
+.fields {
     width: 90% !important;
     margin-left: auto;
     margin-right: auto;

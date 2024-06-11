@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {TextField, Button, Snackbar} from '@mui/material'; // Snackbar is now imported
 import authService from "../../services/AuthService";
 import {useNavigate} from "react-router-dom";
@@ -11,6 +11,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import CloseIcon from '@mui/icons-material/Close';
+import userService from '../../services/UserService';
 
 const ProfessorRegistration = ({ theme, updated }) => {
     const navigate = useNavigate();
@@ -28,6 +29,30 @@ const ProfessorRegistration = ({ theme, updated }) => {
     const [open, setOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
 
+    
+    useEffect(() => {
+        const fetchProfileData = async () => {
+            if (updated) {
+                try {
+                    const currentUser = await authService.getProfileData();
+                    console.log(currentUser);
+                    setProfessor({
+                        ...professor,
+                        id: currentUser.id,
+                        name: currentUser.name,
+                        surname: currentUser.surname,
+                        email: currentUser.email,
+                        university: currentUser.university.name,
+                    });
+                } catch (error) {
+                    console.error('Error fetching profile data:', error);
+                }
+            }
+        };
+
+        fetchProfileData();
+    }, [updated]);
+
     const handleChange = (e) => {
         setProfessor({...professor, [e.target.name]: e.target.value});
     };
@@ -39,8 +64,7 @@ const ProfessorRegistration = ({ theme, updated }) => {
         setShowPassword(!showPassword); // Toggle the visibility of the password
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const createProfessor = async (e) =>{
         if (professor.password !== confirmPassword) {
             setSnackbarMessage("Passwords do not match!"); // Show the Snackbar
             handleClick();
@@ -59,6 +83,23 @@ const ProfessorRegistration = ({ theme, updated }) => {
         }
 
         console.log(professor);
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!updated) createProfessor(e);
+        else{
+            try {
+                const result = await userService.updateProfessor(professor);
+                if (result.status === 200) {
+                    console.log("updated");
+                }
+            } catch (error) {
+                setSnackbarMessage('Update was not successfull. Please check your data.');
+                handleClick();
+            }
+        }
     };
 
         //snackbar
@@ -105,7 +146,7 @@ const ProfessorRegistration = ({ theme, updated }) => {
                                value={professor.email}
                                onChange={handleChange}/>
                 </div>
-                <div className="fields">
+                { !updated && (<div className="fields">
                     <TextField
                         sx={{m: 1, width: '30ch'}}
                         className="fields"
@@ -128,7 +169,8 @@ const ProfessorRegistration = ({ theme, updated }) => {
                         }}
                     />
                 </div>
-                <div className="fields">
+                )}
+                {!updated && (<div className="fields">
                     <TextField
                         sx={{m: 1, width: '30ch'}}
                         className="fields"
@@ -150,13 +192,13 @@ const ProfessorRegistration = ({ theme, updated }) => {
                             ),
                         }}
                     />
-                </div>
+                </div> )}
                 <Button onClick={handleSubmit}
                         id="login"
                         variant="contained"
                         style={{marginTop: "50px", textTransform: 'none', width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'block'}}
                     
-                >Register</Button>
+                >{updated ? 'Update' : 'Register'}</Button>
                 <Snackbar
                         open={open}
                         autoHideDuration={1000}

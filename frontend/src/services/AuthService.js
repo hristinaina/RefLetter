@@ -75,6 +75,18 @@ class AuthService {
             throw error;
         }
     }
+      
+    async getProfileData() {
+        try {
+          const response = await httpClient.get('http://localhost:8080/api');
+          console.log(response);
+          return response.data;
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          throw error;
+        }
+      }
+    
 }
   
   const authService = new AuthService();
