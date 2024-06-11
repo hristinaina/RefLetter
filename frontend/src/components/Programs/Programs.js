@@ -9,10 +9,8 @@ import Icon from "@mui/material/Icon";
 import TextField from "@mui/material/TextField";
 import "./Programs.css";
 import {useNavigate} from "react-router-dom";
-import authService from "../../services/AuthService";
 import authService from '../../services/AuthService';
 import ProfNavigation from '../ProfNavigation/ProfNavigation';
-import { TextField, Button } from '@mui/material';
 import AddProgramDialog from './AddProgram';
 
 
@@ -34,23 +32,21 @@ export function Programs() {
     }
 
     useEffect(() => {
-        validateRole();
         const fetchData = async () => {
-            const result = await programService.getAll();
-            if (result)
-            if (result.status === 200) {
-                setData(result.data);
-
+            validateRole();
             const user = await authService.validateUser();
-            if (user.name === "professor") {
+
+            if (user === "professor") {
                 setRole(1);
                 const result = await programService.getByProfessor();
+                if (result)
                 if (result.status === 200) {
                     setData(result.data);
                 }
             }
             else{
                 const result = await programService.getAll();
+                if (result)
                 if (result.status === 200) {
                     setData(result.data);
                 }
@@ -67,6 +63,7 @@ export function Programs() {
 
         fetchData();
     }, []);
+
 
     const [open, setOpen] = useState(false);
     const [rank, setRank] = useState('');
