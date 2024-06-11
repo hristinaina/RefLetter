@@ -4,6 +4,7 @@ import com.ftn.sbnz.model.models.FilterTemplateModel;
 import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.Professor;
 import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.model.models.dto.ProgramDTO;
 import com.ftn.sbnz.services.interf.GradProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,19 +20,18 @@ public class ProgramController {
     @Autowired
     GradProgramService gradProgramService;
 
-    @PreAuthorize("hasAuthority('student')")
+    @PreAuthorize("hasAnyAuthority('student', 'professor')")
     @GetMapping("/{id}/details")
     public ResponseEntity<?> getProgramDetails(@PathVariable Long id) {
         try {
-            var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-            return ResponseEntity.ok(gradProgramService.getDetails(id));
+           return ResponseEntity.ok(gradProgramService.getDetails(id));
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
 
     }
 
-    @PreAuthorize("hasAuthority('student') || hasAuthority('professor')")
+    @PreAuthorize("hasAuthority('student')")
     @GetMapping("/all")
     public ResponseEntity<?> getAllPrograms() {
         try {
@@ -41,7 +41,18 @@ public class ProgramController {
         }
     }
 
-    @PreAuthorize("hasAuthority('student') || hasAuthority('professor')")
+    @PreAuthorize("hasAuthority('professor')")
+    @GetMapping("/prof")
+    public ResponseEntity<?> getProgramsByProfessor() {
+        try {
+            var professor = (Professor) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            return ResponseEntity.ok(gradProgramService.getProgramsByProfessor(professor));
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PreAuthorize("hasAuthority('student')")
     @PostMapping("/filter")
     public ResponseEntity<?> filter(@RequestBody FilterTemplateModel filterTemplateModel) {
         try {
@@ -65,7 +76,7 @@ public class ProgramController {
 
     @PreAuthorize("hasAuthority('professor')")
     @PostMapping()
-    public ResponseEntity<?> create(@RequestBody GradProgram gradProgram) {
+    public ResponseEntity<?> create(@RequestBody ProgramDTO gradProgram) {
         try {
             var professor = (Professor) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
             return ResponseEntity.ok(gradProgramService.create(gradProgram, professor));

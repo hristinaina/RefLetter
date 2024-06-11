@@ -24,6 +24,18 @@ class ProgramService {
         }
     }
 
+    async getByProfessor() {
+
+        try {
+            const response = await httpClient.get('http://localhost:8080/api/program/prof');
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            throw error;
+        }
+    }
+
     async getFinancialAids(programID){
         try {
             const response = await httpClient.get(`http://localhost:8080/api/program/${programID}/details`);
@@ -94,6 +106,17 @@ class ProgramService {
         }
     }
 
+    async deleteProgram(id) {
+        try {
+            const response = await httpClient.delete(`http://localhost:8080/api/program/${id}`);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Error deleting mentorship:', error);
+            throw error;
+        }
+    }
+
     async addMentorship(email) {
         try {
             const response = await httpClient.post(`http://localhost:8080/api/mentorship`,{
@@ -103,6 +126,30 @@ class ProgramService {
             return response;
         } catch (error) {
             console.error('Creating mentorship:', error);
+        }
+    }
+
+    
+    async addProgram(student) {
+        try {
+            const program = {
+                name: student.name,
+                price: student.price,
+                universityName: student.universityName,
+                requirement: {
+                    gpa: student.gpa,
+                    researchExperience: student.researchExperience,
+                    researchInterest: student.researchInterest,
+                    testScores: student.testScores,
+                }
+            };
+            console.log(program);
+            const response = await httpClient.post(`http://localhost:8080/api/program`, program);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Creating mentorship:', error);
+            throw error;
         }
     }
 

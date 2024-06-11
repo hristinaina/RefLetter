@@ -10,12 +10,20 @@ import TextField from "@mui/material/TextField";
 import "./Programs.css";
 import {useNavigate} from "react-router-dom";
 import authService from "../../services/AuthService";
+import authService from '../../services/AuthService';
+import ProfNavigation from '../ProfNavigation/ProfNavigation';
+import { TextField, Button } from '@mui/material';
+import AddProgramDialog from './AddProgram';
+
+
 
 export function Programs() {
     const [data, setData] = useState([]);
     const [selectedCardId, setSelectedCardId] = useState(null);
     const [selectedProgram, setSelectedProgram] = useState(null);
     const navigate = useNavigate();
+    const [role, setRole] = useState(0);
+
 
     function validateRole() {
         const role = authService.validateUser();
@@ -32,7 +40,23 @@ export function Programs() {
             if (result)
             if (result.status === 200) {
                 setData(result.data);
+
+            const user = await authService.validateUser();
+            if (user.name === "professor") {
+                setRole(1);
+                const result = await programService.getByProfessor();
+                if (result.status === 200) {
+                    setData(result.data);
+                }
             }
+            else{
+                const result = await programService.getAll();
+                if (result.status === 200) {
+                    setData(result.data);
+                }
+            }
+
+            console.log(role);
         };
         const handleUnauthorized = () => {
             authService.logout();
@@ -90,11 +114,21 @@ export function Programs() {
         setCurrentPage((prevPageNumber) => prevPageNumber - 1);
     };
 
+    const handleDelete = async (id) => {
+        const response = await programService.deleteProgram(id);
+        if (response)
+        if (response.status === 200) {
+            setData(data.filter((item) => item.id !== id));
+        }
+        console.log(`Delete program with id: ${id}`);
+    };
+
     const dataToShow = data.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
     return (
         <ThemeProvider theme={darkTheme}>
-            <StudentNavigation></StudentNavigation>
+            {role === 0 && (<StudentNavigation></StudentNavigation>)}
+            {role === 1 && (<ProfNavigation></ProfNavigation>)}
             <div className='programs-container'>
                 <div className='left-side'>
                     <Button onClick={handleOpen} className="filter-button">
@@ -126,8 +160,18 @@ export function Programs() {
                             <p>Requirement: {item.requirementName}</p>
                             <p>Location: {item.location}</p>
                             <p>Price: {item.price}</p>
+                            {role == 1 && (
+                            <Button onClick={() => handleDelete(item.id)}>
+                                <Icon>delete</Icon>
+                            </Button>
+                            )}
                         </Card>
                     ))}
+                    {role == 1 && (
+                        <AddProgramDialog setData={setData} data={data}/>
+                    )}
+
+
                     <Button onClick={handlePrevious} disabled={currentPage === 0}>
                         <Icon>chevron_left</Icon>
                     </Button>
