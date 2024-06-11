@@ -10,6 +10,7 @@ import authService from '../../services/AuthService';
 import ProfNavigation from '../ProfNavigation/ProfNavigation';
 import { TextField, Button, Chip, Snackbar, Checkbox, FormControlLabel } from '@mui/material';
 import IconButton from "@mui/material/IconButton";
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const AddProgramDialog = ({ setData, data }) => {
@@ -32,10 +33,15 @@ const AddProgramDialog = ({ setData, data }) => {
         const [experienceInput, setExperienceInput] = useState('');
         const [testNameInput, setTestNameInput] = useState('');
         const [testScoreInput, setTestScoreInput] = useState('');
+
+        //snackbar
+        const [open, setOpen] = useState(false);
+        const [snackbarMessage, setSnackbarMessage] = useState('');
     
         const handleShow = () => setShow(true);
         const handleCloseAdd = () => {
             setShow(false);
+            resetFields();
         };
 
         
@@ -47,10 +53,29 @@ const AddProgramDialog = ({ setData, data }) => {
                 setData(programs);
                 console.log(programs);
             }
+            setSnackbarMessage('Program successfully added!');
+            handleClick();
             handleCloseAdd();
         } catch (error) {
-            console.log('Error adding program:', error);
+            setSnackbarMessage('Input data invalid!');
+            handleClick();
         }
+    };
+
+    const resetFields = () => {
+        setStudent({
+            name: '',
+            price: '',
+            universityName: '',
+            gpa: '',
+            researchInterest: [],
+            testScores: {},
+            researchExperience: []
+        });
+        setInterestInput('');
+        setExperienceInput('');
+        setTestNameInput('');
+        setTestScoreInput('');
     };
 
     const handleChange = (e) => {
@@ -122,6 +147,26 @@ const AddProgramDialog = ({ setData, data }) => {
         </IconButton>
     );
     
+       // Snackbar
+       const handleClick = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpen(false);
+    };
+
+    const action = (
+        <React.Fragment>
+            <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
+                <CloseIcon fontSize="small" />
+            </IconButton>
+        </React.Fragment>
+    );
+
 
     return (
         <ThemeProvider theme={darkTheme}>
@@ -234,6 +279,13 @@ const AddProgramDialog = ({ setData, data }) => {
                     </Button>
                 </DialogActions>
             </Dialog>
+            <Snackbar
+                    open={open}
+                    autoHideDuration={4000}
+                    onClose={handleClose}
+                    message={snackbarMessage}
+                    action={action}
+                />
         </ThemeProvider>
     )
 

@@ -81,7 +81,7 @@ public class GradProgramServiceImpl implements GradProgramService {
 
             return ResponseEntity.ok(new GradProgramDTO(gp));
         } catch (Exception e) {
-            return ResponseEntity.notFound().build();
+            throw e;
         }
     }
 
