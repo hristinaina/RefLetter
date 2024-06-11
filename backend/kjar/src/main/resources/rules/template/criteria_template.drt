@@ -1,0 +1,28 @@
+template header
+id
+gpa
+requiredScores
+requiredExperience
+
+package template;
+
+import com.ftn.sbnz.model.models.Requirement;
+import com.ftn.sbnz.model.models.Student;
+
+global java.util.ArrayList results;
+
+template "admissionCriteria"
+
+rule "AdmissionCriteria_@{row.rowNumber}"
+    when
+        $student : Student(gpa >= @{gpa})
+        $testName: String() from @{requiredScores}.keySet()
+        eval($student.getTestScores().containsKey($testName) && Double.parseDouble($student.getTestScores().get($testName).toString()) >= Double.parseDouble(@{requiredScores}.get($testName).toString()))
+        $requiredExp: String() from @{requiredExperience}
+        eval($student.getResearchExperience().contains(@{requiredExperience})
+    then
+        System.out.println("Student " + $student.getName() + " meets the criteria for admission.");
+        results.add(@{id});
+end
+
+end template

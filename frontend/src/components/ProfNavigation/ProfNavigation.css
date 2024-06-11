@@ -1,0 +1,105 @@
+@media (min-width: 768px) {
+    .navbar {
+        font-size: 24px;
+    }
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 50px;
+}
+
+.navbar {
+    background-color: var(--background-red);
+    height: 100px;
+    padding: 25px 150px 0 130px;
+}
+
+ul {
+    height: 100px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.text-light {
+    display: inline-block;
+    position: relative;
+    color: white;
+    margin: 0 33px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.text-light::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.text-light:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.profile-dropdown {
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-left: auto;
+}
+
+.dropdown-menu {
+    padding: 15px 0;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    background-color: var(--text-color);
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.dropdown-item {
+    color: black;
+    font-size: smaller;
+    width: max-content;
+    padding: 10px 25px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover{
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    border: solid black;
+    border-width: 0 1.5px 1.5px 0;
+    padding: 4px;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+    opacity: 0;
+    transform: translateY(+100%) translateX(-300%) rotate(-45deg) scaleX(1);
+}
+
+.dropdown-item:hover::before {
+    transform: translateY(+100%) translateX(-230%) rotate(-45deg) scaleX(1);
+    opacity: 1;
+}

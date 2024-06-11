@@ -1,0 +1,26 @@
+:root {
+  --background-red: #3a0820;
+  --accent-red: #78244c;
+  --light-red: #895061;
+  --old-red: #59253A;
+  --background-blue: #3a746e;
+  --yellow-color: #f5f9a4;
+  --gray-color: #DAD8D8;
+  --text-color: white;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-red);
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,78 @@
+package cep2;
+import com.ftn.sbnz.model.models.Student;
+import com.ftn.sbnz.model.events.InterestChange;
+import com.ftn.sbnz.model.events.IndecisiveStudent;
+import java.util.Date;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
+import java.util.ArrayList;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.Collection;
+
+
+declare window InterestChanges
+    @doc("last 720h")
+    InterestChange() over window:time(720h)
+end
+
+
+global Map<String, Integer> frequentInterestsMap;
+
+rule "Check if student's interests have changed"
+    salience 4
+    when
+        $s1: Student($sId: id, $interest1: researchInterest, $date1: updatedTimestamp)
+        $s2: Student(
+            this != $s1,
+            id == $sId,
+            $interest2: researchInterest,
+            $date2: updatedTimestamp,
+            eval($date2.after($date1)),
+            !$interest2.equals($interest1)
+        )
+    then
+        insert(new InterestChange($interest1, $interest2, $sId));
+        delete($s1);
+end
+
+
+rule "Check if student is indecisive"
+    salience 3
+when
+    $s1: Student($sId: id)
+    $changes: List(size >= 6)
+    from collect(InterestChange(studentId == $sId) over window:time(720h))
+    not (IndecisiveStudent(studentId == $sId))
+then
+    insert(new IndecisiveStudent($sId));
+end
+
+
+rule "Generate statistics for indecisive student"
+    salience 2
+when
+    $s1: Student($sId: id)
+    IndecisiveStudent(studentId == $sId)
+    $interestsTemp: List() from accumulate(
+        InterestChange($currentInterests: currentInterests, studentId == $sId) over window:time(720h),
+        collectList($currentInterests)
+    )
+then
+    Map<String, Integer> interestCountMap = new HashMap<>();
+    for (Set<String> interests : (List<Set<String>>) $interestsTemp) {
+        for (String interest : interests) {
+            interestCountMap.put(interest, interestCountMap.getOrDefault(interest, 0) + 1);
+        }
+    }
+    for (Map.Entry<String, Integer> entry : interestCountMap.entrySet()) {
+        frequentInterestsMap.put(entry.getKey(), new Integer(entry.getValue()));
+    }
+
+    delete($s1);
+    System.out.println(frequentInterestsMap);
+end
+
+
