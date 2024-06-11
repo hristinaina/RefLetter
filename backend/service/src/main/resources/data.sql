@@ -2245,6 +2245,9 @@ insert into professor (id, university_id) values (1,1);
 
 -- Inserting data into the Requirement table
 INSERT INTO requirement (id, gpa) VALUES (1, 3.5);
+INSERT INTO requirement (id, gpa) VALUES (2, 3.4);
+INSERT INTO requirement (id, gpa) VALUES (3, 3.2);
+INSERT INTO requirement (id, gpa) VALUES (4, 3.6);
 
 insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (1,'CS1',10000.0,1,1,1);
 -- Inserting data into the GradProgram table
@@ -2257,7 +2260,7 @@ INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ru
 insert into student (gpa, location, requires_financial_aid, id, updated_timestamp) values (3.8,'United States',true,2, '2024-05-10T07:37:50.637+00:00');
 
 -- Inserting data into the FinancialAid table
-INSERT INTO financial_aid (id, type, amount, requirement_id, deadline) VALUES (1, 2, 1000.0, 1, '2024-12-31');
+INSERT INTO financial_aid (id, type, amount, requirement_id, deadline) VALUES (1, 2, 1000.0, 4, '2024-12-31');
 
 insert into grad_program_financial_aids (grad_program_id, financial_aids_id) values (1, 1);
 
@@ -2267,6 +2270,24 @@ insert into requirement_research_interest (requirement_id, research_interest) va
 insert into requirement_research_interest (requirement_id, research_interest) values (1,'AI');
 
 insert into requirement_test_scores (requirement_id, test_scores, test_scores_key) values (1,320.0,'GRE');
+
+insert into requirement_research_experience (requirement_id, research_experience) values (2,'Research in AI');
+insert into requirement_research_interest (requirement_id, research_interest) values (2,'Computer Science');
+insert into requirement_research_interest (requirement_id, research_interest) values (2,'AI');
+
+insert into requirement_test_scores (requirement_id, test_scores, test_scores_key) values (2,320.0,'GRE');
+
+insert into requirement_research_experience (requirement_id, research_experience) values (3,'Research in AI');
+insert into requirement_research_interest (requirement_id, research_interest) values (3,'Computer Science');
+insert into requirement_research_interest (requirement_id, research_interest) values (3,'AI');
+
+insert into requirement_test_scores (requirement_id, test_scores, test_scores_key) values (3,320.0,'GRE');
+
+insert into requirement_research_experience (requirement_id, research_experience) values (4,'Research in AI');
+insert into requirement_research_interest (requirement_id, research_interest) values (4,'Computer Science');
+insert into requirement_research_interest (requirement_id, research_interest) values (4,'AI');
+
+insert into requirement_test_scores (requirement_id, test_scores, test_scores_key) values (4,320.0,'GRE');
 
 insert into student_research_experience (student_id, research_experience) values (2,'Research in AI');
 insert into student_research_interest (student_id, research_interest) values (2,'AI');
@@ -2282,8 +2303,8 @@ insert into professor (id, university_id) values (3,1);
 insert into professor (id, university_id) values (4,2);
 
 -- Inserting data into the GradProgram table
-insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (2,'CS2',12000.0,3,1,1);
-insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (3,'CS3',15000.0,4,1,2);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (2,'CS2',12000.0,3,2,1);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (3,'CS3',15000.0,4,3,2);
 
 -- Inserting data into the mentorship table
 INSERT INTO mentorship (id, mentor_id, student_id) VALUES (1, 1, 4);

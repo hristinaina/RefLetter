@@ -2,10 +2,13 @@ package com.ftn.sbnz.model.models.dto;
 
 import com.ftn.sbnz.model.models.GradProgram;
 import com.ftn.sbnz.model.models.GradProgramRecommendation;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-
+@NoArgsConstructor
+@AllArgsConstructor
 public class GradProgramDTO {
     Long id;
     private double price;

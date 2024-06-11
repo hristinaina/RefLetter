@@ -4,6 +4,7 @@ import com.ftn.sbnz.model.events.FinancialAid;
 import com.ftn.sbnz.model.models.*;
 import com.ftn.sbnz.model.models.dto.GradProgramDTO;
 import com.ftn.sbnz.model.models.dto.GradProgramDetailsDTO;
+import com.ftn.sbnz.model.models.dto.ProgramDTO;
 import com.ftn.sbnz.model.repo.FinancialAidRepo;
 import com.ftn.sbnz.model.repo.GradProgramRepo;
 import com.ftn.sbnz.model.repo.RequirementRepo;
@@ -56,26 +57,29 @@ public class GradProgramServiceImpl implements GradProgramService {
     }
 
     @Override
-    public ResponseEntity<?> create(GradProgram gp, Professor professor) {
+    public ResponseEntity<?> create(ProgramDTO program, Professor professor) {
         try {
+            GradProgram gp = new GradProgram();
+            gp.setName(program.getName());
+            gp.setPrice(program.getPrice());
             gp.setProfessor(professor);
-            gp.setUniversity(universityRepo.findById(gp.getUniversity().getId()).orElseThrow(
-                    ChangeSetPersister.NotFoundException::new));
-            Requirement requirement = requirementRepo.save(gp.getRequirement());
+            gp.setUniversity(universityRepo.findByName(program.getUniversityName()));
+            Requirement requirement = requirementRepo.save(program.getRequirement());
             gp.setRequirement(requirement);
-            Set<FinancialAid> aids = new HashSet<>();
-            for (FinancialAid aid: gp.getFinancialAids()){
-                requirement = requirementRepo.save(aid.getRequirement());
-                aid.setRequirement(requirement);
-                aid = financialAidRepo.save(aid);
-                aids.add(aid);
+//            Set<FinancialAid> aids = new HashSet<>();
+//            for (FinancialAid aid: gp.getFinancialAids()){
+//                requirement = requirementRepo.save(aid.getRequirement());
+//                aid.setRequirement(requirement);
+//                aid = financialAidRepo.save(aid);
+//                aids.add(aid);
+//
+//                cepService.newFinancialAid(aid, gp);
+//            }
+//            gp.setFinancialAids(aids);
+            gp.setFinancialAids(new HashSet<>());
+            gp = gradProgramRepo.save(gp);
 
-                cepService.newFinancialAid(aid, gp);
-            }
-            gp.setFinancialAids(aids);
-            gradProgramRepo.save(gp);
-
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(new GradProgramDTO(gp));
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
@@ -122,6 +126,11 @@ public class GradProgramServiceImpl implements GradProgramService {
     @Override
     public List<GradProgramDTO> getAll() {
         return gradProgramRepo.findAll().stream().map(GradProgramDTO::new).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<GradProgramDTO> getProgramsByProfessor(Professor professor) {
+        return gradProgramRepo.findAllByProfessorId(professor.getId()).stream().map(GradProgramDTO::new).collect(Collectors.toList());
     }
 
 
