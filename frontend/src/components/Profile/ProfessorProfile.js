@@ -11,6 +11,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import StudentNavigation from '../StudentNavigation/StudentNavigation';
 import { ThemeProvider } from '@emotion/react';
 import ProfessorRegistration from '../Registration/ProfessorRegistration';
+import ProfNavigation from '../ProfNavigation/ProfNavigation';
 
 
 const ProfessorProfile = () => {
@@ -108,7 +109,7 @@ const handleClose = (event, reason) => {
 
   return (
     <ThemeProvider theme={darkTheme}>
-    <StudentNavigation />
+    <ProfNavigation />
     <div className="user-profile-container">
       <div className="side-menu">
         <div className='container-image'>

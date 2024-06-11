@@ -26,7 +26,7 @@ const ProfNavigation = () => {
                     <NavItem>
                         <NavLink
                             tag={Link}
-                            className={`text-light ${location.pathname === "/mentorship" ? "active" : ""}`}
+                            className={`text-light ${location.pathname === "/prof-mentorship" ? "active" : ""}`}
                             to="/prof-mentorship"
                         >
                             Mentorship
