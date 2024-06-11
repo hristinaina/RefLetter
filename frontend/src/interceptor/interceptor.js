@@ -13,12 +13,7 @@ httpClient.interceptors.request.use(
             config.headers['Authorization'] = `Bearer ${token}`;
         }
 
-        return config;
-
-
-
-
-        // // Add CORS headers
+        // Add CORS headers
         config.headers['Access-Control-Allow-Origin'] = '*'; // Allow all origins
         config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';
         config.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization';
@@ -30,5 +25,16 @@ httpClient.interceptors.request.use(
         return Promise.reject(error);
     }
 );
+
+httpClient.interceptors.response.use((response) => {
+    return response;
+}, function (error) {
+    if (error.response && error.response.status === 401 || error.response.status === 403) {
+        const event = new CustomEvent('unauthorized');
+        console.error('Unauthorized event dispatched');
+        window.dispatchEvent(event);
+    }
+    return Promise.reject(error);
+});
 
 export default httpClient;

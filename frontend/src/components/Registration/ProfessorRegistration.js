@@ -15,6 +15,11 @@ import userService from '../../services/UserService';
 
 const ProfessorRegistration = ({ theme, updated }) => {
     const navigate = useNavigate();
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
+    const [errors, setErrors] = useState({});
 
     const [professor, setProfessor] = useState({
         university: '',
@@ -24,10 +29,43 @@ const ProfessorRegistration = ({ theme, updated }) => {
         password: ''
     });
 
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
-    const [open, setOpen] = useState(false);
-    const [snackbarMessage, setSnackbarMessage] = useState('');
+
+
+    const validatePassword = (password) => {
+        // At least 8 characters long, 1 uppercase letter, 1 lowercase letter, 1 number, 1 special character
+        const regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@#$%^&(){}[\]:;<>,.?/~_+\-=|\\]).{8,20}$/;
+        return regex.test(password);
+    };
+
+
+    const validateForm = () => {
+        let tempErrors = {};
+        let missingFields = [];
+        if (!professor.university) {
+            tempErrors.university = "University is required.";
+            missingFields.push('University');
+        }
+        if (!professor.name) {
+            tempErrors.name = "Name is required.";
+            missingFields.push('Name');
+        }
+        if (!professor.surname) {
+            tempErrors.surname = "Surname is required.";
+            missingFields.push('Surname');
+        }
+        if (!professor.email) {
+            tempErrors.email = "Email is required.";
+            missingFields.push('Email');
+        }
+        if (!professor.password) {
+            tempErrors.password = "Password is required.";
+            missingFields.push('Password');
+        } else if (!validatePassword(professor.password)) {
+            tempErrors.password = "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.";
+        }
+        setErrors(tempErrors);
+        return missingFields;
+    };
 
     
     useEffect(() => {
@@ -45,7 +83,7 @@ const ProfessorRegistration = ({ theme, updated }) => {
                         university: currentUser.university.name,
                     });
                 } catch (error) {
-                    console.error('Error fetching profile data:', error);
+                    console.log('Error fetching profile data:', error);
                 }
             }
         };
@@ -72,10 +110,11 @@ const ProfessorRegistration = ({ theme, updated }) => {
         }
         try{
             const result = await authService.registerProfessor(professor);
-            if (result.status === 200) {
-                console.log("Registered");
-                navigate('/login'); // Redirect to login page
-            }
+            if (result)
+                if (result.status === 200) {
+                    console.log("Registered");
+                    navigate('/login'); // Redirect to login page
+                }
         }        
         catch (error) {
             setSnackbarMessage('Please fill all the fields');
@@ -87,7 +126,11 @@ const ProfessorRegistration = ({ theme, updated }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        const missingFields = validateForm();
+        if (missingFields.length > 0) {
+            setSnackbarMessage(`Missing fields: ${missingFields.join(', ')}`);
+            return;
+        }
         if (!updated) createProfessor(e);
         else{
             try {
@@ -131,22 +174,30 @@ const ProfessorRegistration = ({ theme, updated }) => {
                 <div className="fields">
                     <TextField sx={{m: 1, width: '30ch'}} className="fields" name="university" label="University"
                                value={professor.university}
-                               onChange={handleChange}/>
+                               onChange={handleChange}
+                               error={Boolean(errors.university)}
+                               helperText={errors.university}/>
                 </div>
                 <div className="fields">
                     <TextField sx={{m: 1, width: '30ch'}} className="fields" name="name" label="Name"
                                value={professor.name}
-                               onChange={handleChange}/>
+                               onChange={handleChange}
+                               error={Boolean(errors.name)}
+                               helperText={errors.name}/>
                 </div>
                 <div className="fields">
                     <TextField sx={{m: 1, width: '30ch'}} className="fields" name="surname" label="Surname"
                                value={professor.surname}
-                               onChange={handleChange}/>
+                               onChange={handleChange}
+                               error={Boolean(errors.surname)}
+                               helperText={errors.surname}/>
                 </div>
                 <div className="fields">
                     <TextField sx={{m: 1, width: '30ch'}} className="fields" name="email" label="Email"
                                value={professor.email}
-                               onChange={handleChange}/>
+                               onChange={handleChange}
+                               error={Boolean(errors.email)}
+                               helperText={errors.email}/>
                 </div>
                 { !updated && (<div className="fields">
                     <TextField
@@ -157,6 +208,8 @@ const ProfessorRegistration = ({ theme, updated }) => {
                         type={showPassword ? 'text' : 'password'} // Change the type based on the visibility state
                         value={professor.password}
                         onChange={handleChange}
+                        error={Boolean(errors.password)}
+                        helperText={errors.password}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">

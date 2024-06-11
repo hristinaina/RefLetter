@@ -6,23 +6,47 @@ import { Card } from '@mui/material';
 import Button from '@mui/material/Button';
 import Icon from '@mui/material/Icon';
 import programService from "../../services/ProgramService";
+import {useNavigate} from "react-router-dom";
+import authService from "../../services/AuthService";
 
 export function Recommendation() {
     const [data, setData] = useState([]);
     const [selectedCardId, setSelectedCardId] = useState(null);
     const [selectedProgram, setSelectedProgram] = useState(null);
+    const navigate = useNavigate();
+
+    function validateRole() {
+        const role = authService.validateUser();
+        console.log(role);
+        if (role !== 'student') {
+            navigate('/login');
+        }
+    }
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await programService.getRecommendations();
-            if (result.status === 200) {
-                console.log("DATA received");
-                // console.log(result.data);
-                setData(result.data);
-            }
+        const handleUnauthorized = () => {
+            authService.logout();
+            navigate('/login');
         };
 
+        window.addEventListener('unauthorized', handleUnauthorized);
+        validateRole();
+        const fetchData = async () => {
+            const result = await programService.getRecommendations();
+            if (result)
+                if (result.status === 200) {
+                    console.log("DATA received");
+                    // console.log(result.data);
+                    setData(result.data);
+                }
+        };
+
+
+
         fetchData();
+        return () => {
+            window.removeEventListener('unauthorized', handleUnauthorized);
+        };
     }, []);
 
     const handleCardClick = async (programID) => {

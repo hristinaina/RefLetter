@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { Navbar, NavItem, NavLink } from "reactstrap";
 import { Link, useLocation } from "react-router-dom";
 import "./StudentNavigation.css";
+import authService from "../../services/AuthService";
 
 const StudentNavigation = () => {
   const location = useLocation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const handleLogout = () => {
+    authService.logout();
+  };
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
@@ -54,7 +59,12 @@ const StudentNavigation = () => {
                 <NavLink tag={Link} className="dropdown-item" to="/studentProfile">
                   View Profile
                 </NavLink>
-                <NavLink tag={Link} className="dropdown-item" to="/">
+                <NavLink
+                    tag={Link}
+                    className="dropdown-item"
+                    to="/login"
+                    onClick={handleLogout}
+                >
                   Logout
                 </NavLink>
               </div>

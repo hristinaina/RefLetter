@@ -11,7 +11,7 @@ class UserService {
             return response;
         } catch (error) {
             console.error('Updating student:', error);
-            throw error;
+
         }
     }
 
@@ -24,7 +24,7 @@ class UserService {
             return response;
         } catch (error) {
             console.error('Updating professor', error);
-            throw error;
+
         }
     }
 
@@ -35,7 +35,7 @@ class UserService {
             return response;
         } catch (error) {
             console.error('Getting notifications:', error);
-            throw error;
+
         }
     }
 
@@ -46,7 +46,7 @@ class UserService {
             return response;
         } catch (error) {
             console.error('Getting notifications:', error);
-            throw error;
+
         }
     }
 

@@ -54,9 +54,9 @@ const Login = () => {
                 if (result.status === 200) {
                     const result = await authService.validateUser();
                     console.log(result);
-                    if (result.name === 'student') {
+                    if (result === 'student') {
                         navigate('/programs');
-                    } else if (result.name === 'professor') {
+                    } else if (result === 'professor') {
                         navigate('/prof-mentorship');
                     } else {
                         navigate('/login');

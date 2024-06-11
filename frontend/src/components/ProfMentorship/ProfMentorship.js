@@ -6,15 +6,36 @@ import Icon from '@mui/material/Icon';
 import ProfNavigation from "../ProfNavigation/ProfNavigation";
 import darkTheme from "../../themes/darkTheme";
 import {ThemeProvider} from "@mui/material/styles";
-import TextField from "@mui/material/TextField"; // Assuming you're using react-bootstrap for UI components
+import TextField from "@mui/material/TextField";
+import authService from "../../services/AuthService";
+import {useNavigate} from "react-router-dom"; // Assuming you're using react-bootstrap for UI components
 
 const ProfMentorshipCards = () => {
     const [mentorships, setMentorships] = useState([]);
     const [show, setShow] = useState(false);
     const [email, setEmail] = useState('');
+    const navigate = useNavigate();
+
+    function validateRole() {
+        const role = authService.validateUser();
+        if (role !== 'professor') {
+            navigate('/login');
+        }
+    }
 
     useEffect(() => {
+        validateRole();
+        const handleUnauthorized = () => {
+            authService.logout();
+            navigate('/login');
+        };
+
+        window.addEventListener('unauthorized', handleUnauthorized);
         fetchMentorships();
+
+        return () => {
+            window.removeEventListener('unauthorized', handleUnauthorized);
+        };
     }, []);
 
 
@@ -27,15 +48,16 @@ const ProfMentorshipCards = () => {
     const handleSave = async () => {
         try {
             const response = await programService.addMentorship(email);
-            if (response.status === 200){
-                let mentorship = [...mentorships, response.data.body];
-                setMentorships(mentorship);
-                console.log(mentorship);
-                console.log('Mentorship added:', mentorships);
-            }
+            if (result)
+                if (response.status === 200){
+                    let mentorship = [...mentorships, response.data.body];
+                    setMentorships(mentorship);
+                    console.log(mentorship);
+                    console.log('Mentorship added:', mentorships);
+                }
             handleClose();
         } catch (error) {
-            console.error('Error adding mentorship:', error);
+            console.log('Error adding mentorship:', error);
         }
     };
 
@@ -45,7 +67,7 @@ const ProfMentorshipCards = () => {
             console.log(response);
             setMentorships(response.data);
         } catch (error) {
-            console.error('Error fetching mentorships:', error);
+            console.log('Error fetching mentorships:', error);
         }
     };
 

@@ -1,8 +1,11 @@
 import httpClient from "../interceptor/interceptor";
 import { jwtDecode } from 'jwt-decode';
+import {useNavigate} from "react-router-dom";
 
 class AuthService {
-  
+
+
+
     async loginUser(email, password) {
       try {
         const response = await httpClient.post('http://localhost:8080/api/login',{
@@ -13,10 +16,9 @@ class AuthService {
        return response;
       } catch (error) {
         console.error('Error fetching data:', error);
-        throw error;
       }
     }
-  
+
     async setToken(user) {
       localStorage.setItem('token', JSON.stringify(user));
     }
@@ -27,7 +29,7 @@ class AuthService {
         try {
             user = JSON.parse(token);
         } catch (error) {
-            console.error('Error parsing token:', error);
+            console.log('Error parsing token:', error);
         }
         return user;
     }
@@ -41,7 +43,7 @@ class AuthService {
         const decodedToken = jwtDecode(token);
         const roles = decodedToken.role;
 
-        return roles ? roles[0] : null;
+        return roles ? roles[0].name : null;
     }
 
     async logout() {
@@ -58,7 +60,6 @@ class AuthService {
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
-            throw error;
         }
     }
 
@@ -72,7 +73,6 @@ class AuthService {
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
-            throw error;
         }
     }
       
@@ -83,7 +83,6 @@ class AuthService {
           return response.data;
         } catch (error) {
           console.error('Error fetching data:', error);
-          throw error;
         }
       }
     

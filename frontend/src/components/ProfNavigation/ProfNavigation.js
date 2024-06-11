@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { Navbar, NavItem, NavLink } from "reactstrap";
 import { Link, useLocation } from "react-router-dom";
 import "./ProfNavigation.css";
+import authService from "../../services/AuthService";
 
 const ProfNavigation = () => {
     const location = useLocation();
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+
+    const handleLogout = () => {
+        authService.logout();
+    };
 
     return (
         <header>
@@ -45,7 +50,12 @@ const ProfNavigation = () => {
                                 <NavLink tag={Link} className="dropdown-item" to="/profProfile">
                                     View Profile
                                 </NavLink>
-                                <NavLink tag={Link} className="dropdown-item" to="/">
+                                <NavLink
+                                    tag={Link}
+                                    className="dropdown-item"
+                                    to="/login"
+                                    onClick={handleLogout}
+                                >
                                     Logout
                                 </NavLink>
                             </div>

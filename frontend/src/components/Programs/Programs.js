@@ -1,26 +1,45 @@
 import React, {useEffect, useState} from 'react';
 import StudentNavigation from '../StudentNavigation/StudentNavigation';
 import darkTheme from '../../themes/darkTheme';
-import { ThemeProvider } from '@emotion/react';
+import {ThemeProvider} from '@emotion/react';
 import programService from "../../services/ProgramService";
 import {Card, Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
 import Button from "@mui/material/Button";
 import Icon from "@mui/material/Icon";
 import TextField from "@mui/material/TextField";
 import "./Programs.css";
+import {useNavigate} from "react-router-dom";
+import authService from "../../services/AuthService";
 
 export function Programs() {
     const [data, setData] = useState([]);
     const [selectedCardId, setSelectedCardId] = useState(null);
     const [selectedProgram, setSelectedProgram] = useState(null);
+    const navigate = useNavigate();
+
+    function validateRole() {
+        const role = authService.validateUser();
+        console.log('PROGRAMS ROLE:' + role);
+        if (role !== 'student' && role !== 'professor') {
+            navigate('/login');
+        }
+    }
 
     useEffect(() => {
+        validateRole();
         const fetchData = async () => {
             const result = await programService.getAll();
+            if (result)
             if (result.status === 200) {
                 setData(result.data);
             }
         };
+        const handleUnauthorized = () => {
+            authService.logout();
+            navigate('/login');
+        };
+
+        window.addEventListener('unauthorized', handleUnauthorized);
 
         fetchData();
     }, []);
@@ -54,9 +73,10 @@ export function Programs() {
     const handleCardClick = async (programID) => {
         setSelectedCardId(programID);
         const result = await programService.getFinancialAids(programID);
-        if (result.status === 200) {
-            setSelectedProgram(result.data);
-        }
+        if (result)
+            if (result.status === 200) {
+                setSelectedProgram(result.data);
+            }
     }
 
     const itemsPerPage = 2; // Change this to the number of items you want per page
