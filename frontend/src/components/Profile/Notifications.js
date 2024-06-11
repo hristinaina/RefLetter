@@ -35,9 +35,13 @@ const Notifications = () => {
 
     return (
         <ThemeProvider theme={lightTheme} className="notification-container">
-            <Typography className='about-you'>
+            <p className='about-you'>
                 Don't Miss Out!
-            </Typography>
+            </p>
+            {notifications.length < 1 && (
+                <p style={{fontSize: "1.4em", textAlign: "center", marginTop: "50px"}}>No data to show! </p>
+            )}
+            {notifications.length >= 1 && (
             <List className='notification-list'>
                 {notifications.map(notification => (
                     <ListItem key={notification.id} className='notification-item'>
@@ -56,6 +60,7 @@ const Notifications = () => {
                     </ListItem>
                 ))}
             </List>
+        )}
         </ThemeProvider>
     );
 };

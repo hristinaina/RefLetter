@@ -9,6 +9,7 @@ import StudentNavigation from '../StudentNavigation/StudentNavigation';
 import { ThemeProvider } from '@emotion/react';
 import StudentRegistration from '../Registration/StudentRegistration';
 import Notifications from './Notifications';
+import Statistics from './Statistics';
 
 const StudentProfile = () => {
   const [selectedOption, setSelectedOption] = useState('PROFILE');
@@ -90,6 +91,13 @@ const StudentProfile = () => {
             <>
               <form className='update-form'> 
                 <Notifications/>
+              </form>
+            </>
+          )}
+          {selectedOption === 'STATISTICS' && (
+            <>
+              <form className='update-form'> 
+                <Statistics/>
               </form>
             </>
           )}

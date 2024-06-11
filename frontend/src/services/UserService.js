@@ -39,6 +39,17 @@ class UserService {
         }
     }
 
+    async getStatistics() {
+        try {
+            const response = await httpClient.get(`http://localhost:8080/api/student/statistics`);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Getting notifications:', error);
+            throw error;
+        }
+    }
+
 }
 
 const userService = new UserService();
