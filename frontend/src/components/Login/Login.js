@@ -33,6 +33,7 @@ const Login = () => {
                 }
             } catch (error) {
                 console.error('Error:', error);
+                handleClick();
             }
         };
 
@@ -65,6 +66,11 @@ const Login = () => {
                     setSnackbarMessage(result.error);
                     handleClick();
                 }
+            }
+            else {
+                setSnackbarMessage("Invalid email or password");
+                handleClick();
+
             }
         }
         catch (error) {
@@ -168,7 +174,7 @@ const Login = () => {
                         </Link>
                         <Snackbar
                             open={open}
-                            autoHideDuration={1000}
+                            autoHideDuration={5000}
                             onClose={handleClose}
                             message={snackbarMessage}
                             action={action}

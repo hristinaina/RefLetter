@@ -31,23 +31,21 @@ public class ProgramController {
 
     }
 
-    @PreAuthorize("hasAuthority('student')")
+    @PreAuthorize("hasAuthority('student') || hasAuthority('professor')")
     @GetMapping("/all")
     public ResponseEntity<?> getAllPrograms() {
         try {
-            var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
             return ResponseEntity.ok(gradProgramService.getAll());
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
     }
 
-    @PreAuthorize("hasAuthority('student')")
+    @PreAuthorize("hasAuthority('student') || hasAuthority('professor')")
     @PostMapping("/filter")
     public ResponseEntity<?> filter(@RequestBody FilterTemplateModel filterTemplateModel) {
         try {
-            var student = (Student) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-            return ResponseEntity.ok(gradProgramService.filterGradPrograms(filterTemplateModel,student));
+            return ResponseEntity.ok(gradProgramService.filterGradPrograms(filterTemplateModel));
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
