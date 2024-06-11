@@ -12,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import CloseIcon from '@mui/icons-material/Close';
 
-const ProfessorRegistration = () => {
+const ProfessorRegistration = ({ theme, updated }) => {
     const navigate = useNavigate();
 
     const [professor, setProfessor] = useState({
@@ -82,9 +82,9 @@ const ProfessorRegistration = () => {
         );
 
     return (
-        <ThemeProvider theme={lightTheme}>
+        <ThemeProvider theme={theme}>
 
-            <form>
+            <form id='professor-reg'>
                 <div className="fields">
                     <TextField sx={{m: 1, width: '30ch'}} className="fields" name="university" label="University"
                                value={professor.university}
@@ -154,8 +154,8 @@ const ProfessorRegistration = () => {
                 <Button onClick={handleSubmit}
                         id="login"
                         variant="contained"
-                        style={{marginTop: "50px", textTransform: 'none'}}
-                        sx={{m: 1, width: '39ch'}}
+                        style={{marginTop: "50px", textTransform: 'none', width: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'block'}}
+                    
                 >Register</Button>
                 <Snackbar
                         open={open}

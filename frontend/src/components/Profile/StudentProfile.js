@@ -10,6 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import StudentNavigation from '../StudentNavigation/StudentNavigation';
 import { ThemeProvider } from '@emotion/react';
+import StudentRegistration from '../Registration/StudentRegistration';
 
 
 const StudentProfile = () => {
@@ -140,46 +141,9 @@ const handleClose = (event, reason) => {
           <>
           <form className='update-form'> 
           <p className='about-you'>About you</p>
-            <div className='user-data'>
-                <div className='field-name'> Name:</div>
-                <TextField
-                    value={name}
-                    onChange={handleNameChange}
-                    sx={{ m: 1, width: '34ch' }}
-                    id="name"
-                    placeholder="Add your name"/>
-            </div> 
-
-            <div className='user-data'>
-                <div className='field-name'> Surname:</div>
-                <TextField
-                    value={surname}
-                    onChange={handleSurnameChange}
-                    sx={{ m: 1, width: '34ch' }}
-                    id="surname"
-                    className='text-field'
-                    placeholder="Add your surname"
-                    helperText={user.Surname !== '' ? '' : 'Required'} />
-            </div> 
-
-            <div className='user-data'>
-                <div className='field-name'> Email:</div>
-                <TextField
-                    value={email}
-                    sx={{ m: 1, width: '34ch' }}
-                    id="email"
-                    className='text-field'
-                    placeholder="someone@example.com"
-                    type='email' />
-            </div>
-            <Button 
-                id='update'
-                variant="contained" 
-                color="primary" 
-                disabled={isButtonUpdateDisabled}
-                onClick={handleUpdateProfile}
-                style={{ display: (user.Name === '' || user.Surname === '') ? 'block' : 'none' }}>UPDATE
-            </Button> 
+            
+            <StudentRegistration theme={darkTheme}
+                  updated={true}/>
 
             <Snackbar
               open={open}

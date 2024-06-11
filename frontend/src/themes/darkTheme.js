@@ -41,13 +41,15 @@ const darkTheme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
+          backgroundColor: '#59253a63',
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
             color: 'white',
-            backgroundColor: 'var(--light-red)', // Keep background color on focus
+            backgroundColor: '#85385663', // Keep background color on focus
             borderColor: 'var(--background-blue)',
           }, // Background color for outlined variant
           '&:hover .MuiOutlinedInput-notchedOutline': {
             borderColor: 'var(--background-blue)', // Hover border color
+            backgroundColor: '#85385663',
           },
         }
       },
