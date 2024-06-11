@@ -85,6 +85,7 @@ export function Programs() {
 
     const handleSubmit = async () => {
         const result = await programService.postProgramFilter(rank, location, researchScore, citationScore);
+        if(result)
         if (result.status === 200) {
             setData(result.data);
         }

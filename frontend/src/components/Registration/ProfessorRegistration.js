@@ -103,6 +103,11 @@ const ProfessorRegistration = ({ theme, updated }) => {
     };
 
     const createProfessor = async (e) =>{
+        const missingFields = validateForm();
+        if (missingFields.length > 0) {
+            setSnackbarMessage(`Missing fields: ${missingFields.join(', ')}`);
+            return;
+        }
         if (professor.password !== confirmPassword) {
             setSnackbarMessage("Passwords do not match!"); // Show the Snackbar
             handleClick();
@@ -126,11 +131,7 @@ const ProfessorRegistration = ({ theme, updated }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const missingFields = validateForm();
-        if (missingFields.length > 0) {
-            setSnackbarMessage(`Missing fields: ${missingFields.join(', ')}`);
-            return;
-        }
+
         if (!updated) createProfessor(e);
         else{
             try {

@@ -158,6 +158,11 @@ const StudentRegistration = ({theme, updated}) => {
 
 
     const createStudent = async (e) => {
+        const missingFields = validateForm();
+        if (missingFields.length > 0) {
+            setSnackbarMessage(`Missing fields: ${missingFields.join(', ')}`);
+            return;
+        }
         if (student.password !== confirmPassword) {
             setSnackbarMessage("Passwords do not match!"); // Show the Snackbar
             handleClick();
@@ -180,10 +185,7 @@ const StudentRegistration = ({theme, updated}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const missingFields = validateForm();
-        if (missingFields.length > 0) {
-            setSnackbarMessage(`Missing fields: ${missingFields.join(', ')}`);
-            return;
-        }
+
         if (!updated) createStudent(e);
         else {
             try {

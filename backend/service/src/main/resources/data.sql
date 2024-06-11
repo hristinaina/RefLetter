@@ -2318,7 +2318,7 @@ SELECT setval('financial_aid_id_seq', 2500);
 SELECT setval('grad_program_id_seq', 2500);
 SELECT setval('grad_program_recommendation_id_seq', 2500);
 SELECT setval('mentorship_id_seq', 2500);
--- SELECT setval('person_id_seq', 2500);
+SELECT setval('person_id_seq', 2500);
 SELECT setval('requirement_id_seq', 2500);
 SELECT setval('notification_id_seq', 2500);
 SELECT setval('role_id_seq', 2500);
