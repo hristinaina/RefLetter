@@ -48,7 +48,7 @@ const ProfMentorshipCards = () => {
     const handleSave = async () => {
         try {
             const response = await programService.addMentorship(email);
-            if (result)
+            if (response)
                 if (response.status === 200){
                     let mentorship = [...mentorships, response.data.body];
                     setMentorships(mentorship);

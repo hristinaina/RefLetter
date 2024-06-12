@@ -13,6 +13,7 @@ import AddProgramDialog from './AddProgram';
 import { TextField, Button, Chip, Snackbar, Checkbox, FormControlLabel } from '@mui/material';
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from '@mui/icons-material/Close';
+import AddFinancialAid from './AddFinancialAid';
 
 
 export function Programs() {
@@ -259,6 +260,9 @@ export function Programs() {
                         <p>Overall Score: {selectedProgram.overallScore}</p>
                         <p>Research Score: {selectedProgram.researchScore}</p>
                         <p>Citation Score: {selectedProgram.citationScore}</p>
+                        {role == 1 && (
+                            <AddFinancialAid setSelectedProgram={setSelectedProgram} selectedProgram={selectedProgram} selectedProgramId={selectedCardId}/>
+                        )}
                         {selectedProgram.financialAids.map((aid, index) => (
                             <Card key={index} className={"financial-aid-card"}>
                                 <p>Type: {aid.type}</p>

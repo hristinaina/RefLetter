@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import httpClient from "../interceptor/interceptor";
 import { jwtDecode } from 'jwt-decode';
 
@@ -158,6 +159,32 @@ class ProgramService {
             };
             console.log(program);
             const response = await httpClient.post(`http://localhost:8080/api/program`, program);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Creating mentorship:', error);
+            throw error;
+        }
+    }
+
+    async addAid(student, programId) {
+        try {
+            console.log(student);
+            const aid = {
+                financialAid: {
+                    type: student.type,
+                    deadline: student.deadline,
+                    amount: student.price,
+                    requirement: {
+                        gpa: student.gpa,
+                        researchExperience: student.researchExperience,
+                        researchInterest: student.researchInterest,
+                        testScores: student.testScores,
+                    },
+                },
+                programId: programId,
+            };
+            const response = await httpClient.post(`http://localhost:8080/api/aid`, aid);
             console.log(response);
             return response;
         } catch (error) {
