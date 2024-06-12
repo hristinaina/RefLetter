@@ -22,6 +22,7 @@ export function Programs() {
     const [selectedProgram, setSelectedProgram] = useState(null);
     const navigate = useNavigate();
     const [role, setRole] = useState(0);
+    const [criteria, setCriteria] = useState(false);
 
     //snackbar
     const [openSB, setOpenSB] = useState(false);
@@ -110,6 +111,14 @@ export function Programs() {
             if (result.status === 200) {
                 setSelectedProgram(result.data);
             }
+
+        if (role === 1) return; 
+        const criteria = await programService.checkCriteria(programID);
+        if (criteria && criteria.status === 200)
+            if (criteria.data.length != 0) {
+                setCriteria(true);
+            }
+            else setCriteria(false);
     }
 
     const itemsPerPage = 2; // Change this to the number of items you want per page
@@ -251,7 +260,12 @@ export function Programs() {
                 </div>
                 {selectedProgram && (
                     <div className='right-side'>
-
+                        {role === 0 && criteria && (
+                            <p style={{color: 'var(--background-blue)'}}>Requirements are satisfied!</p>
+                        )}
+                        {role === 0 && !criteria && (
+                            <p style={{color: 'red'}}>Requirements are not satisfied!</p>
+                        )}
                         <p>Professor: {selectedProgram.professorName}</p>
                         <p>Rank: {selectedProgram.rank}</p>
                         <p>Number of Students: {selectedProgram.numberOfStudents}</p>

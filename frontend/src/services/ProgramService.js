@@ -193,6 +193,17 @@ class ProgramService {
         }
     }
 
+    async checkCriteria(id) {
+
+        try {
+            const response = await httpClient.get(`http://localhost:8080/api/student/criteria/${id}`);
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
 }
 
 const programService = new ProgramService();
