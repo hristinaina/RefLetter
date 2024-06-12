@@ -16,7 +16,6 @@ import com.ftn.sbnz.model.models.Notification;
 import com.ftn.sbnz.model.models.Requirement;
 import com.ftn.sbnz.model.models.Student;
 
-@Disabled
 @SpringBootTest
 public class Cep1Test {
 

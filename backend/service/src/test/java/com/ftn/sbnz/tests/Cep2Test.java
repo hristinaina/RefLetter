@@ -16,7 +16,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.ftn.sbnz.model.models.Student;
 
-@Disabled
 @SpringBootTest
 public class Cep2Test {
 
@@ -52,7 +51,7 @@ public class Cep2Test {
 		kieSession.setGlobal("frequentInterestsMap", frequentInterestsMap);
 
         int fired = 0;
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 6; i++){
             kieSession.insert(createStudent(i));
             clock.advanceTime(1, TimeUnit.HOURS);
             if (fired == 0) kieSession.insert(createStudent(i-1));

@@ -14,7 +14,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.io.InputStream;
 import java.util.*;
 
-@Disabled
 @SpringBootTest
 public class FilterTemplateTest {
 

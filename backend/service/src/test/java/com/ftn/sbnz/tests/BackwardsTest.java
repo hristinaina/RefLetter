@@ -12,7 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 
-@Disabled
 @SpringBootTest
 public class BackwardsTest {
     @Test
