@@ -67,7 +67,7 @@ public class CepServiceImpl implements InitializingBean, CepService {
         kieSession.insert(newStudent);
 
         int fired = kieSession.fireAllRules();
-
+		log.info("Fired {} rules. Interests: {}", fired, frequentInterestsMap);
 		KieSessionUtil.removeFromSessionByClass(kieSession, Student.class);
 		return frequentInterestsMap;
 	}
