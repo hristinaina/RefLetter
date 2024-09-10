@@ -2255,7 +2255,7 @@ insert into grad_program (id, name, price, professor_id, requirement_id, univers
 
 
 -- Inserting data into the Student table
-INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ruzic', 'ruza@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ruzic', 'ruza@example.com', '$2a$10$YPvrmQYNlJyKvtVsn/LteOziQf0Tlm4YLwQAg4Fj8DDLHaI0uUcVC');
 
 insert into student (gpa, location, requires_financial_aid, id, updated_timestamp) values (3.8,'United States',true,2, '2024-05-10T07:37:50.637+00:00');
 
@@ -2296,8 +2296,8 @@ insert into student_test_scores (student_id, test_scores, test_scores_key) value
 insert into person_roles (person_id, roles_id) values (1,2);
 insert into person_roles (person_id, roles_id) values (2,1);
 
-INSERT INTO person (id, name, surname, email, password) VALUES (3, 'Professor2', 'Surname2', 'email2@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
-INSERT INTO person (id, name, surname, email, password) VALUES (4, 'Professor3', 'Surname3', 'email3@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password) VALUES (3, 'Professor2', 'Surname2', 'email2@example.com', '$2a$10$YPvrmQYNlJyKvtVsn/LteOziQf0Tlm4YLwQAg4Fj8DDLHaI0uUcVC');
+INSERT INTO person (id, name, surname, email, password) VALUES (4, 'Professor3', 'Surname3', 'email3@example.com', '$2a$10$YPvrmQYNlJyKvtVsn/LteOziQf0Tlm4YLwQAg4Fj8DDLHaI0uUcVC');
 
 insert into professor (id, university_id) values (3,1);
 insert into professor (id, university_id) values (4,2);
