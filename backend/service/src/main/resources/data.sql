@@ -2249,7 +2249,7 @@ INSERT INTO requirement (id, gpa) VALUES (2, 3.4);
 INSERT INTO requirement (id, gpa) VALUES (3, 3.2);
 INSERT INTO requirement (id, gpa) VALUES (4, 3.6);
 
-insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (1,'CS1',10000.0,1,1,1);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (1,'Machine Learning',10000.0,1,1,1);
 -- Inserting data into the GradProgram table
 
 
@@ -2303,8 +2303,8 @@ insert into professor (id, university_id) values (3,1);
 insert into professor (id, university_id) values (4,2);
 
 -- Inserting data into the GradProgram table
-insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (2,'CS2',12000.0,3,2,1);
-insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (3,'CS3',15000.0,4,3,2);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (2,'Applied Mathematics',12000.0,3,2,1);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (3,'Virtual Reality',15000.0,4,3,2);
 
 -- Inserting data into the mentorship table
 INSERT INTO mentorship (id, mentor_id, student_id) VALUES (1, 1, 4);

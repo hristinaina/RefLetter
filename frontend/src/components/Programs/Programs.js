@@ -316,6 +316,11 @@ export function Programs() {
                         )}
                         {selectedProgram.financialAids.map((aid, index) => (
                             <Card key={index} className={"financial-aid-card"}>
+                            {role == 1 && (
+                                <Button className='delete-button' onClick={() => handleDeleteAid(aid.id)}>
+                                    <Icon>delete</Icon>
+                                </Button>
+                                )}
                                 <h3>{aid.type}</h3>
                                 
                                 <div className="aid-requirement-list">
@@ -339,11 +344,6 @@ export function Programs() {
                                         <span>{aid.amount}</span>
                                     </div>
                                 </div>
-                                {role == 1 && (
-                                    <Button onClick={() => handleDeleteAid(aid.id)}>
-                                        <Icon>delete</Icon>
-                                    </Button>
-                                    )}
                             </Card>
                             
                         ))}

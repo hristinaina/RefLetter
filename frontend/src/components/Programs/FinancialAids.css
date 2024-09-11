@@ -1,11 +1,5 @@
  /* FINACIAL AID DESIGN */
 
-/* Adding the requirements text next to the icon */
-.aid-requirement-list {
-    display: flex;
-    align-items: center;
-    margin: 0 35px 5px 35px;
-}
 
 .financial-aid-card {
     border-radius: 15px !important;
