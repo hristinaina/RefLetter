@@ -57,7 +57,7 @@ const StudentProfile = () => {
             />
             <img id='add-image' src="/images/add.png" alt="Add Image" />
           </div>
-          <p style={{color: 'var(--background-red)'}}>pls</p>
+          <p style={{color: '#4a1f30'}}>pls</p>
           <div
             className={`menu-option ${selectedOption === 'PROFILE' ? 'selected' : ''}`}
             onClick={() => handleOptionChange('PROFILE')}

@@ -111,3 +111,11 @@
     color: var(--dark-red) !important;
 }
 
+.profMentor{
+    width: 62%;
+    margin: 0 auto;
+}
+
+.profMentor:hover{
+    cursor:text ;
+}
