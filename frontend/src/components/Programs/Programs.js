@@ -205,7 +205,6 @@ export function Programs() {
             </React.Fragment>
         );
     
-        // Function to format the date
         function formatDate(dateString) {
             return moment(dateString).format('MMMM Do, YYYY');
         }

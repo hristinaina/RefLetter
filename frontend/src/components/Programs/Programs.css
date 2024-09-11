@@ -26,6 +26,10 @@
     position: relative !important; 
 }
 
+.program-card:hover{
+    cursor: pointer;
+}
+
 .program-name{
     margin: 10px 0 8px 0  !important;
 }

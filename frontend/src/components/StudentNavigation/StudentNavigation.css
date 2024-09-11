@@ -13,7 +13,8 @@
 .navbar {
   background-color: var(--background-red);
   height: 100px;
-  padding: 25px 150px 0 130px;
+  padding: 25px 150px 5px 130px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 ul {
