@@ -1,4 +1,4 @@
-.programs-container{
+.programs-container {
     display: flex;
     flex-direction: row;
 }
@@ -9,7 +9,7 @@
 }
 
 .left-side {
-    max-width: 44%;
+    max-width: 45%;
     padding: 50px;
     padding-bottom: 0 !important;
 }
@@ -19,10 +19,19 @@
     padding: 100px 50px 0px 50px;
 }
 
-.program-card, .financial-aid-card{
+.program-card, .financial-aid-card {
     border-radius: 25px !important;
     margin: 10px;
-    padding-bottom: 0 !important;
+    padding: 5px 30px !important;
+    position: relative !important; 
+}
+
+.program-card:hover{
+    cursor: pointer;
+}
+
+.program-name{
+    margin: 10px 0 8px 0  !important;
 }
 
 .program-card.selected {
@@ -30,6 +39,83 @@
     color: var(--old-red) !important;
 }
 
-.financial-aid-card{
-    background-color:var(--dark-red) !important;
+.financial-aid-card {
+    background-color: var(--dark-red) !important;
+}
+
+.location-university {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.location-university Icon {
+    margin-right: 8px;
+}
+
+.university-name {
+    font-weight: bold;
+    margin-left: 10px;
+    color: var(--secondary-text-color); /* Subtle styling for university name */
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px; /* Added padding for the footer */
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    color: var(--highlight-color);
+    font-size: 16px;
+    position: absolute; /* Move price to the bottom-right corner */
+    bottom: 10px;
+    right: 10px;
+}
+
+.price Icon {
+    margin-right: 5px;
+}
+
+/* Adding the requirements text next to the icon */
+.requirement-list {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 0 50px 0px 25px;
+}
+
+.reqIcon{
+    margin-right: 30px;
+}
+
+.requirement-list Icon {
+    margin-right: 8px;
+}
+
+.requirement-list .requirements-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.delete-button{
+    position: absolute !important; /* Position the button absolutely within the card */
+    top: 10px; /* Distance from the top edge */
+    right: 10px; /* Distance from the right edge */
+    color: var(--dark-red) !important;
+}
+
+.profMentor{
+    width: 62%;
+    margin: 0 auto;
+}
+
+.profMentor:hover{
+    cursor:text ;
 }

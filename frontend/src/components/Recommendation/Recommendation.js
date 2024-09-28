@@ -8,6 +8,7 @@ import Icon from '@mui/material/Icon';
 import programService from "../../services/ProgramService";
 import {useNavigate} from "react-router-dom";
 import authService from "../../services/AuthService";
+import moment from "moment";
 
 export function Recommendation() {
     const [data, setData] = useState([]);
@@ -57,7 +58,7 @@ export function Recommendation() {
         }
     }
 
-    const itemsPerPage = 1; // Change this to the number of items you want per page
+    const itemsPerPage = 7; // Change this to the number of items you want per page
     const [currentPage, setCurrentPage] = useState(0);
 
     const handleNext = () => {
@@ -70,6 +71,10 @@ export function Recommendation() {
 
     const dataToShow = data.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
+    function formatDate(dateString) {
+        return moment(dateString).format('MMMM Do, YYYY');
+    }
+
     return (
         <ThemeProvider theme={darkTheme}>
             <StudentNavigation></StudentNavigation>
@@ -77,14 +82,38 @@ export function Recommendation() {
                 <div style={{width: '50%', float: 'left'}}>
                     {dataToShow.map((item) => (
                         <Card key={item.id}
-                              className={`program-card ${item.id === selectedCardId ? 'selected' : ''}`}
-                              onClick={() => handleCardClick(item.id)}>
-                            <h2>{item.name}</h2>
-                            <p>University: {item.universityName}</p>
-                            <p>Requirement: {item.requirementName}</p>
-                            <p>Location: {item.location}</p>
-                            <p>Price: {item.price}</p>
-                        </Card>
+                        className={`program-card ${item.id === selectedCardId ? 'selected' : ''}`}
+                        onClick={() => handleCardClick(item.id)}>
+                        <div className="card-header">
+                            <h2 className="program-name">{item.name}</h2> {/* Program name at the top */}
+                        </div>
+                            <div className="requirement-list">
+                                <Icon className='reqIcon'>assignment</Icon>
+                                <div className="requirement-attribute">
+                                    <p><strong>GPA:</strong> {item.requirement?.gpa || 'Not specified'}</p>
+                                </div>
+                                <div className="requirement-attribute">
+                                    <p><strong>Research Experience:</strong> {item.requirement?.researchExperience?.join(', ') || 'None'}</p>
+                                </div>
+                                <div className="requirement-attribute">
+                                    <p><strong>Research Interests:</strong> {item.requirement?.researchInterest?.join(', ') || 'None'}</p>
+                                </div>
+                                <div className="requirement-attribute">
+                                    <p><strong>Test Scores:</strong> {item.requirement?.testScores ? Object.entries(item.requirement.testScores).map(([test, score]) => `${test}: ${score}`).join(', ') : 'None'}</p>
+                                </div>
+                        </div>
+                        <div className="card-footer">
+                            <div className="location-university">
+                                <Icon>location_on</Icon>
+                                <span>{item.location}</span>
+                                <span className="university-name"> | {item.universityName}</span>
+                            </div>
+                            <div className="price">
+                                <Icon>attach_money</Icon>
+                                <span>{item.price}</span>
+                            </div>
+                        </div>
+                    </Card>
                     ))}
                     <Button onClick={handlePrevious} disabled={currentPage === 0}>
                         <Icon>chevron_left</Icon>
@@ -96,20 +125,45 @@ export function Recommendation() {
                 {selectedProgram && (
                     <div style={{width: '50%', float: 'right'}}>
 
-                        <p>Professor: {selectedProgram.professorName}</p>
-                        <p>Rank: {selectedProgram.rank}</p>
-                        <p>Number of Students: {selectedProgram.numberOfStudents}</p>
-                        <p>Student Per Staff: {selectedProgram.studentPerStaff}</p>
-                        <p>International Student Percent: {selectedProgram.internationalStudentPercent}</p>
-                        <p>Overall Score: {selectedProgram.overallScore}</p>
-                        <p>Research Score: {selectedProgram.researchScore}</p>
-                        <p>Citation Score: {selectedProgram.citationScore}</p>
+<div className="program-details-container">
+                            <div className="left-column">
+                                <p><strong><Icon>person</Icon> Professor:</strong> {selectedProgram.professorName}</p>
+                                <p><strong><Icon>groups</Icon> Number of Students:</strong> {selectedProgram.numberOfStudents}</p>
+                                <p><strong><Icon>people_alt</Icon> Student Per Staff:</strong> {selectedProgram.studentPerStaff}</p>
+                                <p><strong><Icon>public</Icon> International Student Percent:</strong> {selectedProgram.internationalStudentPercent}</p>
+                            </div>
+                            <div className="right-column">
+                                <p><strong><Icon>star</Icon> Rank:</strong> {selectedProgram.rank}</p>
+                                <p><strong><Icon>score</Icon> Overall Score:</strong> {selectedProgram.overallScore}</p>
+                                <p><strong><Icon>trending_up</Icon> Research Score:</strong> {selectedProgram.researchScore}</p>
+                                <p><strong><Icon>trending_up</Icon> Citation Score:</strong> {selectedProgram.citationScore}</p>
+                            </div>
+                        </div>
                         {selectedProgram.financialAids.map((aid, index) => (
                             <Card key={index} className={"financial-aid-card"}>
-                                <p>Type: {aid.type}</p>
-                                <p>Amount: {aid.amount}</p>
-                                <p>Requirement: {aid.requirement.name}</p>
-                                <p>Deadline: {aid.deadline}</p>
+                                <h3>{aid.type}</h3>
+                                
+                                <div className="aid-requirement-list">
+                                    <div className="requirement-attribute">
+                                        <p><strong>GPA:</strong> {aid.requirement?.gpa || 'Not specified'}</p>
+                                    </div>
+                                    <div className="requirement-attribute">
+                                        <p><strong>Research Experience:</strong> {aid.requirement?.researchExperience?.join(', ') || 'None'}</p>
+                                    </div>
+                                    <div className="requirement-attribute">
+                                        <p><strong>Research Interests:</strong> {aid.requirement?.researchInterest?.join(', ') || 'None'}</p>
+                                    </div>
+                                    <div className="requirement-attribute">
+                                        <p><strong>Test Scores:</strong> {aid.requirement?.testScores ? Object.entries(aid.requirement.testScores).map(([test, score]) => `${test}: ${score}`).join(', ') : 'None'}</p>
+                                    </div>
+                                </div>
+                                <div className="card-footer">
+                                <p><Icon>calendar_today</Icon> {formatDate(aid.deadline)}</p>
+                                    <div className="price">
+                                        <Icon>attach_money</Icon>
+                                        <span>{aid.amount}</span>
+                                    </div>
+                                </div>
                             </Card>
                         ))}
                     </div>

@@ -85,9 +85,10 @@ const ProfMentorshipCards = () => {
             <ProfNavigation/>
                 <div className='App'>
                     {mentorships.map((mentorship) => (
-                        <Card key={mentorship.id} className='program-card'>
-                            <h2>Student: {mentorship.studentName}</h2>
-                            <p>{mentorship.studentEmail}</p>
+                        <Card key={mentorship.id} className='program-card profMentor'>
+                            <h2>Mentorship student info</h2>
+                            <p>Name: <strong>{mentorship.studentName}</strong></p>
+                            <p>Email:<strong> {mentorship.studentEmail}</strong></p>
                             <Button onClick={() => handleDelete(mentorship.id)}>
                                 <Icon>delete</Icon>
                             </Button>

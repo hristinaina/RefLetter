@@ -1,0 +1,53 @@
+/* University details */
+
+.program-details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    margin:11px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.left-column p, .right-column p {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.left-column p strong, .right-column p strong {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.left-column Icon, .right-column Icon {
+    margin-right: 8px;
+}
+
+.status {
+    display: flex;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.status.satisfied {
+    background-color: var(--background-blue);
+    color: white;
+}
+
+.status.not-satisfied {
+    background-color: red;
+    color: white;
+}
+
+.status Icon {
+    margin-right: 10px;
+}

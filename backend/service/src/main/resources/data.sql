@@ -2249,13 +2249,13 @@ INSERT INTO requirement (id, gpa) VALUES (2, 3.4);
 INSERT INTO requirement (id, gpa) VALUES (3, 3.2);
 INSERT INTO requirement (id, gpa) VALUES (4, 3.6);
 
-insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (1,'CS1',10000.0,1,1,1);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (1,'Machine Learning',10000.0,1,1,1);
 -- Inserting data into the GradProgram table
 
 
 
 -- Inserting data into the Student table
-INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ruzic', 'ruza@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password ) VALUES (2, 'Lazar', 'Ruzic', 'ruza@example.com', '$2a$10$YPvrmQYNlJyKvtVsn/LteOziQf0Tlm4YLwQAg4Fj8DDLHaI0uUcVC');
 
 insert into student (gpa, location, requires_financial_aid, id, updated_timestamp) values (3.8,'United States',true,2, '2024-05-10T07:37:50.637+00:00');
 
@@ -2296,15 +2296,15 @@ insert into student_test_scores (student_id, test_scores, test_scores_key) value
 insert into person_roles (person_id, roles_id) values (1,2);
 insert into person_roles (person_id, roles_id) values (2,1);
 
-INSERT INTO person (id, name, surname, email, password) VALUES (3, 'Professor2', 'Surname2', 'email2@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
-INSERT INTO person (id, name, surname, email, password) VALUES (4, 'Professor3', 'Surname3', 'email3@example.com', '$2a$10$Y4JZtmg0NyAGDyJXHldXVeIZGUmk9Fxc1AfStQQgIznSjujogLVIu');
+INSERT INTO person (id, name, surname, email, password) VALUES (3, 'Professor2', 'Surname2', 'email2@example.com', '$2a$10$YPvrmQYNlJyKvtVsn/LteOziQf0Tlm4YLwQAg4Fj8DDLHaI0uUcVC');
+INSERT INTO person (id, name, surname, email, password) VALUES (4, 'Professor3', 'Surname3', 'email3@example.com', '$2a$10$YPvrmQYNlJyKvtVsn/LteOziQf0Tlm4YLwQAg4Fj8DDLHaI0uUcVC');
 
 insert into professor (id, university_id) values (3,1);
 insert into professor (id, university_id) values (4,2);
 
 -- Inserting data into the GradProgram table
-insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (2,'CS2',12000.0,3,2,1);
-insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (3,'CS3',15000.0,4,3,2);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (2,'Applied Mathematics',12000.0,3,2,1);
+insert into grad_program (id, name, price, professor_id, requirement_id, university_id) values (3,'Virtual Reality',15000.0,4,3,2);
 
 -- Inserting data into the mentorship table
 INSERT INTO mentorship (id, mentor_id, student_id) VALUES (1, 1, 4);

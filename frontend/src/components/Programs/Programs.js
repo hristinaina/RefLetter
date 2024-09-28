@@ -6,6 +6,8 @@ import programService from "../../services/ProgramService";
 import {Card, Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
 import Icon from "@mui/material/Icon";
 import "./Programs.css";
+import "./Details.css";
+import "./FinancialAids.css";
 import {useNavigate} from "react-router-dom";
 import authService from '../../services/AuthService';
 import ProfNavigation from '../ProfNavigation/ProfNavigation';
@@ -14,6 +16,7 @@ import { TextField, Button, Chip, Snackbar, Checkbox, FormControlLabel } from '@
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from '@mui/icons-material/Close';
 import AddFinancialAid from './AddFinancialAid';
+import moment from 'moment';
 
 
 export function Programs() {
@@ -107,6 +110,7 @@ export function Programs() {
     const handleCardClick = async (programID) => {
         setSelectedCardId(programID);
         const result = await programService.getFinancialAids(programID);
+        console.log(result);
         if (result)
             if (result.status === 200) {
                 setSelectedProgram(result.data);
@@ -121,7 +125,7 @@ export function Programs() {
             else setCriteria(false);
     }
 
-    const itemsPerPage = 2; // Change this to the number of items you want per page
+    const itemsPerPage = 7; // Change this to the number of items you want per page
     const [currentPage, setCurrentPage] = useState(0);
 
     const handleNext = () => {
@@ -201,6 +205,9 @@ export function Programs() {
             </React.Fragment>
         );
     
+        function formatDate(dateString) {
+            return moment(dateString).format('MMMM Do, YYYY');
+        }
 
     const dataToShow = data.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
@@ -232,19 +239,43 @@ export function Programs() {
                     </Dialog>
                     {dataToShow.map((item) => (
                         <Card key={item.id}
-                              className={`program-card ${item.id === selectedCardId ? 'selected' : ''}`}
-                              onClick={() => handleCardClick(item.id)}>
-                            <h2>{item.name}</h2>
-                            <p>University: {item.universityName}</p>
-                            <p>Requirement: {item.requirementName}</p>
-                            <p>Location: {item.location}</p>
-                            <p>Price: {item.price}</p>
+                        className={`program-card ${item.id === selectedCardId ? 'selected' : ''}`}
+                        onClick={() => handleCardClick(item.id)}>
                             {role == 1 && (
-                            <Button onClick={() => handleDelete(item.id)}>
+                            <Button onClick={(e) => { e.stopPropagation(); handleDelete(item.id); }} className="delete-button">
                                 <Icon>delete</Icon>
                             </Button>
-                            )}
-                        </Card>
+                        )}
+                        <div className="card-header">
+                            <h2 className="program-name">{item.name}</h2> {/* Program name at the top */}
+                        </div>
+                            <div className="requirement-list">
+                                <Icon className='reqIcon'>assignment</Icon>
+                                <div className="requirement-attribute">
+                                    <p><strong>GPA:</strong> {item.requirement?.gpa || 'Not specified'}</p>
+                                </div>
+                                <div className="requirement-attribute">
+                                    <p><strong>Research Experience:</strong> {item.requirement?.researchExperience?.join(', ') || 'None'}</p>
+                                </div>
+                                <div className="requirement-attribute">
+                                    <p><strong>Research Interests:</strong> {item.requirement?.researchInterest?.join(', ') || 'None'}</p>
+                                </div>
+                                <div className="requirement-attribute">
+                                    <p><strong>Test Scores:</strong> {item.requirement?.testScores ? Object.entries(item.requirement.testScores).map(([test, score]) => `${test}: ${score}`).join(', ') : 'None'}</p>
+                                </div>
+                        </div>
+                        <div className="card-footer">
+                            <div className="location-university">
+                                <Icon>location_on</Icon>
+                                <span>{item.location}</span>
+                                <span className="university-name"> | {item.universityName}</span>
+                            </div>
+                            <div className="price">
+                                <Icon>attach_money</Icon>
+                                <span>{item.price}</span>
+                            </div>
+                        </div>
+                    </Card>
                     ))}
                     {role == 1 && (
                         <AddProgramDialog setData={setData} data={data}/>
@@ -260,34 +291,59 @@ export function Programs() {
                 </div>
                 {selectedProgram && (
                     <div className='right-side'>
-                        {role === 0 && criteria && (
-                            <p style={{color: 'var(--background-blue)'}}>Requirements are satisfied!</p>
+                       {role === 0 && (
+                            <div className={`status ${criteria ? 'satisfied' : 'not-satisfied'}`}>
+                                <Icon>{criteria ? 'check_circle' : 'cancel'}</Icon>
+                                <span>{criteria ? 'Requirements are satisfied!' : 'Requirements are not satisfied!'}</span>
+                            </div>
                         )}
-                        {role === 0 && !criteria && (
-                            <p style={{color: 'red'}}>Requirements are not satisfied!</p>
-                        )}
-                        <p>Professor: {selectedProgram.professorName}</p>
-                        <p>Rank: {selectedProgram.rank}</p>
-                        <p>Number of Students: {selectedProgram.numberOfStudents}</p>
-                        <p>Student Per Staff: {selectedProgram.studentPerStaff}</p>
-                        <p>International Student Percent: {selectedProgram.internationalStudentPercent}</p>
-                        <p>Overall Score: {selectedProgram.overallScore}</p>
-                        <p>Research Score: {selectedProgram.researchScore}</p>
-                        <p>Citation Score: {selectedProgram.citationScore}</p>
+                        <div className="program-details-container">
+                            <div className="left-column">
+                                <p><strong><Icon>person</Icon> Professor:</strong> {selectedProgram.professorName}</p>
+                                <p><strong><Icon>groups</Icon> Number of Students:</strong> {selectedProgram.numberOfStudents}</p>
+                                <p><strong><Icon>people_alt</Icon> Student Per Staff:</strong> {selectedProgram.studentPerStaff}</p>
+                                <p><strong><Icon>public</Icon> International Student Percent:</strong> {selectedProgram.internationalStudentPercent}</p>
+                            </div>
+                            <div className="right-column">
+                                <p><strong><Icon>star</Icon> Rank:</strong> {selectedProgram.rank}</p>
+                                <p><strong><Icon>score</Icon> Overall Score:</strong> {selectedProgram.overallScore}</p>
+                                <p><strong><Icon>trending_up</Icon> Research Score:</strong> {selectedProgram.researchScore}</p>
+                                <p><strong><Icon>trending_up</Icon> Citation Score:</strong> {selectedProgram.citationScore}</p>
+                            </div>
+                        </div>
                         {role == 1 && (
                             <AddFinancialAid setSelectedProgram={setSelectedProgram} selectedProgram={selectedProgram} selectedProgramId={selectedCardId}/>
                         )}
                         {selectedProgram.financialAids.map((aid, index) => (
                             <Card key={index} className={"financial-aid-card"}>
-                                <p>Type: {aid.type}</p>
-                                <p>Amount: {aid.amount}</p>
-                                <p>Requirement: {aid.requirement.name}</p>
-                                <p>Deadline: {aid.deadline}</p>
-                                {role == 1 && (
-                                    <Button onClick={() => handleDeleteAid(aid.id)}>
-                                        <Icon>delete</Icon>
-                                    </Button>
-                                    )}
+                            {role == 1 && (
+                                <Button className='delete-button' onClick={() => handleDeleteAid(aid.id)}>
+                                    <Icon>delete</Icon>
+                                </Button>
+                                )}
+                                <h3>{aid.type}</h3>
+                                
+                                <div className="aid-requirement-list">
+                                    <div className="requirement-attribute">
+                                        <p><strong>GPA:</strong> {aid.requirement?.gpa || 'Not specified'}</p>
+                                    </div>
+                                    <div className="requirement-attribute">
+                                        <p><strong>Research Experience:</strong> {aid.requirement?.researchExperience?.join(', ') || 'None'}</p>
+                                    </div>
+                                    <div className="requirement-attribute">
+                                        <p><strong>Research Interests:</strong> {aid.requirement?.researchInterest?.join(', ') || 'None'}</p>
+                                    </div>
+                                    <div className="requirement-attribute">
+                                        <p><strong>Test Scores:</strong> {aid.requirement?.testScores ? Object.entries(aid.requirement.testScores).map(([test, score]) => `${test}: ${score}`).join(', ') : 'None'}</p>
+                                    </div>
+                                </div>
+                                <div className="card-footer">
+                                <p><Icon>calendar_today</Icon> {formatDate(aid.deadline)}</p>
+                                    <div className="price">
+                                        <Icon>attach_money</Icon>
+                                        <span>{aid.amount}</span>
+                                    </div>
+                                </div>
                             </Card>
                             
                         ))}
